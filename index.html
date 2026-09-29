@@ -18,10 +18,12 @@
 <meta property="og:image" content="https://antecipayprecatorios.com.br/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Antecipay">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FinancialService","name":"Antecipay Precatórios","url":"https://antecipayprecatorios.com.br/","email":"contato@antecipay.com.br","telephone":"+55-84-99493-8383","description":"Antecipação e compra de precatórios federais, estaduais e municipais.","areaServed":{"@type":"Country","name":"Brasil"},"address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol (Incubadora do IFRN – Campus Natal Central)","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"},"taxID":"64.382.432/0001-97"}
 </script>
@@ -117,13 +119,14 @@ select:focus,input[type=text]:focus{outline:0;border-color:var(--green)}
 
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
-.step{position:relative;background:var(--mist);border-radius:var(--r);padding:32px;transition:transform .25s,background .25s,color .25s}
-.step:hover{transform:translateY(-6px);background:var(--ink);color:#fff}
-.step:hover p{color:rgba(255,255,255,.7)}
-.step .n{font:700 3.4rem/1 Montserrat,sans-serif;color:var(--green);letter-spacing:-.04em}
-.step h3{font-size:1.22rem;font-weight:600;margin:22px 0 10px}
+.step{position:relative;background:var(--mist);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:16px;transition:transform .25s}
+.step:last-child{background:var(--ink);color:#fff}
+.step:last-child p{color:rgba(255,255,255,.72)}
+.step:hover{transform:translateY(-4px)}
+.step .n{font:700 3rem/1 Montserrat,sans-serif;color:var(--green);letter-spacing:-.03em}
+.step h3{font-size:1.25rem;font-weight:600;padding-top:8px}
+.step h3+p{margin-top:-8px}
 .step p{color:var(--muted);font-size:.98rem;transition:color .25s}
-.step:not(:last-child)::after{content:"";position:absolute;top:56px;right:-16px;width:12px;height:12px;border-top:3px solid var(--green);border-right:3px solid var(--green);transform:rotate(45deg);z-index:2}
 
 /* types */
 .types{background:var(--mist)}
@@ -132,8 +135,6 @@ select:focus,input[type=text]:focus{outline:0;border-color:var(--green)}
 .type .tag{font:600 .72rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d)}
 .type h3{font-size:1.6rem;font-weight:700;margin:10px 0 12px}
 .type p{color:var(--muted)}
-.type .big{position:absolute;right:-10px;bottom:-34px;font:700 8rem/1 Montserrat,sans-serif;color:var(--mist);letter-spacing:-.06em;z-index:0;pointer-events:none}
-.type>*:not(.big){position:relative;z-index:1}
 
 /* advantages */
 .adv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
@@ -203,7 +204,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.66);padding:80px 0 34px;fon
   .hero-grid,.about,.faq-wrap{grid-template-columns:1fr}
   .faq-wrap .sec-head{position:static}
   .steps{grid-template-columns:repeat(2,1fr)}
-  .step:nth-child(2)::after{display:none}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(3){border-left:0}
   .type-grid{grid-template-columns:1fr}
@@ -220,7 +220,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.66);padding:80px 0 34px;fon
   .hero h1 em{color:#fff}
   .hero-ctas .btn-wa{font-style:italic}
   .hero{padding:130px 0 80px}
-  .hero h1{font-size:2.35rem}
+  .hero h1{font-size:2.35rem;font-weight:400}
+  .hero .pill{display:none}
   .hero h1 em{white-space:normal}
   .chips label{font-size:.8rem}
   .nav .btn span{display:none}
@@ -229,7 +230,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.66);padding:80px 0 34px;fon
   .hero-types li+li{margin-left:0}
   .sim{padding:26px 22px}
   .steps,.adv-grid{grid-template-columns:1fr}
-  .step::after{display:none}
+  .step{display:grid;grid-template-columns:48px 1fr;column-gap:16px;row-gap:6px;align-items:start}
+  .step .n{font-size:2rem;grid-row:span 2}
+  .step h3{padding-top:0;font-size:1.12rem}
+  .step h3+p{margin-top:0}
+  .step p{font-size:.94rem}
   .adv{padding:24px;flex-direction:row;gap:16px}
   .stat{padding:30px 14px 0}
   .foot{grid-template-columns:1fr}
@@ -331,9 +336,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.66);padding:80px 0 34px;fon
       <p>Se você tem um valor a receber do governo reconhecido na Justiça, a Antecipay pode antecipar esse pagamento.</p>
     </div>
     <div class="type-grid">
-      <div class="type rv"><span class="big">FED</span><span class="tag">União</span><h3>Federal</h3><p>Precatórios contra a União, INSS, autarquias e fundações federais.</p></div>
-      <div class="type rv"><span class="big">EST</span><span class="tag">Estados</span><h3>Estadual</h3><p>Precatórios devidos pelos Estados, suas autarquias e fundações.</p></div>
-      <div class="type rv"><span class="big">MUN</span><span class="tag">Municípios</span><h3>Municipal</h3><p>Precatórios devidos por prefeituras e entidades municipais.</p></div>
+      <div class="type rv"><span class="tag">União</span><h3>Federal</h3><p>Precatórios contra a União, INSS, autarquias e fundações federais.</p></div>
+      <div class="type rv"><span class="tag">Estados</span><h3>Estadual</h3><p>Precatórios devidos pelos Estados, suas autarquias e fundações.</p></div>
+      <div class="type rv"><span class="tag">Municípios</span><h3>Municipal</h3><p>Precatórios devidos por prefeituras e entidades municipais.</p></div>
     </div>
   </div>
 </section>
