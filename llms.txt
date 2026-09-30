@@ -12,10 +12,12 @@
 
 - [Início](https://antecipayprecatorios.com.br/): apresentação, simulador e contato
 - [Sobre a Antecipay](https://antecipayprecatorios.com.br/sobre/): quem somos, dados da empresa e como funciona
+- [Vender precatório do INSS](https://antecipayprecatorios.com.br/vender-precatorio-inss/): compra e antecipação de precatórios do INSS
 - [Blog](https://antecipayprecatorios.com.br/blog/): guias sobre precatórios
 
 ## Guias
 
+- [Precatório do INSS: como funciona e quanto tempo demora](https://antecipayprecatorios.com.br/blog/precatorio-inss/): Ganhou ação contra o INSS? Entenda quando o pagamento sai por RPV ou precatório, os prazos, a prioridade para idosos e doentes graves e o imposto de renda.
 - [O que é precatório e RPV? Entenda a diferença](https://antecipayprecatorios.com.br/blog/o-que-e-precatorio-e-rpv/): Precatório e RPV são as formas de o governo pagar dívidas reconhecidas na Justiça. Veja a diferença, o limite de valor e quanto tempo cada um leva.
 - [Quanto tempo demora para receber um precatório?](https://antecipayprecatorios.com.br/blog/quanto-tempo-demora-precatorio/): Veja os prazos de pagamento do precatório federal, estadual e municipal, a nova data de corte de 1º de fevereiro e quem tem prioridade na fila.
 - [Como saber se tenho precatório a receber](https://antecipayprecatorios.com.br/blog/como-saber-se-tenho-precatorio/): Passo a passo para consultar precatório e RPV pelo CPF ou número do processo nos tribunais federais (TRF) e estaduais (TJ).
