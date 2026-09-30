@@ -1,0 +1,105 @@
+:root{
+  --ink:#07111F;--ink-3:#1A2B4A;--paper:#fff;--mist:#F3F6FA;--line:#E3E9F2;
+  --text:#0B1526;--muted:#5B6B82;--green:#16C784;--green-d:#0B8457;--lime:#D7FF3A;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--text);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;letter-spacing:-.02em;line-height:1.15}
+a{color:var(--green-d)}
+img,svg{display:block}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.narrow{width:min(760px,100% - 40px);margin-inline:auto}
+
+/* header */
+.top{background:var(--ink);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{color:#fff;text-decoration:none;font:700 1.35rem/1 Montserrat,sans-serif;letter-spacing:-.03em}
+.menu{display:flex;gap:32px}
+.menu a{color:rgba(255,255,255,.78);text-decoration:none;font:600 .95rem Montserrat,sans-serif}
+.menu a:hover,.menu a[aria-current]{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem/1 Montserrat,sans-serif;padding:16px 26px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,background .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--green);color:#04130C}
+.btn-wa:hover{background:#1FDB93;transform:translateY(-2px)}
+.nav .btn{padding:12px 20px;font-size:.9rem}
+
+/* blog index */
+.hero{background:var(--ink);color:#fff;padding:72px 0 80px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 .78rem/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:3px;background:currentColor}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.4rem);font-weight:700;margin:16px 0}
+.hero p{color:rgba(255,255,255,.74);font-size:1.12rem;max-width:640px}
+.posts{padding:80px 0 120px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.card{display:flex;flex-direction:column;gap:12px;padding:32px;border:1px solid var(--line);border-radius:var(--r);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s,transform .2s}
+.card:hover{border-color:var(--green);box-shadow:0 18px 50px -18px rgba(7,17,31,.22);transform:translateY(-3px)}
+.card .tag{font:600 .72rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d)}
+.card h2{font-size:1.4rem;font-weight:700}
+.card p{color:var(--muted)}
+.card .more{margin-top:auto;padding-top:8px;font:600 .95rem Montserrat,sans-serif;color:var(--text)}
+
+/* article */
+.art-head{background:var(--ink);color:#fff;padding:56px 0 64px}
+.crumbs{font-size:.88rem;color:rgba(255,255,255,.6);margin-bottom:24px}
+.crumbs a{color:rgba(255,255,255,.8);text-decoration:none}
+.art-head h1{font-size:clamp(2rem,4.2vw,3rem);font-weight:700;margin:16px 0}
+.art-head .lead{color:rgba(255,255,255,.76);font-size:1.15rem}
+.meta{margin-top:24px;font-size:.9rem;color:rgba(255,255,255,.6)}
+article{padding:56px 0 24px}
+.answer{background:var(--mist);border-left:0;border-radius:var(--r);padding:24px 28px;margin-bottom:40px}
+.answer strong{display:block;font:600 .78rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);margin-bottom:8px}
+article h2{font-size:1.6rem;font-weight:700;margin:48px 0 16px}
+article h3{font-size:1.2rem;font-weight:600;margin:32px 0 12px}
+article p{margin-bottom:16px;font-size:1.06rem}
+article ul,article ol{margin:0 0 20px 22px}
+article li{margin-bottom:8px;font-size:1.06rem}
+table{width:100%;border-collapse:collapse;margin:8px 0 24px;font-size:.98rem}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--ink);color:#fff;font:600 .8rem Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin-bottom:24px}
+.table-wrap table{margin:0}
+.note{font-size:.92rem;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;margin-top:40px}
+.cta{background:var(--green);border-radius:24px;padding:40px;margin:48px 0;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.cta h2{margin:0;font-size:1.6rem;color:var(--ink)}
+.cta p{margin:0;color:rgba(7,17,31,.75)}
+.cta .btn{background:var(--ink);color:#fff}
+.cta .btn:hover{background:var(--ink-3)}
+.related{padding:24px 0 120px}
+.related h2{font-size:1.4rem;margin-bottom:24px}
+.related .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.related .card{padding:24px}
+.related .card h3{font-size:1.1rem;font-weight:600}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.68);padding:56px 0 32px;font-size:.95rem}
+.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer a{color:rgba(255,255,255,.8);text-decoration:none}
+footer a:hover{color:var(--green)}
+.foot ul{list-style:none;display:grid;gap:8px}
+.legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;font-size:.86rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(37,211,102,.6)}
+.fab svg{width:30px;height:30px}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .grid,.related .grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap,.narrow{width:calc(100% - 40px)}
+  .nav .btn span{display:none}
+  .nav .btn{padding:12px}
+  .hero{padding:48px 0 56px}
+  .posts{padding:48px 0 72px}
+  .card{padding:24px}
+  .grid{gap:12px}
+  .art-head{padding:40px 0 48px}
+  article{padding:40px 0 16px}
+  article h2{font-size:1.35rem;margin-top:40px}
+  .answer{padding:20px}
+  .cta{padding:28px 24px}
+  .cta .btn{width:100%}
+  .related{padding-bottom:72px}
+}
