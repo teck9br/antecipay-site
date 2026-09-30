@@ -13,6 +13,7 @@
 - [Início](https://antecipayprecatorios.com.br/): apresentação, simulador e contato
 - [Sobre a Antecipay](https://antecipayprecatorios.com.br/sobre/): quem somos, dados da empresa e como funciona
 - [Vender precatório do INSS](https://antecipayprecatorios.com.br/vender-precatorio-inss/): compra e antecipação de precatórios do INSS
+- [Vender precatório no RN](https://antecipayprecatorios.com.br/vender-precatorio-rn/): precatórios do TRF5 e do TJRN (Estado do RN e municípios)
 - [Blog](https://antecipayprecatorios.com.br/blog/): guias sobre precatórios
 
 ## Guias
