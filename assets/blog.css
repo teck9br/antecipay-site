@@ -103,3 +103,17 @@ footer a:hover{color:var(--green)}
   .cta .btn{width:100%}
   .related{padding-bottom:72px}
 }
+
+/* calculadora */
+.calc{background:var(--ink);color:#fff;border-radius:24px;padding:40px;margin:0 0 40px;display:grid;gap:24px}
+.calc h2{margin:0;color:#fff;font-size:1.5rem}
+.calc .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.calc label{display:grid;gap:8px;font:600 .85rem Montserrat,sans-serif;color:rgba(255,255,255,.8)}
+.calc input,.calc select{height:52px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#0E1C33;color:#fff;padding:0 16px;font:500 1rem Inter,sans-serif;width:100%}
+.calc input:focus,.calc select:focus{outline:2px solid var(--green);outline-offset:1px}
+.calc .out{background:#0E1C33;border-radius:16px;padding:24px;display:grid;gap:8px}
+.calc .out small{font:600 .75rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.calc .range{font:700 clamp(1.6rem,4vw,2.2rem)/1.15 Montserrat,sans-serif;color:var(--lime)}
+.calc .out p{margin:0;color:rgba(255,255,255,.72);font-size:.95rem}
+.calc .btn{justify-self:start}
+@media (max-width:640px){.calc{padding:24px}.calc .fields{grid-template-columns:1fr}.calc .btn{width:100%}}
