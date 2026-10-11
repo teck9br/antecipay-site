@@ -68,7 +68,7 @@ FOOT = f"""<footer>
   <div class="wrap">
     <div class="foot">
       <div><a href="/" class="logo" translate="no">Antecipay</a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
-      <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/antecipacao-de-precatorio/">Antecipação de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
+      <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/antecipacao-de-precatorio/">Antecipação de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/vender-precatorio-trabalhista/">Precatório trabalhista</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
       <ul><li><a href="{wa('Olá! Vim pelo site da Antecipay.')}" target="_blank" rel="noopener">WhatsApp (84) 99493-8383</a></li><li><a href="mailto:contato@antecipay.com.br">contato@antecipay.com.br</a></li><li>Av. Senador Salgado Filho, 1559 – Tirol, Natal-RN</li></ul>
     </div>
     <div class="legal"><span>© 2026 Antecipay Precatórios</span><span>CNPJ 64.382.432/0001-97</span></div>
@@ -149,14 +149,14 @@ POSTS = [
 <li>Inscrito até <strong>1º de fevereiro</strong>: pago até o fim do ano seguinte.</li>
 <li>Inscrito depois de 1º de fevereiro: pago até o fim do segundo ano seguinte.</li>
 </ul>
-<p>Essa data mudou com a <strong>Emenda Constitucional 136/2025</strong>. Até então, o corte era 2 de abril. Na prática, entre a inscrição e o dinheiro na conta podem se passar de cerca de 11 meses a quase 3 anos, conforme a data de inscrição. Veja também <a href="/vender-precatorio-federal/">precatório federal</a> e, para ações contra o INSS, <a href="/blog/precatorio-inss/">precatório do INSS</a>.</p>
+<p>Essa data mudou com a <a href="/blog/precatorios-2027-ec-136/"><strong>Emenda Constitucional 136/2025</strong></a>. Até então, o corte era 2 de abril. Na prática, entre a inscrição e o dinheiro na conta podem se passar de cerca de 11 meses a quase 3 anos, conforme a data de inscrição. Veja também <a href="/vender-precatorio-federal/">precatório federal</a> e, para ações contra o INSS, <a href="/blog/precatorio-inss/">precatório do INSS</a>.</p>
 <h2>Precatório estadual e municipal</h2>
 <p>Aqui a espera costuma ser bem maior. Com a EC 136/2025, estados e municípios passaram a pagar os precatórios dentro de um <strong>limite anual de 1% a 5% da receita corrente líquida</strong>, conforme o tamanho da dívida de cada um. Quem deve muito paga uma parte por ano e a fila anda devagar.</p>
 <p>Por isso, dois credores com o mesmo valor podem esperar tempos muito diferentes: tudo depende de <strong>qual estado ou município</strong> deve e da sua posição na fila.</p>
 <h2>RPV: o caminho mais rápido</h2>
 <p>Se o valor estiver dentro do limite de pequeno valor, o pagamento sai como RPV, em geral em até 60 dias. Veja os limites em <a href="/blog/o-que-e-precatorio-e-rpv/">O que é precatório e RPV</a>.</p>
 <h2>Quem tem prioridade na fila</h2>
-<p>A Constituição garante prioridade a credores com <strong>60 anos ou mais</strong>, com <strong>doença grave</strong> ou com <strong>deficiência</strong>. Eles podem receber antes uma parte do crédito, até um limite legal. O restante segue a fila normal.</p>
+<p>A Constituição garante prioridade a credores com <strong>60 anos ou mais</strong>, com <strong>doença grave</strong> ou com <strong>deficiência</strong>. Eles podem receber antes uma parte do crédito, até um limite legal. O restante segue a fila normal. Entenda quem tem direito em <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>.</p>
 <h2>O valor é corrigido enquanto espero?</h2>
 <p>Sim. Pelas regras atuais, o valor é atualizado pelo IPCA, com juros simples de 2% ao ano. Se essa soma passar da Selic, vale a Selic, que funciona como teto. Ainda assim, esperar anos significa adiar planos, e é por isso que muitos credores preferem <a href="/">vender o precatório</a> e receber à vista. Para estimar quanto receberia, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
 """,
@@ -312,7 +312,7 @@ POSTS.insert(0, dict(
   ],
   body="""
 <h2>Quem pode vender precatório</h2>
-<p>Pode vender quem é o <strong>titular do crédito</strong>: a pessoa física ou empresa que ganhou a ação. Se o titular faleceu, os <strong>herdeiros</strong> podem vender depois de regularizar a sucessão no processo. Precatórios federais, do INSS, estaduais e municipais podem ser vendidos.</p>
+<p>Pode vender quem é o <strong>titular do crédito</strong>: a pessoa física ou empresa que ganhou a ação. Se o titular faleceu, os <strong>herdeiros</strong> podem vender depois de regularizar a sucessão no processo (veja <a href="/blog/precatorio-de-heranca/">precatório de herança</a>). Precatórios federais, do INSS, estaduais, municipais e trabalhistas podem ser vendidos.</p>
 
 <h2>Passo a passo para vender precatório</h2>
 <ol>
@@ -546,7 +546,7 @@ POSTS.insert(0, dict(
 <ul>
 <li><strong>O pagamento está perto.</strong> No precatório federal, entre a inscrição e o pagamento passam de cerca de 11 meses a quase 3 anos. Se o seu já está no orçamento do próximo ano, a espera pode ser curta.</li>
 <li><strong>O seu crédito é uma RPV.</strong> Valores federais de até 60 salários mínimos são pagos como RPV, em poucos meses. Em geral não compensa vender.</li>
-<li><strong>Você tem prioridade por idade, doença grave ou deficiência.</strong> A parcela prioritária é paga antes e não passa para quem compra. Muitas vezes vale manter essa parte e vender só o restante.</li>
+<li><strong>Você tem prioridade por idade, doença grave ou deficiência.</strong> A <a href="/blog/superpreferencia-precatorio/">parcela prioritária</a> é paga antes e não passa para quem compra. Muitas vezes vale manter essa parte e vender só o restante.</li>
 </ul>
 
 <h2>Como comparar a proposta, passo a passo</h2>
@@ -564,6 +564,139 @@ POSTS.insert(0, dict(
 """,
   cta=("Quer comparar com uma proposta real?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Li o artigo sobre se vale a pena vender precatório e quero uma proposta para comparar."),
   related=["desagio-precatorio","quanto-tempo-demora-precatorio","golpe-do-precatorio"],
+))
+BY = {p["slug"]: p for p in POSTS}
+
+POSTS.insert(0, dict(
+  slug="precatorio-de-heranca",
+  tag="Herança",
+  title="Precatório de herança: como receber ou vender",
+  seo="Precatório de herança: como receber ou vender | Antecipay",
+  desc="Herdou um precatório? Veja como os herdeiros recebem pela habilitação no processo ou pelo inventário, quais documentos juntar e como vender a sua parte.",
+  lead="O titular do precatório faleceu antes de receber? O crédito passa para os herdeiros. Veja o caminho para regularizar a situação e as opções para receber ou vender.",
+  answer="Quando o titular morre antes do pagamento, o precatório faz parte da herança e passa para os herdeiros. Para receber, eles precisam se habilitar no processo ou fazer o inventário, judicial ou em cartório. Depois de regularizada a sucessão, cada herdeiro pode esperar o pagamento ou vender a sua parte do precatório.",
+  faq=[
+   ("Os herdeiros perdem o precatório se demorarem para se habilitar?","O direito não se perde com o falecimento, mas o valor só é liberado para quem estiver habilitado no processo. Quanto antes a sucessão for regularizada, menor o risco de atraso no recebimento."),
+   ("Cada herdeiro pode vender só a sua parte?","Sim. Depois de definida a parte de cada um, quem quiser pode vender a sua parte e os demais podem esperar o pagamento."),
+   ("Precisa fazer inventário para receber o precatório?","Depende. Alguns juízes aceitam a habilitação dos herdeiros direto no processo; outros exigem o inventário. O advogado da família indica o caminho para o seu caso."),
+  ],
+  body="""
+<h2>O precatório entra na herança</h2>
+<p>O precatório é um direito de crédito e, como qualquer bem, passa para os herdeiros quando o titular morre. O direito não se perde, mas o tribunal só libera o pagamento para quem comprovar que é sucessor. Por isso, o primeiro passo é regularizar a sucessão no processo.</p>
+
+<h2>Dois caminhos: habilitação ou inventário</h2>
+<div class="table-wrap"><table>
+<tr><th>Caminho</th><th>Como funciona</th></tr>
+<tr><td><strong>Habilitação no processo</strong></td><td>Os herdeiros pedem, no próprio processo, para ocupar o lugar do titular (arts. 687 a 692 do Código de Processo Civil). Alguns juízes aceitam sem inventário, desde que a condição de herdeiro esteja comprovada.</td></tr>
+<tr><td><strong>Inventário</strong></td><td>Feito na Justiça ou em cartório, partilha todos os bens, inclusive o precatório. Ao final, sai o formal de partilha ou a escritura, que indica a parte de cada herdeiro.</td></tr>
+</table></div>
+
+<h2>Documentos que costumam ser pedidos</h2>
+<ul>
+<li>Certidão de óbito do titular.</li>
+<li>Documentos pessoais dos herdeiros (RG e CPF).</li>
+<li>Certidão de casamento ou de união estável, quando houver.</li>
+<li>Procuração para o advogado.</li>
+<li>Formal de partilha, escritura ou alvará judicial, conforme o caso.</li>
+</ul>
+
+<h2>Posso vender o precatório herdado?</h2>
+<p>Sim. Os herdeiros que não quiserem esperar a fila podem vender. Se o inventário ainda está na Justiça, a venda costuma depender de autorização do juiz (alvará). Depois da partilha, cada herdeiro pode vender a sua parte, sem que os outros precisem vender também.</p>
+<p>A venda é feita por <a href="/blog/cessao-de-precatorio/">contrato de cessão de crédito</a>, comunicado ao tribunal. Veja o passo a passo em <a href="/blog/como-vender-precatorio/">como vender precatório</a> e como <a href="/">vender precatório</a> com a Antecipay.</p>
+
+<h2>Impostos e descontos</h2>
+<p>Além dos descontos normais do precatório, como honorários do advogado e imposto de renda, pode incidir o ITCMD, imposto estadual sobre herança. Confira com o advogado do inventário como ficam os impostos no seu caso.</p>
+
+<h2>Cuidados</h2>
+<p>Golpistas costumam procurar herdeiros dizendo que há valores a liberar mediante pagamento de taxa. Desconfie e veja os sinais em <a href="/blog/golpe-do-precatorio/">golpe do precatório</a>. Para conferir a situação do crédito, veja <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório</a>.</p>
+""",
+  cta=("Herdou um precatório?","Envie o número do processo e receba uma proposta por escrito para a sua parte.","Olá! Herdei um precatório e quero uma proposta para a minha parte."),
+  related=["cessao-de-precatorio","como-vender-precatorio","golpe-do-precatorio"],
+))
+
+POSTS.insert(0, dict(
+  slug="superpreferencia-precatorio",
+  tag="Prioridade",
+  title="Superpreferência no precatório: quem tem direito e como pedir",
+  seo="Superpreferência no precatório: quem tem direito | Antecipay",
+  desc="Superpreferência no precatório: veja quem tem direito (60 anos ou mais, doença grave ou deficiência), qual é o limite e o que acontece se você vender.",
+  lead="Credores idosos, com doença grave ou com deficiência podem receber antes uma parte do precatório. Veja quem tem direito, qual é o limite e como pedir.",
+  answer="Superpreferência é o direito de receber antes, fora da ordem normal da fila, uma parte do precatório de natureza alimentar. Têm direito credores com 60 anos ou mais, com doença grave ou com deficiência. O limite é o triplo do valor da RPV (no federal, 180 salários mínimos); o restante segue a fila. A preferência é pessoal e não passa para quem compra o precatório.",
+  faq=[
+   ("A superpreferência vale para qualquer precatório?","Não. Vale só para precatórios de natureza alimentar, como salários, aposentadorias, pensões e benefícios previdenciários."),
+   ("Doença descoberta depois do início do processo conta?","Sim. A doença grave pode ter surgido depois do início do processo. O pedido é feito no próprio precatório, com laudo médico."),
+   ("Posso vender só a parte que fica na fila?","Sim. A venda pode ser parcial: você mantém a parcela superpreferencial, que recebe antes, e vende só o saldo."),
+  ],
+  body="""
+<h2>Quem tem direito</h2>
+<p>A superpreferência está no art. 100, §2º, da Constituição. Ela vale para precatórios de <strong>natureza alimentar</strong>, como salários, vencimentos, aposentadorias, pensões, benefícios previdenciários e indenizações por morte ou invalidez, cujo titular:</p>
+<ul>
+<li>tem <strong>60 anos ou mais</strong>;</li>
+<li>tem <strong>doença grave</strong>; ou</li>
+<li>é <strong>pessoa com deficiência</strong>.</li>
+</ul>
+
+<h2>Qual é o limite</h2>
+<p>A parte paga antes vai até o <strong>triplo do valor da RPV</strong> do devedor. No federal, a RPV vai até 60 salários mínimos, então a superpreferência chega a 180 salários mínimos. Estados e municípios têm limites de RPV próprios, por isso o teto muda conforme o devedor. O que passar do limite continua na fila normal.</p>
+<p>Pelo entendimento do STF (Tema 1.156), essa parcela é paga por precatório, e não por RPV, salvo quando o valor estiver dentro do limite de pequeno valor.</p>
+
+<h2>Como pedir</h2>
+<ul>
+<li><strong>Idade:</strong> costuma ser reconhecida pelo próprio tribunal, com base na data de nascimento do credor.</li>
+<li><strong>Doença grave ou deficiência:</strong> precisa de pedido no processo, com laudo médico. Em geral, quem faz o pedido é o advogado que cuida da ação.</li>
+</ul>
+
+<h2>E se eu vender o precatório?</h2>
+<p>A superpreferência é <strong>pessoal</strong>. Pela Constituição (art. 100, §13), quem compra o precatório não fica com essa prioridade. Por isso, vender o crédito inteiro pode significar abrir mão de receber logo uma parte dele.</p>
+<p>Uma saída comum é a venda parcial: você mantém a parcela superpreferencial e vende só o saldo, que ainda esperaria a fila. Veja como funciona a <a href="/antecipacao-de-precatorio/">antecipação de precatório</a>, o <a href="/blog/cessao-de-precatorio/">contrato de cessão</a> e se <a href="/blog/vale-a-pena-vender-precatorio/">vale a pena vender precatório</a> no seu caso.</p>
+
+<h2>Precatório do INSS e prazos</h2>
+<p>Aposentados e pensionistas com ação contra o INSS costumam ter direito à superpreferência. Veja <a href="/blog/precatorio-inss/">como funciona o precatório do INSS</a> e <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>. Para estimar o valor do saldo, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>, e para a visão geral veja como <a href="/">vender precatório</a>.</p>
+""",
+  cta=("Quer vender só o saldo do seu precatório?","Envie o número do processo e receba uma proposta por escrito, mantendo a sua parcela prioritária.","Olá! Tenho direito à superpreferência e quero uma proposta para o saldo do meu precatório."),
+  related=["precatorio-inss","quanto-tempo-demora-precatorio","vale-a-pena-vender-precatorio"],
+))
+
+POSTS.insert(0, dict(
+  slug="precatorios-2027-ec-136",
+  tag="Prazos",
+  title="Precatórios 2027: o que muda com a EC 136/2025",
+  seo="Precatórios 2027: o que muda com a EC 136 | Antecipay",
+  desc="Precatórios 2027: veja a nova data de corte de 1º de fevereiro, quem entra no orçamento, a nova correção pelo IPCA e os limites de pagamento de estados.",
+  lead="A Emenda Constitucional 136/2025 mudou a data de corte, a correção e os limites de pagamento dos precatórios. Veja o que isso significa para quem espera receber em 2027.",
+  answer="Pela EC 136/2025, os precatórios apresentados até 1º de fevereiro de 2026 entram no orçamento de 2027 e devem ser pagos até o fim de 2027. Quem foi inscrito depois dessa data fica para o orçamento de 2028. A emenda também mudou a correção, que passou a ser o IPCA mais 2% ao ano, limitada à Selic, e fixou limites anuais de pagamento para estados e municípios.",
+  faq=[
+   ("Meu precatório foi apresentado em março de 2026. Quando recebo?","Como passou da data de corte de 1º de fevereiro de 2026, ele entra no orçamento de 2028 e deve ser pago até o fim de 2028."),
+   ("A nova correção vale para precatórios antigos?","A correção pelo IPCA mais 2% ao ano, limitada à Selic, vale a partir da promulgação da emenda, em 2025. Os períodos anteriores seguem as regras antigas."),
+   ("Essas regras podem mudar?","Podem. A EC 136/2025 é questionada no STF na ADI 7873. Enquanto não houver decisão, as regras da emenda continuam valendo."),
+  ],
+  body="""
+<h2>A nova data de corte</h2>
+<p>A EC 136/2025 antecipou de 2 de abril para <strong>1º de fevereiro</strong> a data-limite para um precatório entrar no orçamento do ano seguinte.</p>
+<div class="table-wrap"><table>
+<tr><th>Precatório apresentado</th><th>Orçamento</th><th>Pagamento até</th></tr>
+<tr><td>Até 1º de fevereiro de 2026</td><td>2027</td><td>Fim de 2027</td></tr>
+<tr><td>De 2 de fevereiro de 2026 a 1º de fevereiro de 2027</td><td>2028</td><td>Fim de 2028</td></tr>
+</table></div>
+<p>Na prática, um dia de diferença na apresentação pode adiar o pagamento em um ano. Veja mais em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+
+<h2>Como saber se o meu entra em 2027</h2>
+<p>Consulte o precatório no portal do tribunal (TRF, para federais, ou TJ, para estaduais e municipais) e confira a data de apresentação e o ano do orçamento. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório</a>.</p>
+
+<h2>A nova correção</h2>
+<p>Desde a emenda, os precatórios são corrigidos pelo <strong>IPCA mais juros simples de 2% ao ano</strong>. Se essa soma passar da Selic, vale a Selic, que funciona como teto. Antes, a correção era feita pela Selic.</p>
+
+<h2>Estados e municípios: limite anual</h2>
+<p>Estados e prefeituras passaram a pagar dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho do estoque de precatórios. A emenda também acabou com o prazo final para eles quitarem os atrasados. Para quem está numa fila longa, isso pode significar uma espera maior. Veja <a href="/vender-precatorio-estadual/">precatório estadual</a> e <a href="/vender-precatorio-municipal/">precatório municipal</a>.</p>
+
+<h2>E os precatórios da União?</h2>
+<p>A União costuma pagar os precatórios no ano do orçamento. Para quem tem precatório federal ou do INSS, a data de corte é o que mais pesa no prazo. Veja <a href="/vender-precatorio-federal/">precatório federal</a> e <a href="/vender-precatorio-inss/">vender precatório do INSS</a>.</p>
+
+<h2>Esperar ou vender agora?</h2>
+<p>Se o seu precatório ficou para 2028 ou está numa fila estadual ou municipal longa, antecipar pode fazer sentido. Veja os critérios em <a href="/blog/vale-a-pena-vender-precatorio/">vale a pena vender precatório</a>, faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a> e veja como <a href="/">vender precatório</a> com a Antecipay.</p>
+""",
+  cta=("Não quer esperar até 2027 ou 2028?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Li sobre os precatórios 2027 e quero uma proposta para o meu precatório."),
+  related=["quanto-tempo-demora-precatorio","vale-a-pena-vender-precatorio","precatorio-inss"],
 ))
 BY = {p["slug"]: p for p in POSTS}
 
@@ -731,6 +864,7 @@ def build_llms():
 - [Início]({SITE}/): apresentação, simulador e contato
 - [Sobre a Antecipay]({SITE}/sobre/): quem somos, dados da empresa e como funciona
 - [Calculadora de precatório]({SITE}/calculadora-precatorio/): estimativa de quanto vale o precatório à vista
+- [Vender precatório trabalhista]({SITE}/vender-precatorio-trabalhista/): compra de precatórios de ações trabalhistas contra órgãos públicos
 - [Antecipação de precatório]({SITE}/antecipacao-de-precatorio/): como funciona a antecipação, diferença para empréstimo e antecipação parcial
 - [Precatório federal]({SITE}/vender-precatorio-federal/): prazo de pagamento e venda de precatórios da União
 - [Vender precatório estadual]({SITE}/vender-precatorio-estadual/): compra de precatórios de estados
@@ -790,8 +924,8 @@ def build_inss():
     <li><strong>100% digital:</strong> atendimento pelo WhatsApp, de qualquer lugar do Brasil.</li>
   </ul>
   <h2>Antes de decidir</h2>
-  <p>Se você tem 60 anos ou mais, doença grave ou deficiência, pode ter direito a receber antes uma parte do crédito. Essa prioridade não passa para quem compra, então avaliamos com você a melhor opção. Para estimar o valor, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>. Entenda mais em <a href="/blog/precatorio-inss/">Precatório do INSS: como funciona e quanto tempo demora</a> e em <a href="/blog/desagio-precatorio/">Deságio: por que recebo menos ao antecipar</a>.</p>
-  <p>Tem precatório de outro devedor? Veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-estadual/">precatório estadual</a> e <a href="/vender-precatorio-municipal/">precatório municipal</a>, ou a página principal sobre como <a href="/">vender precatório</a>.</p>
+  <p>Se você tem 60 anos ou mais, doença grave ou deficiência, pode ter direito a <a href="/blog/superpreferencia-precatorio/">receber antes uma parte do crédito</a>. Essa prioridade não passa para quem compra, então avaliamos com você a melhor opção. Para estimar o valor, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>. Entenda mais em <a href="/blog/precatorio-inss/">Precatório do INSS: como funciona e quanto tempo demora</a> e em <a href="/blog/desagio-precatorio/">Deságio: por que recebo menos ao antecipar</a>.</p>
+  <p>Tem precatório de outro devedor? Veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-estadual/">precatório estadual</a> e <a href="/vender-precatorio-municipal/">precatório municipal</a>, ou a página principal sobre como <a href="/">vender precatório</a>. Também compramos <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
   {cta("Receba uma proposta para o seu precatório do INSS", "Envie o número do processo pelo WhatsApp.", "Olá! Tenho um precatório do INSS e quero uma proposta.")}
   <h2>Perguntas frequentes</h2>
   {faq_html}
@@ -992,7 +1126,7 @@ def build_municipal():
   <p>É a dívida de uma prefeitura (ou de uma autarquia municipal) reconhecida em decisão judicial definitiva e que passa do limite de RPV do município. Esse limite é definido por lei de cada cidade. O precatório é expedido pelo Tribunal de Justiça do estado e entra na fila de pagamento daquela prefeitura.</p>
   <h2>Por que a espera costuma ser longa</h2>
   <p>Muitas prefeituras estão no regime especial de pagamento. Com a Emenda Constitucional 136/2025, estados e municípios passaram a pagar precatórios dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho da dívida. Quando a fila é grande, ela anda devagar, e a espera pode levar vários anos.</p>
-  <p>Cada município é um caso: há prefeituras em dia e outras com anos de atraso. Por isso analisamos o devedor antes de fazer a proposta. Se o seu precatório é de outro devedor, veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-estadual/">precatório estadual</a> ou <a href="/vender-precatorio-inss/">precatório do INSS</a>, ou a página principal sobre como <a href="/">vender precatório</a>.</p>
+  <p>Cada município é um caso: há prefeituras em dia e outras com anos de atraso. Por isso analisamos o devedor antes de fazer a proposta. Se o seu precatório é de outro devedor, veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-estadual/">precatório estadual</a> ou <a href="/vender-precatorio-inss/">precatório do INSS</a>, ou a página principal sobre como <a href="/">vender precatório</a>. Também compramos <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
   <h2>Vender ou esperar?</h2>
   <div class="table-wrap"><table>
     <tr><th>Opção</th><th>Vantagem</th><th>Ponto de atenção</th></tr>
@@ -1023,8 +1157,8 @@ def build_estadual():
   <h2>O que é precatório estadual</h2>
   <p>É a dívida de um estado (ou de uma autarquia estadual, como institutos de previdência e universidades estaduais) reconhecida na Justiça e acima do limite de RPV fixado por lei estadual. É expedido pelo Tribunal de Justiça e entra na fila do estado devedor. Também são comuns precatórios de servidores públicos, por diferenças salariais, e de desapropriações.</p>
   <h2>Quanto tempo leva para receber</h2>
-  <p>Pela EC 136/2025, os estados pagam dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho do estoque de precatórios. Alguns estados estão em dia; outros têm filas de muitos anos. A posição na fila e a data de inscrição fazem diferença no prazo.</p>
-  <p>Se o seu precatório é do Rio Grande do Norte, veja a página <a href="/vender-precatorio-rn/">vender precatório no RN</a>. Para outros devedores, veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-municipal/">precatório municipal</a> e <a href="/vender-precatorio-inss/">precatório do INSS</a>, ou a página principal sobre como <a href="/">vender precatório</a>.</p>
+  <p>Pela EC 136/2025, os estados pagam dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho do estoque de precatórios. Alguns estados estão em dia; outros têm filas de muitos anos. A posição na fila e a data de inscrição fazem diferença no prazo. Veja o que mudou em <a href="/blog/precatorios-2027-ec-136/">precatórios 2027 e a EC 136</a>.</p>
+  <p>Se o seu precatório é do Rio Grande do Norte, veja a página <a href="/vender-precatorio-rn/">vender precatório no RN</a>. Para outros devedores, veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-municipal/">precatório municipal</a> e <a href="/vender-precatorio-inss/">precatório do INSS</a>, ou a página principal sobre como <a href="/">vender precatório</a>. Também compramos <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
   <h2>O que influencia a proposta</h2>
   <ul>
     <li><strong>Estado devedor:</strong> o histórico de pagamento e o tamanho da fila.</li>
@@ -1185,7 +1319,7 @@ def build_federal():
     <tr><td>Até 1º de fevereiro</td><td>Até o fim do ano seguinte</td></tr>
     <tr><td>Depois de 1º de fevereiro</td><td>Até o fim do segundo ano seguinte</td></tr>
   </table></div>
-  <p>A data de corte de 1º de fevereiro vale desde a Emenda Constitucional 136/2025; antes, era 2 de abril. Na prática, entre a inscrição e o dinheiro na conta podem se passar de cerca de 11 meses a quase 3 anos, conforme a data de inscrição. Veja os detalhes em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+  <p>A data de corte de 1º de fevereiro vale desde a Emenda Constitucional 136/2025; antes, era 2 de abril. Na prática, entre a inscrição e o dinheiro na conta podem se passar de cerca de 11 meses a quase 3 anos, conforme a data de inscrição. Veja os detalhes em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a> e em <a href="/blog/precatorios-2027-ec-136/">precatórios 2027</a>.</p>
   <h2>Como consultar o precatório federal</h2>
   <p>No portal de RPV e precatórios do TRF da sua região, pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório</a>. Se preferir, envie o número do processo pelo WhatsApp e nós consultamos para você.</p>
   <h2>Vale a pena vender o precatório federal?</h2>
@@ -1194,7 +1328,7 @@ def build_federal():
   {cta("Quer vender o seu precatório federal?", "Envie o número do processo e receba uma proposta por escrito.", msg)}
   <h2>Precatório do INSS e prioridades</h2>
   <p>Precatórios de ações contra o INSS são federais. Veja a página <a href="/vender-precatorio-inss/">vender precatório do INSS</a>. Credores com 60 anos ou mais, doença grave ou deficiência podem receber antes uma parte do crédito; essa prioridade é pessoal e não passa para quem compra.</p>
-  <p>Para outros devedores, veja <a href="/vender-precatorio-estadual/">precatório estadual</a> e <a href="/vender-precatorio-municipal/">precatório municipal</a>, ou a página principal sobre como <a href="/">vender precatório</a>.</p>
+  <p>Para outros devedores, veja <a href="/vender-precatorio-estadual/">precatório estadual</a> e <a href="/vender-precatorio-municipal/">precatório municipal</a>, ou a página principal sobre como <a href="/">vender precatório</a>. Também compramos <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
 """
     faq=[("Quando o precatório federal é pago?","Se for inscrito até 1º de fevereiro, até o fim do ano seguinte. Inscrito depois dessa data, até o fim do segundo ano seguinte."),
          ("Posso vender precatório federal?","Sim. A Constituição (art. 100, §13) permite ceder o precatório a terceiros. A venda é feita por contrato de cessão de crédito, comunicado ao tribunal."),
@@ -1208,7 +1342,7 @@ def build_federal():
         body, faq, "Compra de precatório federal")
 
 def build_sitemap():
-    urls = ["/", "/antecipacao-de-precatorio/", "/calculadora-precatorio/", "/vender-precatorio-federal/", "/vender-precatorio-estadual/", "/vender-precatorio-municipal/", "/melhor-empresa-para-vender-precatorio/", "/vender-precatorio-inss/", "/vender-precatorio-rn/", "/empresa-que-compra-precatorio-natal/", "/sobre/", "/blog/"] + [f"/blog/{p['slug']}/" for p in POSTS] + ["/privacidade.html"]
+    urls = ["/", "/antecipacao-de-precatorio/", "/calculadora-precatorio/", "/vender-precatorio-federal/", "/vender-precatorio-estadual/", "/vender-precatorio-municipal/", "/vender-precatorio-trabalhista/", "/melhor-empresa-para-vender-precatorio/", "/vender-precatorio-inss/", "/vender-precatorio-rn/", "/empresa-que-compra-precatorio-natal/", "/sobre/", "/blog/"] + [f"/blog/{p['slug']}/" for p in POSTS] + ["/privacidade.html"]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{UPDATED}</lastmod></url>\n" for u in urls)
     xml += "</urlset>\n"
@@ -1232,8 +1366,9 @@ def build_antecipacao():
     <li><strong>Federais:</strong> dívidas da União, do <a href="/vender-precatorio-inss/">INSS</a> e de autarquias federais. Veja <a href="/vender-precatorio-federal/">precatório federal</a>.</li>
     <li><strong>Estaduais:</strong> dívidas dos estados, como diferenças salariais de servidores. Veja <a href="/vender-precatorio-estadual/">precatório estadual</a>.</li>
     <li><strong>Municipais:</strong> dívidas de prefeituras. Veja <a href="/vender-precatorio-municipal/">precatório municipal</a>.</li>
+    <li><strong>Trabalhistas:</strong> ações na Justiça do Trabalho contra órgãos públicos. Veja <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</li>
   </ul>
-  <p>Também dá para antecipar <strong>só uma parte</strong> do precatório. Isso é útil para quem tem prioridade por idade, doença grave ou deficiência: essa prioridade é pessoal e não passa para quem compra, então muitas vezes vale manter a parcela prioritária e antecipar só o restante.</p>
+  <p>Também dá para antecipar <strong>só uma parte</strong> do precatório. Isso é útil para quem tem prioridade por idade, doença grave ou deficiência: essa prioridade é pessoal e não passa para quem compra, então muitas vezes vale manter a parcela prioritária e antecipar só o restante. Entenda a <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>. Herdeiros também podem antecipar: veja <a href="/blog/precatorio-de-heranca/">precatório de herança</a>.</p>
 
   """ + PASSOS.replace("Como funciona a venda", "Como funciona a antecipação") + """
 
@@ -1255,7 +1390,38 @@ def build_antecipacao():
         body, faq, "Antecipação de precatório")
 
 
+def build_trabalhista():
+    msg="Olá! Tenho um precatório trabalhista e quero uma proposta."
+    body = """
+  <h2>O que é precatório trabalhista</h2>
+  <p>É a ordem de pagamento que surge quando alguém ganha uma ação na Justiça do Trabalho contra um <strong>órgão público</strong>: a União, um estado, uma prefeitura ou uma autarquia. É o caso, por exemplo, de empregados públicos contratados pela CLT que cobram diferenças salariais.</p>
+  <p>Só existe precatório quando quem deve é um órgão público. Se a ação foi contra uma empresa privada, o pagamento segue outro caminho e não há precatório. Valores pequenos são pagos por RPV, que é mais rápida.</p>
+
+  <h2>Natureza alimentar e prioridade</h2>
+  <p>Créditos trabalhistas são de natureza alimentar e entram na fila dos precatórios alimentares, que é paga antes dos demais. O STF já decidiu que a venda não muda essa natureza do precatório. Já a <a href="/blog/superpreferencia-precatorio/">superpreferência</a> de credores com 60 anos ou mais, doença grave ou deficiência é pessoal e não passa para quem compra.</p>
+
+  """ + PASSOS + """
+  <p>Cada Tribunal Regional do Trabalho tem procedimentos próprios para registrar a cessão. Na análise, conferimos o processo, o tribunal e o devedor antes de fazer a proposta.</p>
+
+  <h2>Prazo de pagamento</h2>
+  <p>O prazo depende de quem deve. Precatórios da União seguem o calendário federal, que costuma ser cumprido em dia; os de estados e prefeituras dependem do limite anual de pagamento de cada um. Veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-estadual/">precatório estadual</a>, <a href="/vender-precatorio-municipal/">precatório municipal</a> e <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+
+  <h2>Quanto você recebe</h2>
+  <p>O valor depende do devedor, do prazo previsto, da situação do processo e dos descontos. Faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a> e entenda o cálculo em <a href="/blog/desagio-precatorio/">deságio de precatório</a>. A visão geral de como <a href="/">vender precatório</a> está na página inicial.</p>
+""" + cta("Tem um precatório trabalhista?", "Envie o número do processo e receba uma proposta por escrito, sem compromisso.", msg)
+    faq=[("Todo crédito trabalhista vira precatório?","Não. Só vira precatório quando quem deve é um órgão público, como a União, um estado, uma prefeitura ou uma autarquia, e o valor passa do limite da RPV."),
+         ("Posso vender precatório trabalhista?","Sim. A cessão de precatórios é permitida pelo art. 100, §13, da Constituição. Na análise, conferimos as regras do tribunal do seu processo antes de fazer a proposta."),
+         ("A venda muda a natureza alimentar do precatório?","Não. O STF decidiu que a cessão não muda a natureza alimentar do precatório. Mas a superpreferência por idade, doença grave ou deficiência é pessoal e não passa para quem compra."),
+         ("Em quanto tempo recebo?","Na Antecipay, o valor é pago em até 72 horas depois da proposta aprovada e do contrato de cessão assinado.")]
+    landing("vender-precatorio-trabalhista","Vender precatório trabalhista: receba à vista | Antecipay",
+        "Venda o seu precatório trabalhista contra a União, estados ou prefeituras e receba à vista. Análise jurídica, proposta por escrito e atendimento digital.",
+        "Precatório trabalhista","Trabalhista","Venda o seu precatório trabalhista e receba à vista",
+        "Ganhou uma ação trabalhista contra um órgão público e está esperando o precatório? A Antecipay compra o seu crédito e você recebe agora, sem esperar a fila.",
+        msg,"Precatório trabalhista é a ordem de pagamento de uma ação ganha na Justiça do Trabalho contra um órgão público, como a União, um estado, uma prefeitura ou uma autarquia. Ele pode ser vendido por contrato de cessão de crédito, permitido pelo art. 100, §13, da Constituição. Na venda, você recebe à vista e quem compra passa a receber do governo no futuro.",
+        body, faq, "Compra de precatório trabalhista")
+
+
 if __name__ == "__main__":
     for p in POSTS: build_post(p)
-    build_index(); build_sobre(); build_inss(); build_rn(); build_natal(); build_federal(); build_municipal(); build_estadual(); build_melhor(); build_calc(); build_antecipacao(); build_llms(); build_sitemap()
+    build_index(); build_sobre(); build_inss(); build_rn(); build_natal(); build_federal(); build_municipal(); build_estadual(); build_melhor(); build_calc(); build_antecipacao(); build_trabalhista(); build_llms(); build_sitemap()
     print("ok", len(POSTS), "artigos")

@@ -14,7 +14,7 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
 - `index.html` — home (editada à mão; foco SEO "vender precatório"). Tem FAQ com JSON-LD gerado a partir dos `<details>`.
 - `build_blog.py` — **gerador** de todas as outras páginas. Rode `python3 build_blog.py` depois de editar. Gera:
   - `blog/` (índice + artigos da lista `POSTS`), `sobre/`
-  - páginas de serviço: `vender-precatorio-inss/`, `-rn/`, `-federal/`, `-estadual/`, `-municipal/`, `empresa-que-compra-precatorio-natal/`, `melhor-empresa-para-vender-precatorio/`, `calculadora-precatorio/`
+  - páginas de serviço: `vender-precatorio-inss/`, `-rn/`, `-federal/`, `-estadual/`, `-municipal/`, `empresa-que-compra-precatorio-natal/`, `melhor-empresa-para-vender-precatorio/`, `calculadora-precatorio/`, `antecipacao-de-precatorio/`
   - `sitemap.xml` e `llms.txt`
   - Para novo artigo: adicione um `dict` em `POSTS`. Para nova página de serviço: use a função `landing(...)`, depois inclua no `build_sitemap`, no rodapé (`FOOT`) e no `llms.txt`.
 - `assets/blog.css` — estilos das páginas geradas (escala de espaçamento de 8 px). O gerador embute esse CSS no `<head>` de cada página; edite o arquivo e rode o build.

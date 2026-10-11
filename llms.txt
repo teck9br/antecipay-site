@@ -16,6 +16,7 @@
 - [Início](https://antecipayprecatorios.com.br/): apresentação, simulador e contato
 - [Sobre a Antecipay](https://antecipayprecatorios.com.br/sobre/): quem somos, dados da empresa e como funciona
 - [Calculadora de precatório](https://antecipayprecatorios.com.br/calculadora-precatorio/): estimativa de quanto vale o precatório à vista
+- [Vender precatório trabalhista](https://antecipayprecatorios.com.br/vender-precatorio-trabalhista/): compra de precatórios de ações trabalhistas contra órgãos públicos
 - [Antecipação de precatório](https://antecipayprecatorios.com.br/antecipacao-de-precatorio/): como funciona a antecipação, diferença para empréstimo e antecipação parcial
 - [Precatório federal](https://antecipayprecatorios.com.br/vender-precatorio-federal/): prazo de pagamento e venda de precatórios da União
 - [Vender precatório estadual](https://antecipayprecatorios.com.br/vender-precatorio-estadual/): compra de precatórios de estados
@@ -28,6 +29,9 @@
 
 ## Guias
 
+- [Precatórios 2027: o que muda com a EC 136/2025](https://antecipayprecatorios.com.br/blog/precatorios-2027-ec-136/): Precatórios 2027: veja a nova data de corte de 1º de fevereiro, quem entra no orçamento, a nova correção pelo IPCA e os limites de pagamento de estados.
+- [Superpreferência no precatório: quem tem direito e como pedir](https://antecipayprecatorios.com.br/blog/superpreferencia-precatorio/): Superpreferência no precatório: veja quem tem direito (60 anos ou mais, doença grave ou deficiência), qual é o limite e o que acontece se você vender.
+- [Precatório de herança: como receber ou vender](https://antecipayprecatorios.com.br/blog/precatorio-de-heranca/): Herdou um precatório? Veja como os herdeiros recebem pela habilitação no processo ou pelo inventário, quais documentos juntar e como vender a sua parte.
 - [Vale a pena vender precatório? Como decidir sem errar](https://antecipayprecatorios.com.br/blog/vale-a-pena-vender-precatorio/): Vale a pena vender precatório? Veja quando antecipar faz sentido, quando é melhor esperar a fila do governo e como comparar a proposta antes de decidir.
 - [Golpe do precatório: como identificar e se proteger](https://antecipayprecatorios.com.br/blog/golpe-do-precatorio/): Golpe do precatório: veja os truques mais comuns, como falsos advogados que pedem taxa para liberar o pagamento, e o que fazer para não perder dinheiro.
 - [Cessão de precatório: como funciona e o que conferir no contrato](https://antecipayprecatorios.com.br/blog/cessao-de-precatorio/): Entenda o que é a cessão de precatório, o que a Constituição exige, como o contrato é comunicado ao tribunal e o que conferir antes de assinar.
