@@ -38,7 +38,6 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
 `python3 seo_audit.py . --base https://antecipayprecatorios.com.br --out auditoria.md` (script em `seo_audit.py`).
 
 ## Pendências (out/2026)
-- Apagar do repositório os arquivos `index (1).html` … `index (12).html` (duplicados).
 - Pedir indexação no Search Console de `/blog/empresas-que-compram-precatorios-natal/`.
 - Encurtar meta description da home (175) e do artigo de Natal (185) para ≤ 160.
 - Investigar redirecionamento extra (630 ms no celular) no Render.
