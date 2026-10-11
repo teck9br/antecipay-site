@@ -16,6 +16,7 @@
 - [Início](https://antecipayprecatorios.com.br/): apresentação, simulador e contato
 - [Sobre a Antecipay](https://antecipayprecatorios.com.br/sobre/): quem somos, dados da empresa e como funciona
 - [Calculadora de precatório](https://antecipayprecatorios.com.br/calculadora-precatorio/): estimativa de quanto vale o precatório à vista
+- [Antecipação de precatório](https://antecipayprecatorios.com.br/antecipacao-de-precatorio/): como funciona a antecipação, diferença para empréstimo e antecipação parcial
 - [Precatório federal](https://antecipayprecatorios.com.br/vender-precatorio-federal/): prazo de pagamento e venda de precatórios da União
 - [Vender precatório estadual](https://antecipayprecatorios.com.br/vender-precatorio-estadual/): compra de precatórios de estados
 - [Vender precatório municipal](https://antecipayprecatorios.com.br/vender-precatorio-municipal/): compra de precatórios de prefeituras
@@ -27,6 +28,8 @@
 
 ## Guias
 
+- [Vale a pena vender precatório? Como decidir sem errar](https://antecipayprecatorios.com.br/blog/vale-a-pena-vender-precatorio/): Vale a pena vender precatório? Veja quando antecipar faz sentido, quando é melhor esperar a fila do governo e como comparar a proposta antes de decidir.
+- [Golpe do precatório: como identificar e se proteger](https://antecipayprecatorios.com.br/blog/golpe-do-precatorio/): Golpe do precatório: veja os truques mais comuns, como falsos advogados que pedem taxa para liberar o pagamento, e o que fazer para não perder dinheiro.
 - [Cessão de precatório: como funciona e o que conferir no contrato](https://antecipayprecatorios.com.br/blog/cessao-de-precatorio/): Entenda o que é a cessão de precatório, o que a Constituição exige, como o contrato é comunicado ao tribunal e o que conferir antes de assinar.
 - [Como escolher empresa de precatório em Natal: checklist e golpes](https://antecipayprecatorios.com.br/blog/empresas-que-compram-precatorios-natal/): Vai vender precatório em Natal? Veja o checklist para escolher a empresa, os sinais de golpe e como comparar com o acordo direto da Prefeitura.
 - [Como vender precatório com segurança: passo a passo](https://antecipayprecatorios.com.br/blog/como-vender-precatorio/): Veja como vender precatório passo a passo: quem pode vender, documentos, como é feita a proposta, o contrato de cessão e como evitar golpes.

@@ -68,7 +68,7 @@ FOOT = f"""<footer>
   <div class="wrap">
     <div class="foot">
       <div><a href="/" class="logo" translate="no">Antecipay</a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
-      <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
+      <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/antecipacao-de-precatorio/">Antecipação de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
       <ul><li><a href="{wa('Olá! Vim pelo site da Antecipay.')}" target="_blank" rel="noopener">WhatsApp (84) 99493-8383</a></li><li><a href="mailto:contato@antecipay.com.br">contato@antecipay.com.br</a></li><li>Av. Senador Salgado Filho, 1559 – Tirol, Natal-RN</li></ul>
     </div>
     <div class="legal"><span>© 2026 Antecipay Precatórios</span><span>CNPJ 64.382.432/0001-97</span></div>
@@ -158,7 +158,7 @@ POSTS = [
 <h2>Quem tem prioridade na fila</h2>
 <p>A Constituição garante prioridade a credores com <strong>60 anos ou mais</strong>, com <strong>doença grave</strong> ou com <strong>deficiência</strong>. Eles podem receber antes uma parte do crédito, até um limite legal. O restante segue a fila normal.</p>
 <h2>O valor é corrigido enquanto espero?</h2>
-<p>Sim. Pelas regras atuais, o valor é atualizado pelo IPCA, com juros simples de 2% ao ano (ou pela Selic, se ela for maior). Ainda assim, esperar anos significa adiar planos, e é por isso que muitos credores preferem <a href="/">vender o precatório</a> e receber à vista. Para estimar quanto receberia, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+<p>Sim. Pelas regras atuais, o valor é atualizado pelo IPCA, com juros simples de 2% ao ano. Se essa soma passar da Selic, vale a Selic, que funciona como teto. Ainda assim, esperar anos significa adiar planos, e é por isso que muitos credores preferem <a href="/">vender o precatório</a> e receber à vista. Para estimar quanto receberia, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
 """,
   cta=("Não quer esperar a fila?","A Antecipay compra o seu precatório e você recebe à vista.","Olá! Li o artigo sobre prazos e quero antecipar meu precatório."),
   related=["como-saber-se-tenho-precatorio","desagio-precatorio","o-que-e-precatorio-e-rpv"],
@@ -222,7 +222,7 @@ POSTS = [
   ],
   body="""
 <h2>Por que existe o deságio</h2>
-<p>Quando você antecipa, a empresa que compra o precatório <strong>paga agora</strong> e só vai <strong>receber do governo depois</strong>, às vezes anos depois. Durante esse tempo, o dinheiro dela fica parado e ela assume riscos, como atrasos no pagamento e mudanças nas regras. O deságio é o que remunera essa espera e esses riscos.</p>
+<p>Na <a href="/antecipacao-de-precatorio/">antecipação de precatório</a>, a empresa que compra o precatório <strong>paga agora</strong> e só vai <strong>receber do governo depois</strong>, às vezes anos depois. Durante esse tempo, o dinheiro dela fica parado e ela assume riscos, como atrasos no pagamento e mudanças nas regras. O deságio é o que remunera essa espera e esses riscos.</p>
 <h2>O que influencia o valor da proposta</h2>
 <ul>
 <li><strong>Quem deve:</strong> precatórios federais costumam ter prazo mais previsível. Estados e municípios com muita dívida pagam mais devagar.</li>
@@ -231,7 +231,7 @@ POSTS = [
 <li><strong>Descontos no crédito:</strong> honorários contratuais, imposto de renda e contribuições podem ser descontados do valor final.</li>
 </ul>
 <h2>Vale a pena antecipar?</h2>
-<p>Depende da sua necessidade. Se você pode esperar, receber o valor cheio do governo pode compensar. Se precisa do dinheiro agora, para quitar dívidas com juros altos, investir ou realizar um plano, antecipar pode fazer mais sentido. O ideal é comparar a proposta com o tempo que você ainda esperaria. Veja <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora cada tipo de precatório</a>.</p>
+<p>Depende da sua necessidade. Se você pode esperar, receber o valor cheio do governo pode compensar. Se precisa do dinheiro agora, para quitar dívidas com juros altos, investir ou realizar um plano, antecipar pode fazer mais sentido. O ideal é comparar a proposta com o tempo que você ainda esperaria. Veja <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora cada tipo de precatório</a> e os critérios em <a href="/blog/vale-a-pena-vender-precatorio/">quando vale a pena vender precatório</a>.</p>
 <h2>O que conferir antes de assinar</h2>
 <ol>
 <li><strong>Valor líquido:</strong> quanto cai na sua conta, já com todos os descontos.</li>
@@ -342,9 +342,10 @@ POSTS.insert(0, dict(
 <li>Leia o <strong>contrato de cessão</strong> antes de assinar e confirme que ele será comunicado ao tribunal.</li>
 <li>Desconfie de contatos não solicitados dizendo que você tem valores a receber.</li>
 </ul>
+<p>Veja os truques mais comuns em <a href="/blog/golpe-do-precatorio/">golpe do precatório</a>.</p>
 
 <h2>Quando vale a pena vender</h2>
-<p>Vender faz sentido para quem precisa do dinheiro agora, quer quitar dívidas com juros altos ou não quer esperar a fila do governo. Quem pode esperar recebe o valor cheio no futuro. Credores com 60 anos ou mais, doença grave ou deficiência devem considerar que a prioridade de pagamento deles é pessoal e não passa para quem compra. Quando decidir, peça uma proposta para <a href="/">vender precatório</a> com a Antecipay.</p>
+<p>Vender faz sentido para quem precisa do dinheiro agora, quer quitar dívidas com juros altos ou não quer esperar a fila do governo. Quem pode esperar recebe o valor cheio no futuro. Credores com 60 anos ou mais, doença grave ou deficiência devem considerar que a prioridade de pagamento deles é pessoal e não passa para quem compra. Os critérios estão em <a href="/blog/vale-a-pena-vender-precatorio/">quando vale a pena vender precatório</a>. Quando decidir, peça uma proposta para <a href="/">vender precatório</a> com a Antecipay.</p>
 <p>Para precatórios do INSS, veja a página <a href="/vender-precatorio-inss/">vender precatório do INSS</a>. Para o Rio Grande do Norte, veja <a href="/vender-precatorio-rn/">vender precatório no RN</a>. Para estimar o valor, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>; para entender o contrato, leia <a href="/blog/cessao-de-precatorio/">cessão de precatório</a>; e, antes de assinar, veja <a href="/melhor-empresa-para-vender-precatorio/">como escolher a empresa</a>.</p>
 """,
   cta=("Quer vender seu precatório?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Quero vender meu precatório. Podem me enviar uma proposta?"),
@@ -457,6 +458,112 @@ POSTS.insert(0, dict(
 """,
   cta=("Quer ceder o seu precatório?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Li o artigo sobre cessão de precatório e quero uma proposta."),
   related=["como-vender-precatorio","desagio-precatorio","empresas-que-compram-precatorios-natal"],
+))
+BY = {p["slug"]: p for p in POSTS}
+
+POSTS.insert(0, dict(
+  slug="golpe-do-precatorio",
+  tag="Segurança",
+  title="Golpe do precatório: como identificar e se proteger",
+  seo="Golpe do precatório: como identificar e evitar | Antecipay",
+  desc="Golpe do precatório: veja os truques mais comuns, como falsos advogados que pedem taxa para liberar o pagamento, e o que fazer para não perder dinheiro.",
+  lead="Recebeu uma mensagem dizendo que o seu precatório foi liberado e que basta pagar uma taxa? Desconfie. Veja como o golpe funciona e como se proteger.",
+  answer="O golpe do precatório quase sempre termina num pedido de dinheiro: alguém se passa por advogado, servidor do tribunal ou empresa e cobra uma taxa, custas ou imposto para “liberar” o pagamento ou a venda. Os tribunais não cobram taxa por mensagem para liberar precatório, e empresa séria que compra precatório paga você, nunca o contrário. Na dúvida, confirme com o seu advogado e no portal do tribunal.",
+  faq=[
+   ("O tribunal manda mensagem cobrando taxa para liberar precatório?","Não. Desconfie de qualquer cobrança por mensagem ou telefone. Confirme sempre com o seu advogado e no portal do tribunal."),
+   ("Preciso pagar alguma coisa para vender o meu precatório?","Não deveria. Na venda legítima, quem paga é a empresa compradora. Na Antecipay, a simulação e a proposta são gratuitas."),
+   ("Como saber se o meu precatório foi mesmo liberado?","Consulte no portal do tribunal pelo CPF ou pelo número do processo, ou pergunte ao advogado que cuidou da ação."),
+  ],
+  body="""
+<h2>Como o golpe costuma acontecer</h2>
+<ul>
+<li><strong>Mensagem com dados reais do processo.</strong> Os golpistas usam o seu nome, o número do processo e até o valor. Esses dados costumam ser públicos, então não provam nada.</li>
+<li><strong>Falso advogado ou escritório.</strong> Diz que o valor foi liberado e pede um Pix para “custas”, “imposto” ou “alvará”.</li>
+<li><strong>Falso servidor do tribunal</strong>, com documento de aparência oficial e prazo curto para pagar.</li>
+<li><strong>Falsa empresa compradora</strong>, que promete um valor alto e pede taxa de cadastro, análise ou registro antes de pagar.</li>
+<li><strong>Proposta sem nada por escrito</strong>, só por telefone ou áudio.</li>
+</ul>
+
+<h2>Sinais de alerta</h2>
+<ul>
+<li>Pedido de qualquer pagamento antes de você receber.</li>
+<li>Pressa: “a liberação vence hoje”.</li>
+<li>Contato que você não pediu, de número desconhecido.</li>
+<li>Número de WhatsApp diferente do número do seu advogado.</li>
+<li>Link para “acompanhar a liberação” ou pedido de senha e código do banco.</li>
+<li>Documento com erros, logotipo estranho ou dados bancários em nome de pessoa física.</li>
+</ul>
+
+<h2>Como conferir se é verdade</h2>
+<ol>
+<li><strong>Ligue para o seu advogado</strong> no telefone que você já conhece, não no número que mandou a mensagem.</li>
+<li><strong>Consulte o precatório</strong> no portal do tribunal, pelo CPF ou pelo número do processo. Veja <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório</a>.</li>
+<li><strong>Se for uma empresa compradora</strong>, confira se o CNPJ está ativo na Receita Federal, se ela tem endereço real, se a proposta vem por escrito com o valor líquido e se o contrato é de cessão de crédito.</li>
+</ol>
+
+<h2>Como é uma venda segura</h2>
+<p>Na venda legítima, a empresa analisa o processo, apresenta a proposta por escrito, assina com você um <a href="/blog/cessao-de-precatorio/">contrato de cessão de crédito</a> e <strong>paga você</strong>. Depois, a cessão é comunicada ao tribunal, como exige o art. 100, §14, da Constituição. Na Antecipay, a simulação e a proposta são gratuitas e o pagamento sai em até 72 horas depois da cessão assinada.</p>
+<p>Veja o passo a passo em <a href="/blog/como-vender-precatorio/">como vender precatório</a>, os critérios em <a href="/melhor-empresa-para-vender-precatorio/">como escolher a empresa</a> e como <a href="/">vender precatório</a> com segurança.</p>
+
+<h2>Caí no golpe. E agora?</h2>
+<ol>
+<li><strong>Avise o seu banco na hora</strong> e peça a devolução pelo Mecanismo Especial de Devolução do Pix (MED). Quanto antes, maior a chance de recuperar.</li>
+<li><strong>Registre um boletim de ocorrência.</strong> Em muitos estados dá para fazer pela internet.</li>
+<li><strong>Avise o seu advogado</strong> e, se o golpista usou o nome do tribunal, informe o próprio tribunal.</li>
+<li><strong>Guarde tudo:</strong> prints das conversas, comprovantes e números de telefone.</li>
+</ol>
+""",
+  cta=("Quer vender com segurança?","Envie o número do processo e receba uma proposta por escrito, sem pagar nada antecipado.","Olá! Li o artigo sobre golpe do precatório e quero uma proposta segura."),
+  related=["como-vender-precatorio","cessao-de-precatorio","como-saber-se-tenho-precatorio"],
+))
+
+POSTS.insert(0, dict(
+  slug="vale-a-pena-vender-precatorio",
+  tag="Decisão",
+  title="Vale a pena vender precatório? Como decidir sem errar",
+  seo="Vale a pena vender precatório? Como decidir | Antecipay",
+  desc="Vale a pena vender precatório? Veja quando antecipar faz sentido, quando é melhor esperar a fila do governo e como comparar a proposta antes de decidir.",
+  lead="Recebeu uma proposta pelo seu precatório e não sabe se aceita? Veja os critérios que ajudam a decidir entre vender agora ou esperar o pagamento do governo.",
+  answer="Vale a pena vender quando o dinheiro agora vale mais para você do que o valor cheio no futuro: para quitar dívidas caras, resolver uma urgência ou não depender de uma fila que pode levar anos. Se você pode esperar e o devedor paga em dia, esperar tende a render mais. Compare sempre o valor líquido da proposta com o tempo que ainda falta para receber.",
+  faq=[
+   ("Vender precatório é melhor que pegar empréstimo?","São coisas diferentes. No empréstimo você fica devendo e paga juros; na venda, você recebe à vista e não fica com dívida. Se a ideia é antecipar um dinheiro que já é seu, a venda costuma ser mais simples."),
+   ("Vale a pena vender precatório do INSS?","Depende do prazo. O INSS é federal e a União costuma pagar em dia, então o desconto tende a ser menor. Compare a proposta com o tempo que ainda falta para o pagamento."),
+   ("Posso vender só uma parte do precatório?","Sim. A cessão pode ser parcial, o que ajuda quem quer manter a parcela prioritária por idade, doença grave ou deficiência."),
+  ],
+  body="""
+<h2>O que você ganha e do que abre mão</h2>
+<p>Ao vender, você <strong>ganha</strong> o dinheiro à vista (na Antecipay, em até 72 horas depois da cessão assinada) e deixa de depender do prazo e dos atrasos do governo.</p>
+<p>Em troca, você <strong>abre mão</strong> de duas coisas: a diferença entre o valor do precatório e o valor da proposta, chamada <a href="/blog/desagio-precatorio/">deságio</a>, e a correção que o precatório teria até ser pago. Pelas regras atuais, essa correção é o IPCA mais juros simples de 2% ao ano, limitada à Selic.</p>
+
+<h2>Quando costuma valer a pena vender</h2>
+<ul>
+<li><strong>Você tem dívidas com juros altos.</strong> Os juros do cartão de crédito e do cheque especial costumam ser bem maiores que a correção do precatório. Quitar essas dívidas agora pode compensar o desconto.</li>
+<li><strong>A fila do seu devedor é longa.</strong> Estados e prefeituras pagam dentro de um limite anual de 1% a 5% da receita corrente líquida, e alguns acumulam anos de atraso. Veja <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</li>
+<li><strong>Você tem uma necessidade concreta agora</strong>, como saúde, moradia ou um negócio, e esperar teria um custo maior que o desconto.</li>
+</ul>
+
+<h2>Quando pode ser melhor esperar</h2>
+<ul>
+<li><strong>O pagamento está perto.</strong> No precatório federal, entre a inscrição e o pagamento passam de cerca de 11 meses a quase 3 anos. Se o seu já está no orçamento do próximo ano, a espera pode ser curta.</li>
+<li><strong>O seu crédito é uma RPV.</strong> Valores federais de até 60 salários mínimos são pagos como RPV, em poucos meses. Em geral não compensa vender.</li>
+<li><strong>Você tem prioridade por idade, doença grave ou deficiência.</strong> A parcela prioritária é paga antes e não passa para quem compra. Muitas vezes vale manter essa parte e vender só o restante.</li>
+</ul>
+
+<h2>Como comparar a proposta, passo a passo</h2>
+<ol>
+<li><strong>Descubra o valor líquido</strong> que você receberia do governo, depois de honorários do advogado, imposto de renda e contribuição previdenciária.</li>
+<li><strong>Estime quando seria pago.</strong> Consulte o precatório no portal do tribunal; o passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório</a>.</li>
+<li><strong>Compare com o valor líquido da proposta</strong>, que deve vir por escrito.</li>
+<li><strong>Pense no uso do dinheiro.</strong> Se ele vai quitar uma dívida cara, o ganho de quitar agora entra na conta.</li>
+<li><strong>Peça mais de uma proposta</strong> e compare o valor líquido e o prazo de pagamento, não só a porcentagem anunciada.</li>
+</ol>
+<p>Para uma primeira referência, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+
+<h2>Cuidados antes de decidir</h2>
+<p>Nunca pague taxa para “liberar” a venda ou o pagamento: empresa séria paga você, não o contrário. Veja os sinais em <a href="/blog/golpe-do-precatorio/">golpe do precatório</a> e os critérios em <a href="/melhor-empresa-para-vender-precatorio/">como escolher a empresa</a>. Se decidir vender, veja como funciona a <a href="/antecipacao-de-precatorio/">antecipação de precatório</a> e como <a href="/">vender precatório</a> com a Antecipay. Para precatórios do INSS, veja <a href="/vender-precatorio-inss/">vender precatório do INSS</a>.</p>
+""",
+  cta=("Quer comparar com uma proposta real?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Li o artigo sobre se vale a pena vender precatório e quero uma proposta para comparar."),
+  related=["desagio-precatorio","quanto-tempo-demora-precatorio","golpe-do-precatorio"],
 ))
 BY = {p["slug"]: p for p in POSTS}
 
@@ -624,6 +731,7 @@ def build_llms():
 - [Início]({SITE}/): apresentação, simulador e contato
 - [Sobre a Antecipay]({SITE}/sobre/): quem somos, dados da empresa e como funciona
 - [Calculadora de precatório]({SITE}/calculadora-precatorio/): estimativa de quanto vale o precatório à vista
+- [Antecipação de precatório]({SITE}/antecipacao-de-precatorio/): como funciona a antecipação, diferença para empréstimo e antecipação parcial
 - [Precatório federal]({SITE}/vender-precatorio-federal/): prazo de pagamento e venda de precatórios da União
 - [Vender precatório estadual]({SITE}/vender-precatorio-estadual/): compra de precatórios de estados
 - [Vender precatório municipal]({SITE}/vender-precatorio-municipal/): compra de precatórios de prefeituras
@@ -968,7 +1076,7 @@ def build_melhor():
     <li>Pressão para assinar no mesmo dia.</li>
     <li>Recusa em enviar a proposta por escrito.</li>
   </ul>
-  <p>Veja mais em <a href="/blog/como-vender-precatorio/">como vender precatório com segurança</a>, no guia <a href="/blog/empresas-que-compram-precatorios-natal/">como escolher empresa de precatório em Natal</a>, na página <a href="/empresa-que-compra-precatorio-natal/">empresa que compra precatório em Natal</a> e em <a href="/vender-precatorio-rn/">vender precatório no RN</a>. Para a visão geral, comece por <a href="/">vender precatório</a>.</p>
+  <p>Veja mais em <a href="/blog/como-vender-precatorio/">como vender precatório com segurança</a>, no guia <a href="/blog/empresas-que-compram-precatorios-natal/">como escolher empresa de precatório em Natal</a>, na página <a href="/empresa-que-compra-precatorio-natal/">empresa que compra precatório em Natal</a> e em <a href="/vender-precatorio-rn/">vender precatório no RN</a>. Para não cair em armadilhas, leia <a href="/blog/golpe-do-precatorio/">golpe do precatório</a>. Para a visão geral, comece por <a href="/">vender precatório</a>.</p>
   <h2>Como a Antecipay atende a esses pontos</h2>
   <ul>
     <li>CNPJ 64.382.432/0001-97, com sede na Incubadora do IFRN – Campus Natal Central, em Natal-RN.</li>
@@ -1035,7 +1143,7 @@ def build_calc():
   </form>"""
     body = f"""
   <h2>Como a estimativa é feita</h2>
-  <p>A calculadora parte do valor do precatório, desconta os honorários contratuais que você informou e aplica uma faixa de deságio típica para o tipo de devedor e a situação do processo. É uma referência para você saber a ordem de grandeza antes de conversar com qualquer empresa.</p>
+  <p>A calculadora parte do valor do precatório, desconta os honorários contratuais que você informou e aplica uma faixa de deságio típica para o tipo de devedor e a situação do processo. É uma referência para você saber a ordem de grandeza antes de conversar com qualquer empresa. Para entender a operação, veja como funciona a <a href="/antecipacao-de-precatorio/">antecipação de precatório</a>.</p>
   <h2>O que muda o valor da sua proposta</h2>
   <ul>
     <li><strong>Devedor:</strong> precatórios federais costumam ter deságio menor, porque a União paga em prazo previsível. Estados e prefeituras variam muito.</li>
@@ -1100,13 +1208,54 @@ def build_federal():
         body, faq, "Compra de precatório federal")
 
 def build_sitemap():
-    urls = ["/", "/calculadora-precatorio/", "/vender-precatorio-federal/", "/vender-precatorio-estadual/", "/vender-precatorio-municipal/", "/melhor-empresa-para-vender-precatorio/", "/vender-precatorio-inss/", "/vender-precatorio-rn/", "/empresa-que-compra-precatorio-natal/", "/sobre/", "/blog/"] + [f"/blog/{p['slug']}/" for p in POSTS] + ["/privacidade.html"]
+    urls = ["/", "/antecipacao-de-precatorio/", "/calculadora-precatorio/", "/vender-precatorio-federal/", "/vender-precatorio-estadual/", "/vender-precatorio-municipal/", "/melhor-empresa-para-vender-precatorio/", "/vender-precatorio-inss/", "/vender-precatorio-rn/", "/empresa-que-compra-precatorio-natal/", "/sobre/", "/blog/"] + [f"/blog/{p['slug']}/" for p in POSTS] + ["/privacidade.html"]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{UPDATED}</lastmod></url>\n" for u in urls)
     xml += "</urlset>\n"
     open("sitemap.xml","w").write(xml)
 
+def build_antecipacao():
+    msg="Olá! Quero antecipar o meu precatório. Podem me enviar uma proposta?"
+    body = """
+  <h2>Antecipação não é empréstimo</h2>
+  <p>Muita gente confunde as duas coisas. A diferença é grande:</p>
+  <div class="table-wrap"><table>
+    <tr><th></th><th>Antecipação</th><th>Empréstimo</th></tr>
+    <tr><td><strong>Você fica devendo?</strong></td><td>Não</td><td>Sim</td></tr>
+    <tr><td><strong>Paga parcelas e juros?</strong></td><td>Não</td><td>Sim</td></tr>
+    <tr><td><strong>Se o governo atrasar</strong></td><td>O risco passa para quem comprou</td><td>Você continua devendo</td></tr>
+    <tr><td><strong>O que você assina</strong></td><td>Contrato de cessão de crédito</td><td>Contrato de empréstimo</td></tr>
+  </table></div>
+
+  <h2>Quais precatórios podem ser antecipados</h2>
+  <ul>
+    <li><strong>Federais:</strong> dívidas da União, do <a href="/vender-precatorio-inss/">INSS</a> e de autarquias federais. Veja <a href="/vender-precatorio-federal/">precatório federal</a>.</li>
+    <li><strong>Estaduais:</strong> dívidas dos estados, como diferenças salariais de servidores. Veja <a href="/vender-precatorio-estadual/">precatório estadual</a>.</li>
+    <li><strong>Municipais:</strong> dívidas de prefeituras. Veja <a href="/vender-precatorio-municipal/">precatório municipal</a>.</li>
+  </ul>
+  <p>Também dá para antecipar <strong>só uma parte</strong> do precatório. Isso é útil para quem tem prioridade por idade, doença grave ou deficiência: essa prioridade é pessoal e não passa para quem compra, então muitas vezes vale manter a parcela prioritária e antecipar só o restante.</p>
+
+  """ + PASSOS.replace("Como funciona a venda", "Como funciona a antecipação") + """
+
+  <h2>Quanto você recebe</h2>
+  <p>O valor da antecipação depende de quem deve (União, estado ou prefeitura), do prazo previsto até o pagamento, da situação do processo e dos descontos, como honorários e imposto de renda. Quanto mais longa e incerta a espera, maior o desconto. Entenda o cálculo em <a href="/blog/desagio-precatorio/">deságio de precatório</a> e faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+
+  <h2>Antecipar ou esperar?</h2>
+  <p>Antecipar faz sentido para quem precisa do dinheiro agora ou não quer depender de uma fila que pode levar anos. Quem pode esperar recebe o valor cheio no futuro. Para decidir com calma, leia <a href="/blog/vale-a-pena-vender-precatorio/">vale a pena vender precatório?</a> e veja como evitar o <a href="/blog/golpe-do-precatorio/">golpe do precatório</a>. A visão geral de como <a href="/">vender precatório</a> está na página inicial.</p>
+""" + cta("Quer antecipar o seu precatório?", "Envie o número do processo e receba uma proposta por escrito, sem compromisso.", msg)
+    faq=[("Antecipação de precatório é o mesmo que vender?","Sim. Antecipar é vender o direito de receber o precatório. A empresa paga à vista e recebe do governo depois."),
+         ("A antecipação de precatório é segura?","É uma operação prevista na Constituição (art. 100, §13) e formalizada por contrato de cessão, que só produz efeitos depois de comunicado ao tribunal. Confira sempre o CNPJ da empresa e nunca pague nada antecipado."),
+         ("Posso antecipar só uma parte do precatório?","Sim. A cessão pode ser parcial, o que permite, por exemplo, manter a parcela prioritária e antecipar só o restante."),
+         ("Em quanto tempo recebo?","Na Antecipay, o valor é pago em até 72 horas depois da proposta aprovada e do contrato de cessão assinado.")]
+    landing("antecipacao-de-precatorio","Antecipação de precatório: receba à vista | Antecipay",
+        "Antecipação de precatório: venda o seu crédito federal, estadual ou municipal e receba à vista, sem empréstimo e sem parcelas. Proposta por escrito.",
+        "Antecipação de precatório","Antecipação","Antecipação de precatório: receba agora o que o governo pagaria depois",
+        "Tem um precatório para receber e não quer esperar a fila? Na antecipação, você vende o crédito e recebe à vista, sem contrair dívida.",
+        msg,"Antecipar um precatório é vender o direito de recebê-lo para uma empresa, que paga à vista e passa a receber do governo no futuro. Não é empréstimo: você não fica devendo nada e não paga parcelas. A operação é feita por contrato de cessão de crédito, permitido pelo art. 100, §13, da Constituição.",
+        body, faq, "Antecipação de precatório")
+
+
 if __name__ == "__main__":
     for p in POSTS: build_post(p)
-    build_index(); build_sobre(); build_inss(); build_rn(); build_natal(); build_federal(); build_municipal(); build_estadual(); build_melhor(); build_calc(); build_llms(); build_sitemap()
+    build_index(); build_sobre(); build_inss(); build_rn(); build_natal(); build_federal(); build_municipal(); build_estadual(); build_melhor(); build_calc(); build_antecipacao(); build_llms(); build_sitemap()
     print("ok", len(POSTS), "artigos")

@@ -111,6 +111,8 @@ footer a:hover{color:var(--green)}
   .cta{padding:28px 24px}
   .cta .btn{width:100%}
   .related{padding-bottom:72px}
+  th,td{padding:10px 8px;font-size:.92rem}
+  th{font-size:.72rem;letter-spacing:0}
 }
 
 /* calculadora */
