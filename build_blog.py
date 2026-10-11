@@ -40,7 +40,7 @@ def head(title, desc, url, extra_ld="", current="blog"):
 {extra_ld}
 <!-- Microsoft Clarity -->
 <script>
-(function(c,l,a,r,i,t,y){{c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}})(window,document,"clarity","script","yqi1puom0k");
+if(!/^(localhost|127[.]0[.]0[.]1)$/.test(location.hostname))(function(c,l,a,r,i,t,y){{c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}})(window,document,"clarity","script","yqi1puom0k");
 document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(a&&window.clarity){{clarity("event","whatsapp_click");}}}});
 </script>
 </head>
