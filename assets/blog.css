@@ -1,3 +1,5 @@
+@font-face{font-family:Inter;font-style:normal;font-weight:400 600;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format("woff2")}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400 900;font-display:swap;src:url(/assets/fonts/montserrat-latin.woff2) format("woff2")}
 :root{
   --ink:#07111F;--ink-3:#1A2B4A;--paper:#fff;--mist:#F3F6FA;--line:#E3E9F2;
   --text:#0B1526;--muted:#5B6B82;--green:#16C784;--green-d:#0B8457;--lime:#D7FF3A;
@@ -87,6 +89,8 @@ footer a:hover{color:var(--green)}
 
 .fab{position:fixed;right:calc(20px + env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(37,211,102,.6)}
 .fab svg{width:30px;height:30px}
+.js .fab{opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .25s,transform .25s,visibility .25s}
+.js .fab.on{opacity:1;visibility:visible;transform:none}
 
 @media (max-width:900px){
   .menu{display:none}

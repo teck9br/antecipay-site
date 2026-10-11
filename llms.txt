@@ -7,6 +7,9 @@
 - Área de atuação: todo o Brasil (precatórios da União, INSS, Estados e Municípios)
 - Como funciona: envio do número do processo → análise jurídica → proposta por escrito com valor líquido → contrato de cessão e pagamento
 - Base legal: art. 100, §13, da Constituição Federal permite a cessão de precatórios
+- Horário: segunda a sexta, 8h às 18h; sábado, 8h às 12h
+- Pagamento: em até 72 horas após a proposta aprovada e o contrato de cessão assinado
+- Não confundir: a Antecipay Precatórios não tem relação com a AnteciPay, da Ecx Pay
 
 ## Páginas principais
 
@@ -25,8 +28,8 @@
 ## Guias
 
 - [Cessão de precatório: como funciona e o que conferir no contrato](https://antecipayprecatorios.com.br/blog/cessao-de-precatorio/): Entenda o que é a cessão de precatório, o que a Constituição exige, como o contrato é comunicado ao tribunal e o que conferir antes de assinar.
-- [Empresas que compram precatórios em Natal: como escolher com segurança](https://antecipayprecatorios.com.br/blog/empresas-que-compram-precatorios-natal/): Procurando empresas que compram precatórios em Natal? Veja o que conferir antes de vender, os sinais de alerta e as opções para precatórios federais, estaduais e da Prefeitura de Natal.
-- [Como vender precatório com segurança: passo a passo](https://antecipayprecatorios.com.br/blog/como-vender-precatorio/): Veja como vender precatório passo a passo: quem pode vender, documentos, como é calculada a proposta, o contrato de cessão e os cuidados para não cair em golpe.
+- [Como escolher empresa de precatório em Natal: checklist e golpes](https://antecipayprecatorios.com.br/blog/empresas-que-compram-precatorios-natal/): Vai vender precatório em Natal? Veja o checklist para escolher a empresa, os sinais de golpe e como comparar com o acordo direto da Prefeitura.
+- [Como vender precatório com segurança: passo a passo](https://antecipayprecatorios.com.br/blog/como-vender-precatorio/): Veja como vender precatório passo a passo: quem pode vender, documentos, como é feita a proposta, o contrato de cessão e como evitar golpes.
 - [Precatório do INSS: como funciona e quanto tempo demora](https://antecipayprecatorios.com.br/blog/precatorio-inss/): Ganhou ação contra o INSS? Entenda quando o pagamento sai por RPV ou precatório, os prazos, a prioridade para idosos e doentes graves e o imposto de renda.
 - [O que é precatório e RPV? Entenda a diferença](https://antecipayprecatorios.com.br/blog/o-que-e-precatorio-e-rpv/): Precatório e RPV são as formas de o governo pagar dívidas reconhecidas na Justiça. Veja a diferença, o limite de valor e quanto tempo cada um leva.
 - [Quanto tempo demora para receber um precatório?](https://antecipayprecatorios.com.br/blog/quanto-tempo-demora-precatorio/): Veja os prazos de pagamento do precatório federal, estadual e municipal, a nova data de corte de 1º de fevereiro e quem tem prioridade na fila.

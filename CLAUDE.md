@@ -5,7 +5,7 @@
 Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que compra e antecipa precatórios federais, estaduais e municipais de credores de todo o Brasil. Objetivo do site: gerar contatos pelo WhatsApp e ranquear para "vender precatório".
 
 ## Stack e deploy
-- HTML/CSS/JS estático, sem framework. Fontes Montserrat + Inter (Google Fonts).
+- HTML/CSS/JS estático, sem framework. Fontes Montserrat + Inter hospedadas no próprio site (`assets/fonts/`, woff2 variável, subconjunto latino); não usar Google Fonts.
 - Hospedagem: **Render** (static site `srv-datsbgmk1f9s739g200g`), deploy automático a cada commit na branch `main` de `github.com/teck9br/antecipay-site`.
 - DNS no Registro.br: `A @ 216.24.57.1` e `CNAME www → antecipay-site.onrender.com`.
 - Domínio canônico: `https://antecipayprecatorios.com.br/` (sem www).
@@ -17,7 +17,7 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
   - páginas de serviço: `vender-precatorio-inss/`, `-rn/`, `-federal/`, `-estadual/`, `-municipal/`, `empresa-que-compra-precatorio-natal/`, `melhor-empresa-para-vender-precatorio/`, `calculadora-precatorio/`
   - `sitemap.xml` e `llms.txt`
   - Para novo artigo: adicione um `dict` em `POSTS`. Para nova página de serviço: use a função `landing(...)`, depois inclua no `build_sitemap`, no rodapé (`FOOT`) e no `llms.txt`.
-- `assets/blog.css` — estilos das páginas geradas (escala de espaçamento de 8 px).
+- `assets/blog.css` — estilos das páginas geradas (escala de espaçamento de 8 px). O gerador embute esse CSS no `<head>` de cada página; edite o arquivo e rode o build.
 - `robots.txt` libera robôs de IA; `privacidade.html`; favicons e `og.png`.
 
 ## Dados da empresa (usar sempre iguais)
@@ -39,6 +39,7 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
 
 ## Pendências (out/2026)
 - Pedir indexação no Search Console de `/blog/empresas-que-compram-precatorios-natal/`.
-- Encurtar meta description da home (175) e do artigo de Natal (185) para ≤ 160.
-- Investigar redirecionamento extra (630 ms no celular) no Render.
+- Redirecionamento: `http://www` faz 2 saltos (http→https www→apex). Criar Redirect Rule na Cloudflare direto para a canônica e ativar HSTS; usar sempre a URL canônica em perfis e links externos.
+- **E-mail quebrado:** `antecipay.com.br` tem Null MX (não recebe e-mail) e o domínio do site não tem MX. Criar `contato@antecipayprecatorios.com.br` e trocar em todo lugar (index.html, build_blog.py, llms.txt, este arquivo).
+- **Receita Federal diverge do site:** razão social "Antecipay Soluções Financeiras e Tecnológicas Ltda", início 09/01/2026, endereço cadastral em Parnamirim-RN. O `/sobre/` ainda mostra "Razão social: Antecipay Precatórios". Dono decide: atualizar o endereço na Receita ou explicar Natal como escritório de atendimento.
 - Verificar Google Meu Negócio; conseguir backlinks (ITNC/IFRN, diretórios, perfis sociais).

@@ -12,6 +12,9 @@ def wa(msg):
 
 WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8a9.8 9.8 0 01-5-1.37l-.36-.21-3.72.97.99-3.63-.23-.37A9.8 9.8 0 012.2 12 9.85 9.85 0 0112.05 2.2c2.63 0 5.1 1.03 6.96 2.89A9.78 9.78 0 0121.9 12a9.86 9.86 0 01-9.85 9.8zm8.38-18.18A11.76 11.76 0 0012.05.15C5.5.15.16 5.48.16 12.03c0 2.1.55 4.14 1.59 5.94L.06 24l6.17-1.62a11.87 11.87 0 005.81 1.48c6.55 0 11.89-5.33 11.89-11.88 0-3.18-1.24-6.16-3.49-8.4z"/></svg>'
 
+# CSS das páginas geradas vai embutido no <head> (evita uma requisição que bloqueia a renderização)
+BLOG_CSS = open("assets/blog.css", encoding="utf-8").read()
+
 def head(title, desc, url, extra_ld="", current="blog"):
     return f"""<!doctype html>
 <html lang="pt-BR">
@@ -22,6 +25,7 @@ def head(title, desc, url, extra_ld="", current="blog"):
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
 <meta name="theme-color" content="#07111F">
+<script>document.documentElement.classList.add('js')</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Antecipay">
@@ -33,10 +37,9 @@ def head(title, desc, url, extra_ld="", current="blog"):
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/blog.css">
+<link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+{BLOG_CSS}</style>
 {extra_ld}
 <!-- Microsoft Clarity -->
 <script>
@@ -72,6 +75,11 @@ FOOT = f"""<footer>
   </div>
 </footer>
 <a class="fab" href="{wa('Olá! Vim pelo blog e tenho um precatório para antecipar.')}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8a9.8 9.8 0 01-5-1.37l-.36-.21-3.72.97.99-3.63-.23-.37A9.8 9.8 0 012.2 12 9.85 9.85 0 0112.05 2.2c2.63 0 5.1 1.03 6.96 2.89A9.78 9.78 0 0121.9 12a9.86 9.86 0 01-9.85 9.8zm8.38-18.18A11.76 11.76 0 0012.05.15C5.5.15.16 5.48.16 12.03c0 2.1.55 4.14 1.59 5.94L.06 24l6.17-1.62a11.87 11.87 0 005.81 1.48c6.55 0 11.89-5.33 11.89-11.88 0-3.18-1.24-6.16-3.49-8.4z"/></svg></a>
+<script>
+(function(){{var f=document.querySelector('.fab'),t=document.querySelector('main > section');
+if(!f)return;if(!t||!('IntersectionObserver' in window)){{f.classList.add('on');return;}}
+new IntersectionObserver(function(es){{f.classList.toggle('on',!es[0].isIntersecting);}}).observe(t);}})();
+</script>
 </body>
 </html>
 """
@@ -141,7 +149,7 @@ POSTS = [
 <li>Inscrito até <strong>1º de fevereiro</strong>: pago até o fim do ano seguinte.</li>
 <li>Inscrito depois de 1º de fevereiro: pago até o fim do segundo ano seguinte.</li>
 </ul>
-<p>Essa data mudou com a <strong>Emenda Constitucional 136/2025</strong>. Até então, o corte era 2 de abril. Na prática, entre a inscrição e o dinheiro na conta podem se passar de 11 a quase 24 meses.</p>
+<p>Essa data mudou com a <strong>Emenda Constitucional 136/2025</strong>. Até então, o corte era 2 de abril. Na prática, entre a inscrição e o dinheiro na conta podem se passar de cerca de 11 meses a quase 3 anos, conforme a data de inscrição.</p>
 <h2>Precatório estadual e municipal</h2>
 <p>Aqui a espera costuma ser bem maior. Com a EC 136/2025, estados e municípios passaram a pagar os precatórios dentro de um <strong>limite anual de 1% a 5% da receita corrente líquida</strong>, conforme o tamanho da dívida de cada um. Quem deve muito paga uma parte por ano e a fila anda devagar.</p>
 <p>Por isso, dois credores com o mesmo valor podem esperar tempos muito diferentes: tudo depende de <strong>qual estado ou município</strong> deve e da sua posição na fila.</p>
@@ -159,7 +167,7 @@ POSTS = [
   slug="como-saber-se-tenho-precatorio",
   tag="Consulta",
   title="Como saber se tenho precatório a receber",
-  seo="Como saber se tenho precatório: consulta por CPF | Antecipay",
+  seo="Tenho precatório? Como consultar pelo CPF | Antecipay",
   desc="Passo a passo para consultar precatório e RPV pelo CPF ou número do processo nos tribunais federais (TRF) e estaduais (TJ).",
   lead="Muita gente tem valores a receber do governo e não sabe. Veja como consultar o seu precatório ou RPV pelo CPF ou pelo número do processo.",
   answer="Você consulta no site do tribunal onde correu a ação: no TRF da sua região, se for contra a União ou o INSS, e no Tribunal de Justiça do seu estado, se for contra o Estado ou o Município. Em geral basta o CPF ou o número do processo.",
@@ -272,7 +280,7 @@ POSTS.insert(0, dict(
 <li>Inscrito até <strong>1º de fevereiro</strong>: pago até o fim do ano seguinte.</li>
 <li>Inscrito depois: pago até o fim do segundo ano seguinte.</li>
 </ul>
-<p>Na prática, entre a inscrição e o dinheiro na conta podem se passar de 11 meses a quase 2 anos. Veja mais em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora para receber um precatório</a>.</p>
+<p>Na prática, entre a inscrição e o dinheiro na conta podem se passar de cerca de 11 meses a quase 3 anos, conforme a data de inscrição. Veja mais em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora para receber um precatório</a>.</p>
 <h2>Prioridade para idosos, doentes graves e pessoas com deficiência</h2>
 <p>Os atrasados de benefício do INSS são de <strong>natureza alimentar</strong> e têm preferência na fila. Além disso, credores com <strong>60 anos ou mais</strong>, com <strong>doença grave</strong> ou com <strong>deficiência</strong> podem receber antes uma parte do crédito, até o triplo do limite da RPV (180 salários mínimos). O restante segue a fila normal.</p>
 <p><strong>Atenção:</strong> essa prioridade é pessoal. Se o precatório for vendido, quem compra não aproveita a preferência. Por isso, quem tem direito a ela deve avaliar com calma se vale antecipar todo o crédito ou só a parte que ainda ficaria na fila.</p>
@@ -293,7 +301,7 @@ POSTS.insert(0, dict(
   tag="Vender precatório",
   title="Como vender precatório com segurança: passo a passo",
   seo="Como vender precatório com segurança | Antecipay",
-  desc="Veja como vender precatório passo a passo: quem pode vender, documentos, como é calculada a proposta, o contrato de cessão e os cuidados para não cair em golpe.",
+  desc="Veja como vender precatório passo a passo: quem pode vender, documentos, como é feita a proposta, o contrato de cessão e como evitar golpes.",
   lead="Vender o precatório é a forma de receber agora um valor que o governo só pagaria no futuro. Veja como funciona a venda, do primeiro contato ao dinheiro na conta, e o que conferir para fazer isso com segurança.",
   answer="Para vender precatório, você envia o número do processo a uma empresa compradora, recebe uma proposta por escrito com o valor líquido e, se aceitar, assina um contrato de cessão de crédito, que é comunicado ao tribunal. O pagamento é feito à vista ao credor. A venda é permitida pela Constituição (art. 100, §13).",
   faq=[
@@ -347,18 +355,18 @@ BY = {p["slug"]: p for p in POSTS}
 POSTS.insert(0, dict(
   slug="empresas-que-compram-precatorios-natal",
   tag="Natal-RN",
-  title="Empresas que compram precatórios em Natal: como escolher com segurança",
-  seo="Empresas que compram precatórios em Natal | Antecipay",
-  desc="Procurando empresas que compram precatórios em Natal? Veja o que conferir antes de vender, os sinais de alerta e as opções para precatórios federais, estaduais e da Prefeitura de Natal.",
-  lead="Quem tem um precatório a receber em Natal encontra várias empresas oferecendo compra. Veja como comparar as propostas e escolher com quem negociar com segurança.",
+  title="Como escolher empresa de precatório em Natal: checklist e golpes",
+  seo="Como escolher empresa de precatório em Natal | Antecipay",
+  desc="Vai vender precatório em Natal? Veja o checklist para escolher a empresa, os sinais de golpe e como comparar com o acordo direto da Prefeitura.",
+  lead="Quem tem um precatório a receber em Natal costuma receber propostas de vários compradores. Veja como comparar e escolher com quem negociar com segurança.",
   answer="Para escolher uma empresa que compra precatórios em Natal, confira se ela tem CNPJ ativo e endereço real, se apresenta a proposta por escrito com o valor líquido, se formaliza a cessão de crédito no tribunal e se não cobra nada antecipado. Compare também o prazo de pagamento e a clareza do contrato.",
   faq=[
-   ("Existe empresa que compra precatório em Natal?","Sim. Há empresas de todo o país que compram precatórios de credores de Natal, e algumas têm sede na própria cidade, como a Antecipay, na Incubadora do IFRN – Campus Natal Central."),
+   ("Como saber se uma empresa de precatório é confiável?","Confira se o CNPJ está ativo na Receita Federal, peça a proposta por escrito com o valor líquido, leia o contrato de cessão e desconfie de qualquer cobrança antecipada. Ter endereço real em Natal, como a Antecipay na Incubadora do IFRN, também facilita a conferência."),
    ("A Prefeitura de Natal faz acordo para pagar precatório?","A Prefeitura de Natal mantém um portal de precatórios com edital de credenciamento para acordos diretos com credores, mediante deságio. Vale comparar essa opção com as propostas de empresas compradoras."),
    ("Vender para uma empresa de Natal é melhor?","Ter sede na cidade facilita o contato e a conferência de que a empresa existe. O mais importante, porém, é a transparência da proposta e do contrato."),
   ],
   body="""
-<h2>Quem compra precatórios em Natal</h2>
+<h2>Quem faz propostas de compra em Natal</h2>
 <p>Credores de Natal costumam receber propostas de três tipos de compradores:</p>
 <ul>
 <li><strong>Empresas especializadas</strong> em compra de precatórios, nacionais ou com sede no RN.</li>
@@ -456,7 +464,7 @@ def build_post(p):
     url = f"{SITE}/blog/{p['slug']}/"
     ld = {"@context":"https://schema.org","@graph":[
       {"@type":"Article","headline":p["title"],"description":p["desc"],"dateModified":UPDATED,"datePublished":UPDATED,
-       "author":{"@type":"Organization","name":"Antecipay"},"publisher":{"@type":"Organization","name":"Antecipay","logo":{"@type":"ImageObject","url":SITE+"/logo-512.png"}},
+       "author":{"@type":"Organization","@id":SITE+"/#empresa","name":"Antecipay Precatórios","url":SITE+"/"},"publisher":{"@type":"Organization","@id":SITE+"/#empresa","name":"Antecipay Precatórios","logo":{"@type":"ImageObject","url":SITE+"/logo-512.png"}},
        "mainEntityOfPage":url,"image":SITE+"/og.png"},
       {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in p["faq"]]},
       {"@type":"BreadcrumbList","itemListElement":[
@@ -497,7 +505,7 @@ def build_index():
     ld = {"@context":"https://schema.org","@type":"Blog","name":"Blog da Antecipay","url":url,
           "blogPost":[{"@type":"BlogPosting","headline":p["title"],"url":f"{url}{p['slug']}/"} for p in POSTS]}
     cards = "".join(f'<a class="card" href="/blog/{p["slug"]}/"><span class="tag">{p["tag"]}</span><h2>{p["title"]}</h2><p>{p["desc"]}</p><span class="more">Ler artigo →</span></a>' for p in POSTS)
-    out = head("Blog sobre precatórios: guias e prazos | Antecipay", "Guias simples sobre precatório e RPV: prazos de pagamento, como consultar, deságio e antecipação.", url,
+    out = head("Blog sobre precatórios: guias e prazos | Antecipay", "Guias simples sobre precatório e RPV: prazos de pagamento, como consultar se você tem um precatório, deságio, cessão e como vender com segurança.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>') + f"""
 <main id="conteudo" tabindex="-1">
 <section class="hero"><div class="wrap">
@@ -530,11 +538,11 @@ def build_index():
 def build_sobre():
     url = SITE + "/sobre/"
     ld = {"@context":"https://schema.org","@type":"AboutPage","url":url,"name":"Sobre a Antecipay",
-      "mainEntity":{"@type":"FinancialService","name":"Antecipay Precatórios","logo":SITE+"/logo-512.png","legalName":"Antecipay Precatórios","taxID":"64.382.432/0001-97",
+      "mainEntity":{"@type":"FinancialService","@id":SITE+"/#empresa","name":"Antecipay Precatórios","logo":SITE+"/logo-512.png","taxID":"64.382.432/0001-97",
         "url":SITE+"/","email":"contato@antecipay.com.br","telephone":"+55-84-99493-8383",
         "description":"Empresa que compra e antecipa precatórios federais, estaduais e municipais em todo o Brasil.",
         "areaServed":{"@type":"Country","name":"Brasil"},
-        "address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol (Incubadora do IFRN – Campus Natal Central)","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"},
+        "address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"},
         "knowsAbout":["Precatórios","RPV","Cessão de crédito","Precatórios do INSS","Precatórios federais","Precatórios estaduais","Precatórios municipais"]}}
     out = head("Sobre a Antecipay | Compra e antecipação de precatórios", "Conheça a Antecipay: empresa de Natal-RN que compra e antecipa precatórios federais, estaduais e municipais em todo o Brasil. CNPJ 64.382.432/0001-97.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="sobre") + f"""
@@ -569,6 +577,7 @@ def build_sobre():
 
   <h2>Onde atuamos</h2>
   <p>Atendemos credores de <strong>todo o Brasil</strong>, com processos em qualquer tribunal federal (TRF1 a TRF6) ou estadual. Nossa sede fica em Natal, no Rio Grande do Norte.</p>
+  <p>A Antecipay Precatórios não tem relação com a AnteciPay, da Ecx Pay, que é outra empresa.</p>
 
   <h2>Dados da empresa</h2>
   <div class="table-wrap"><table>
@@ -606,6 +615,9 @@ def build_llms():
 - Área de atuação: todo o Brasil (precatórios da União, INSS, Estados e Municípios)
 - Como funciona: envio do número do processo → análise jurídica → proposta por escrito com valor líquido → contrato de cessão e pagamento
 - Base legal: art. 100, §13, da Constituição Federal permite a cessão de precatórios
+- Horário: segunda a sexta, 8h às 18h; sábado, 8h às 12h
+- Pagamento: em até 72 horas após a proposta aprovada e o contrato de cessão assinado
+- Não confundir: a Antecipay Precatórios não tem relação com a AnteciPay, da Ecx Pay
 
 ## Páginas principais
 
@@ -634,7 +646,7 @@ def build_inss():
          ("Quem tem prioridade por idade ou doença deve vender?","A prioridade é pessoal e não passa para quem compra. Nesses casos, avaliamos com você se vale antecipar todo o crédito ou só a parte que ficaria na fila.")]
     ld={"@context":"https://schema.org","@graph":[
         {"@type":"Service","name":"Compra e antecipação de precatório do INSS","serviceType":"Antecipação de precatório","areaServed":{"@type":"Country","name":"Brasil"},
-         "provider":{"@type":"FinancialService","name":"Antecipay Precatórios","url":SITE+"/","telephone":"+55-84-99493-8383","logo":SITE+"/logo-512.png"},"url":url},
+         "provider":{"@type":"FinancialService","@id":SITE+"/#empresa","name":"Antecipay Precatórios","url":SITE+"/","telephone":"+55-84-99493-8383","logo":SITE+"/logo-512.png"},"url":url},
         {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq]}]}
     faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in faq)
     out = head("Vender precatório do INSS: receba à vista | Antecipay", "Venda o seu precatório do INSS e receba à vista, sem esperar a fila da União. Análise do processo, proposta por escrito e atendimento 100% digital.", url,
@@ -691,7 +703,7 @@ def build_rn():
     ld={"@context":"https://schema.org","@graph":[
         {"@type":"Service","name":"Compra de precatórios no Rio Grande do Norte","serviceType":"Antecipação de precatório",
          "areaServed":[{"@type":"State","name":"Rio Grande do Norte"},{"@type":"City","name":"Natal"}],
-         "provider":{"@type":"FinancialService","name":"Antecipay Precatórios","url":SITE+"/","telephone":"+55-84-99493-8383","logo":SITE+"/logo-512.png",
+         "provider":{"@type":"FinancialService","@id":SITE+"/#empresa","name":"Antecipay Precatórios","url":SITE+"/","telephone":"+55-84-99493-8383","logo":SITE+"/logo-512.png",
            "address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"}},"url":url},
         {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq]}]}
     faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in faq)
@@ -762,12 +774,12 @@ def build_natal():
         {"@type":"FinancialService","@id":SITE+"/#empresa","name":"Antecipay Precatórios","url":SITE+"/","logo":SITE+"/logo-512.png","image":SITE+"/logo-512.png",
          "telephone":"+55-84-99493-8383","email":"contato@antecipay.com.br","taxID":"64.382.432/0001-97",
          "description":"Empresa de Natal-RN que compra precatórios federais, estaduais e municipais.",
-         "address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol (Incubadora do IFRN – Campus Natal Central)","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"},
+         "address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"},
          "areaServed":[{"@type":"City","name":"Natal"},{"@type":"State","name":"Rio Grande do Norte"},{"@type":"Country","name":"Brasil"}],
          "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}]},
         {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq]}]}
     faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in faq)
-    out = head("Empresa que compra precatórios em Natal-RN | Antecipay", "A Antecipay é uma empresa de Natal-RN que compra precatórios federais, do INSS, do Estado do RN e da Prefeitura de Natal. Proposta por escrito e pagamento à vista.", url,
+    out = head("Empresa que compra precatórios em Natal-RN | Antecipay", "A Antecipay é uma empresa de Natal-RN que compra precatórios federais, do INSS, do Estado do RN e da Prefeitura de Natal. Proposta por escrito e à vista.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="") + f"""
 <main id="conteudo" tabindex="-1">
 <section class="art-head"><div class="narrow">
@@ -828,7 +840,7 @@ def landing(slug, seo, desc, crumb, eyebrow, h1, lead, wa_msg, answer, body, faq
     url = SITE + f"/{slug}/"
     ld={"@context":"https://schema.org","@graph":[
         {"@type":"Service","name":service_name,"serviceType":"Antecipação de precatório","areaServed":{"@type":"Country","name":"Brasil"},
-         "provider":{"@type":"FinancialService","name":"Antecipay Precatórios","url":SITE+"/","telephone":"+55-84-99493-8383","logo":SITE+"/logo-512.png"},"url":url},
+         "provider":{"@type":"FinancialService","@id":SITE+"/#empresa","name":"Antecipay Precatórios","url":SITE+"/","telephone":"+55-84-99493-8383","logo":SITE+"/logo-512.png"},"url":url},
         {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq]},
         {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":SITE+"/"},{"@type":"ListItem","position":2,"name":crumb,"item":url}]}]}
     faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in faq)
@@ -919,7 +931,7 @@ def build_estadual():
          ("Servidor público pode vender o precatório?","Sim. Precatórios de diferenças salariais de servidores podem ser vendidos como qualquer outro. Analisamos os descontos de imposto de renda e previdência para mostrar o valor líquido."),
          ("Qual documento preciso para pedir uma proposta?","Basta o número do processo. Nossa equipe consulta o precatório e pede outros documentos só se forem necessários.")]
     landing("vender-precatorio-estadual","Vender precatório estadual: proposta à vista | Antecipay",
-        "Venda seu precatório estadual e receba à vista, sem esperar a fila do estado. Análise jurídica, proposta por escrito e atendimento 100% digital pelo WhatsApp.",
+        "Venda seu precatório estadual e receba à vista, sem esperar a fila do estado. Análise jurídica, proposta por escrito e atendimento pelo WhatsApp.",
         "Precatório estadual","Precatório estadual","Venda o seu precatório estadual e receba à vista",
         "Servidor, aposentado ou credor de uma ação contra o estado? A Antecipay compra o seu precatório estadual e você recebe agora, sem esperar anos na fila.",
         msg,"A Antecipay compra precatórios estaduais de todo o Brasil. Você envia o número do processo, nossa equipe analisa o estado devedor e a posição na fila e apresenta uma proposta por escrito. Com a cessão assinada, o pagamento é feito à vista.",
@@ -1063,7 +1075,7 @@ def build_federal():
     <tr><td>Até 1º de fevereiro</td><td>Até o fim do ano seguinte</td></tr>
     <tr><td>Depois de 1º de fevereiro</td><td>Até o fim do segundo ano seguinte</td></tr>
   </table></div>
-  <p>A data de corte de 1º de fevereiro vale desde a Emenda Constitucional 136/2025; antes, era 2 de abril. Na prática, entre a inscrição e o dinheiro na conta podem se passar de 11 a quase 24 meses. Veja os detalhes em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+  <p>A data de corte de 1º de fevereiro vale desde a Emenda Constitucional 136/2025; antes, era 2 de abril. Na prática, entre a inscrição e o dinheiro na conta podem se passar de cerca de 11 meses a quase 3 anos, conforme a data de inscrição. Veja os detalhes em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
   <h2>Como consultar o precatório federal</h2>
   <p>No portal de RPV e precatórios do TRF da sua região, pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório</a>. Se preferir, envie o número do processo pelo WhatsApp e nós consultamos para você.</p>
   <h2>Vale a pena vender o precatório federal?</h2>
@@ -1078,7 +1090,7 @@ def build_federal():
          ("Qual o deságio do precatório federal?","Costuma ser o menor entre os precatórios, porque o pagamento da União é previsível. O percentual exato depende do valor, do prazo até o pagamento e da situação do processo."),
          ("Quem compra precatório federal?","Bancos, fundos e empresas especializadas. A Antecipay compra precatórios federais de credores de todo o Brasil, com proposta por escrito e pagamento à vista.")]
     landing("vender-precatorio-federal","Precatório federal 2026: prazo e como vender | Antecipay",
-        "Veja quando o precatório federal é pago, como consultar no TRF e como vender o seu precatório federal à vista, com proposta por escrito e atendimento digital.",
+        "Veja quando o precatório federal é pago, como consultar no TRF e como vender o seu precatório federal à vista, com proposta por escrito.",
         "Precatório federal","Precatório federal","Precatório federal: prazo de pagamento e como vender",
         "Tem um precatório contra a União ou o INSS? Veja quando ele deve ser pago e como receber à vista, sem esperar a fila do orçamento federal.",
         msg,"O precatório federal é a dívida da União, do INSS ou de autarquias federais acima de 60 salários mínimos. Inscrito até 1º de fevereiro, é pago até o fim do ano seguinte. Quem não quer esperar pode vender o precatório: a Antecipay faz uma proposta por escrito e paga à vista.",
