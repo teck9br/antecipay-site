@@ -45,9 +45,10 @@ document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.
 </script>
 </head>
 <body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="top">
   <div class="wrap nav">
-    <a href="/" class="logo">Antecipay</a>
+    <a href="/" class="logo" translate="no">Antecipay</a>
     <nav class="menu" aria-label="Principal">
       <a href="/#como-funciona">Como funciona</a>
       <a href="/#vantagens">Vantagens</a>
@@ -63,7 +64,7 @@ document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.
 FOOT = f"""<footer>
   <div class="wrap">
     <div class="foot">
-      <div><a href="/" class="logo">Antecipay</a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
+      <div><a href="/" class="logo" translate="no">Antecipay</a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
       <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
       <ul><li><a href="{wa('Olá! Vim pelo site da Antecipay.')}" target="_blank" rel="noopener">WhatsApp (84) 99493-8383</a></li><li><a href="mailto:contato@antecipay.com.br">contato@antecipay.com.br</a></li><li>Av. Senador Salgado Filho, 1559 – Tirol, Natal-RN</li></ul>
     </div>
@@ -468,10 +469,10 @@ def build_post(p):
     faq_html = "<h2>Perguntas frequentes</h2>" + "".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in p["faq"])
     rel = "".join(f'<a class="card" href="/blog/{s}/"><span class="tag">{BY[s]["tag"]}</span><h3>{BY[s]["title"]}</h3><span class="more">Ler artigo →</span></a>' for s in p["related"])
     out = head(p["seo"], p["desc"], url, ldtag) + f"""
-<main>
+<main id="conteudo" tabindex="-1">
 <section class="art-head">
   <div class="narrow">
-    <div class="crumbs"><a href="/">Início</a> › <a href="/blog/">Blog</a></div>
+    <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <a href="/blog/">Blog</a></nav>
     <span class="eyebrow">{p['tag']}</span>
     <h1>{p['title']}</h1>
     <p class="lead">{p['lead']}</p>
@@ -498,7 +499,7 @@ def build_index():
     cards = "".join(f'<a class="card" href="/blog/{p["slug"]}/"><span class="tag">{p["tag"]}</span><h2>{p["title"]}</h2><p>{p["desc"]}</p><span class="more">Ler artigo →</span></a>' for p in POSTS)
     out = head("Blog sobre precatórios: guias e prazos | Antecipay", "Guias simples sobre precatório e RPV: prazos de pagamento, como consultar, deságio e antecipação.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>') + f"""
-<main>
+<main id="conteudo" tabindex="-1">
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Blog</span>
   <h1>Tudo sobre precatórios, sem juridiquês</h1>
@@ -537,9 +538,9 @@ def build_sobre():
         "knowsAbout":["Precatórios","RPV","Cessão de crédito","Precatórios do INSS","Precatórios federais","Precatórios estaduais","Precatórios municipais"]}}
     out = head("Sobre a Antecipay | Compra e antecipação de precatórios", "Conheça a Antecipay: empresa de Natal-RN que compra e antecipa precatórios federais, estaduais e municipais em todo o Brasil. CNPJ 64.382.432/0001-97.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="sobre") + f"""
-<main>
+<main id="conteudo" tabindex="-1">
 <section class="art-head"><div class="narrow">
-  <div class="crumbs"><a href="/">Início</a> › Sobre</div>
+  <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <span aria-current="page">Sobre</span></nav>
   <span class="eyebrow">Sobre nós</span>
   <h1>Sobre a Antecipay</h1>
   <p class="lead">A Antecipay compra e antecipa precatórios federais, estaduais e municipais. Quem tem valores a receber do governo recebe à vista, sem esperar a fila de pagamentos.</p>
@@ -638,9 +639,9 @@ def build_inss():
     faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in faq)
     out = head("Vender precatório do INSS: receba à vista | Antecipay", "Venda o seu precatório do INSS e receba à vista, sem esperar a fila da União. Análise do processo, proposta por escrito e atendimento 100% digital.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="") + f"""
-<main>
+<main id="conteudo" tabindex="-1">
 <section class="art-head"><div class="narrow">
-  <div class="crumbs"><a href="/">Início</a> › Precatório do INSS</div>
+  <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <span aria-current="page">Precatório do INSS</span></nav>
   <span class="eyebrow">INSS</span>
   <h1>Venda o seu precatório do INSS e receba à vista</h1>
   <p class="lead">Ganhou uma ação de aposentadoria, auxílio, BPC ou revisão e está esperando o precatório? A Antecipay compra o seu crédito e você recebe agora, sem esperar a fila da União.</p>
@@ -696,9 +697,9 @@ def build_rn():
     faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in faq)
     out = head("Vender precatório no RN (TRF5 e TJRN) | Antecipay", "Venda seu precatório federal (TRF5), estadual ou municipal do Rio Grande do Norte e receba à vista. Empresa de Natal-RN, atendimento 100% digital.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="") + f"""
-<main>
+<main id="conteudo" tabindex="-1">
 <section class="art-head"><div class="narrow">
-  <div class="crumbs"><a href="/">Início</a> › Precatório no RN</div>
+  <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <span aria-current="page">Precatório no RN</span></nav>
   <span class="eyebrow">Rio Grande do Norte</span>
   <h1>Venda o seu precatório no Rio Grande do Norte</h1>
   <p class="lead">Tem valores a receber da União, do INSS, do Estado do RN ou de uma prefeitura potiguar? A Antecipay, empresa de Natal, compra o seu precatório e você recebe à vista.</p>
@@ -768,9 +769,9 @@ def build_natal():
     faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in faq)
     out = head("Empresa que compra precatórios em Natal-RN | Antecipay", "A Antecipay é uma empresa de Natal-RN que compra precatórios federais, do INSS, do Estado do RN e da Prefeitura de Natal. Proposta por escrito e pagamento à vista.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="") + f"""
-<main>
+<main id="conteudo" tabindex="-1">
 <section class="art-head"><div class="narrow">
-  <div class="crumbs"><a href="/">Início</a> › Natal-RN</div>
+  <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <span aria-current="page">Natal-RN</span></nav>
   <span class="eyebrow">Natal-RN</span>
   <h1>Empresa que compra precatórios em Natal</h1>
   <p class="lead">A Antecipay é uma empresa de Natal que compra precatórios da União, do INSS, do Estado do RN e da Prefeitura de Natal. Você recebe à vista, com proposta por escrito e segurança jurídica.</p>
@@ -832,9 +833,9 @@ def landing(slug, seo, desc, crumb, eyebrow, h1, lead, wa_msg, answer, body, faq
         {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":SITE+"/"},{"@type":"ListItem","position":2,"name":crumb,"item":url}]}]}
     faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in faq)
     out = head(seo, desc, url, '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="") + f"""
-<main>
+<main id="conteudo" tabindex="-1">
 <section class="art-head"><div class="narrow">
-  <div class="crumbs"><a href="/">Início</a> › {crumb}</div>
+  <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <span aria-current="page">{crumb}</span></nav>
   <span class="eyebrow">{eyebrow}</span>
   <h1>{h1}</h1>
   <p class="lead">{lead}</p>
@@ -1008,7 +1009,7 @@ def build_calc():
       <label>Valor do precatório (R$)<input name="valor" inputmode="decimal" placeholder="Ex.: 150.000" autocomplete="off"></label>
       <label>Quem deve<select name="tipo"><option value="federal">União / INSS (federal)</option><option value="estadual">Estado (estadual)</option><option value="municipal">Prefeitura (municipal)</option></select></label>
       <label>Situação<select name="sit"><option value="exp">Já expedido / inscrito</option><option value="nao">Ainda não expedido</option></select></label>
-      <label>Honorários contratuais do advogado (%)<input name="hon" inputmode="decimal" value="0"></label>
+      <label>Honorários contratuais do advogado (%)<input name="hon" inputmode="decimal" value="0" autocomplete="off"></label>
     </div>
     <div class="out" id="calc-out" aria-live="polite">
       <small>Estimativa à vista</small>
