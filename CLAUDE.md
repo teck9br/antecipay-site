@@ -35,7 +35,7 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
 - Microsoft Clarity (`yqi1puom0k`) com evento `whatsapp_click` em todas as páginas.
 
 ## IndexNow (Bing, Yandex e outros)
-Depois do deploy de páginas novas ou alteradas, rode `python3 indexnow.py /caminho/da-pagina/` (sem argumentos, envia todo o sitemap). A chave está em `8082ba8677f2ebbf6a79e0da524d3676.txt`, na raiz; não apague esse arquivo.
+Depois do deploy de páginas novas ou alteradas, rode `python3 indexnow.py blog/slug/ outra-pagina/` (sem argumentos, envia todo o sitemap). No Git Bash, escreva os caminhos **sem a barra inicial**: o terminal converte `/blog/...` em `C:/Program Files/Git/blog/...` e a API recusa com 422; para a home, use `""`. A chave está em `8082ba8677f2ebbf6a79e0da524d3676.txt`, na raiz; não apague esse arquivo.
 
 ## Auditoria de SEO
 `python3 seo_audit.py . --base https://antecipayprecatorios.com.br --out auditoria.md` (script em `seo_audit.py`).
