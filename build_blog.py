@@ -12,6 +12,8 @@ def wa(msg):
 
 WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8a9.8 9.8 0 01-5-1.37l-.36-.21-3.72.97.99-3.63-.23-.37A9.8 9.8 0 012.2 12 9.85 9.85 0 0112.05 2.2c2.63 0 5.1 1.03 6.96 2.89A9.78 9.78 0 0121.9 12a9.86 9.86 0 01-9.85 9.8zm8.38-18.18A11.76 11.76 0 0012.05.15C5.5.15.16 5.48.16 12.03c0 2.1.55 4.14 1.59 5.94L.06 24l6.17-1.62a11.87 11.87 0 005.81 1.48c6.55 0 11.89-5.33 11.89-11.88 0-3.18-1.24-6.16-3.49-8.4z"/></svg>'
 
+TEL_ICON = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
+
 # CSS das páginas geradas vai embutido no <head> (evita uma requisição que bloqueia a renderização)
 BLOG_CSS = open("assets/blog.css", encoding="utf-8").read()
 
@@ -45,6 +47,7 @@ def head(title, desc, url, extra_ld="", current="blog"):
 <script>
 if(!/^(localhost|127[.]0[.]0[.]1)$/.test(location.hostname))(function(c,l,a,r,i,t,y){{c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}})(window,document,"clarity","script","yqi1puom0k");
 document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(a&&window.clarity){{clarity("event","whatsapp_click");}}}});
+document.addEventListener("click",function(e){{var t=e.target.closest&&e.target.closest('a[href^="tel:"]');if(t&&window.clarity){{clarity("event","phone_click");}}}});
 </script>
 </head>
 <body>
@@ -87,7 +90,7 @@ new IntersectionObserver(function(es){{f.classList.toggle('on',!es[0].isIntersec
 NOTE = '<p class="note">Conteúdo informativo, atualizado em ' + UPDATED_BR + '. As regras de pagamento de precatórios mudam com frequência e cada processo tem particularidades. Para uma análise do seu caso, fale com a nossa equipe.</p>'
 
 def cta(title, text, msg):
-    return f'<div class="cta"><h2>{title}</h2><p>{text}</p><a class="btn" href="{wa(msg)}" target="_blank" rel="noopener">{WA_ICON}Falar no WhatsApp</a></div>'
+    return f'<div class="cta"><h2>{title}</h2><p>{text}</p><a class="btn" href="{wa(msg)}" target="_blank" rel="noopener">{WA_ICON}Falar no WhatsApp</a><a class="btn btn-tel" href="tel:+5584994938383">{TEL_ICON}Ligar (84) 99493-8383</a></div>'
 
 POSTS = [
  dict(
@@ -154,7 +157,7 @@ POSTS = [
 <p>Aqui a espera costuma ser bem maior. Com a EC 136/2025, estados e municípios passaram a pagar os precatórios dentro de um <strong>limite anual de 1% a 5% da receita corrente líquida</strong>, conforme o tamanho da dívida de cada um. Quem deve muito paga uma parte por ano e a fila anda devagar.</p>
 <p>Por isso, dois credores com o mesmo valor podem esperar tempos muito diferentes: tudo depende de <strong>qual estado ou município</strong> deve e da sua posição na fila.</p>
 <h2>RPV: o caminho mais rápido</h2>
-<p>Se o valor estiver dentro do limite de pequeno valor, o pagamento sai como RPV, em geral em até 60 dias. Veja os limites em <a href="/blog/o-que-e-precatorio-e-rpv/">O que é precatório e RPV</a>.</p>
+<p>Se o valor estiver dentro do limite de pequeno valor, o pagamento sai como RPV, em geral em até 60 dias depois de a requisição chegar ao tribunal, após a <a href="/blog/expedicao-de-oficio-precatorio/">expedição do ofício</a>. Veja os limites em <a href="/blog/o-que-e-precatorio-e-rpv/">O que é precatório e RPV</a>.</p>
 <h2>Quem tem prioridade na fila</h2>
 <p>A Constituição garante prioridade a credores com <strong>60 anos ou mais</strong>, com <strong>doença grave</strong> ou com <strong>deficiência</strong>. Eles podem receber antes uma parte do crédito, até um limite legal. O restante segue a fila normal. Entenda quem tem direito em <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>.</p>
 <h2>O valor é corrigido enquanto espero?</h2>
@@ -198,9 +201,9 @@ POSTS = [
 <li>Pesquise pelo seu <strong>CPF</strong> (ou CNPJ) ou pelo <strong>número do processo</strong>.</li>
 <li>Anote o número do precatório, o valor, o ano do orçamento e a situação (por exemplo, "inscrito", "pago" ou "aguardando pagamento").</li>
 </ol>
-<p>No Rio Grande do Norte, por exemplo, precatórios federais são consultados no portal do <strong>TRF5</strong>, e os estaduais e municipais no <strong>TJRN</strong>.</p>
+<p>No Rio Grande do Norte, por exemplo, precatórios federais são consultados no portal do <strong>TRF5</strong> (veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>), e os estaduais e municipais no <strong>TJRN</strong>.</p>
 <h2>4. Não encontrou nada?</h2>
-<p>A ação pode ainda não ter chegado à fase de pagamento, ou o precatório pode ter sido expedido com outros dados. Nesse caso, fale com o advogado que cuidou da ação ou envie o número do processo para a nossa equipe, que fazemos a análise.</p>
+<p>A ação pode ainda não ter chegado à fase de pagamento, ou o precatório pode ter sido expedido com outros dados. Nesse caso, fale com o advogado que cuidou da ação ou envie o número do processo para a nossa equipe, que fazemos a análise. Se o andamento mostra termos como <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício</a> ou <a href="/blog/juntada-de-certidao/">juntada de certidão</a>, veja o que cada um significa.</p>
 <h2>Achei meu precatório. E agora?</h2>
 <p>Veja <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo ele deve levar para ser pago</a>. Se não quiser esperar, você pode <a href="/">vender o precatório</a>: a Antecipay compra e você recebe à vista. Se o seu é do INSS, veja <a href="/blog/precatorio-inss/">quando o INSS paga o precatório</a>.</p>
 """,
@@ -287,7 +290,7 @@ POSTS.insert(0, dict(
 <h2>Tem imposto de renda?</h2>
 <p>Em geral, sim. Os atrasados previdenciários são tributados pelo regime de <strong>rendimentos recebidos acumuladamente (RRA)</strong>, que divide o valor pelos meses de atraso e costuma resultar em imposto menor. Aposentados com doença grave prevista em lei podem ser isentos, e os juros de mora sobre verbas alimentares não são tributados.</p>
 <h2>Como consultar o seu precatório do INSS</h2>
-<p>Entre no portal do TRF da sua região e pesquise pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>.</p>
+<p>Entre no portal do TRF da sua região e pesquise pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>. No Nordeste, veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar no TRF5</a>.</p>
 <h2>Não quer esperar?</h2>
 <p>O precatório do INSS pode ser vendido, como qualquer precatório (entenda <a href="/blog/o-que-e-precatorio-e-rpv/">o que é precatório e RPV</a>). Você recebe um valor à vista agora e quem compra passa a receber da União no futuro. Veja <a href="/vender-precatorio-inss/">como funciona a venda do precatório do INSS na Antecipay</a> e, para os demais casos, como <a href="/">vender precatório</a>.</p>
 """,
@@ -700,6 +703,160 @@ POSTS.insert(0, dict(
 ))
 BY = {p["slug"]: p for p in POSTS}
 
+POSTS.insert(0, dict(
+  slug="juntada-de-certidao",
+  tag="Processo",
+  title="Juntada de certidão: o que significa no processo",
+  seo="Juntada de certidão: o que significa no processo | Antecipay",
+  desc="“Juntada de certidão” apareceu no seu processo? Veja o que significa, as certidões mais comuns na fase do precatório e o que costuma vir depois.",
+  lead="O andamento do processo mostra “juntada de certidão” e você não sabe se é bom ou ruim? Na maioria das vezes, é só um registro. Veja como entender.",
+  answer="Juntada de certidão significa que um documento chamado certidão foi incluído no processo. Na certidão, um servidor da vara ou do tribunal confirma oficialmente um fato, como a publicação de uma decisão, o fim de um prazo ou o trânsito em julgado. Sozinha, a juntada não quer dizer que o pagamento saiu: para saber o que mudou, é preciso ler a certidão ou perguntar ao advogado.",
+  faq=[
+   ("Juntada de certidão é bom ou ruim?","Nem um nem outro. É um registro de que um fato foi confirmado no processo. Para saber se houve avanço, é preciso ler a certidão."),
+   ("Juntada de certidão quer dizer que o dinheiro foi liberado?","Não. O pagamento aparece em outro registro, como a liberação ou o depósito do valor. Desconfie de quem pede taxa dizendo que o dinheiro foi liberado."),
+   ("Quanto tempo depois da juntada de certidão o processo anda?","Depende do tipo de certidão e da vara. Se a certidão abriu um prazo, o processo costuma seguir depois que esse prazo termina."),
+  ],
+  body="""
+<h2>O que é “juntada”</h2>
+<p>No processo, <strong>juntada</strong> é o ato de incluir um documento nos autos: uma petição, um laudo, uma decisão ou uma certidão. Nos processos eletrônicos, o próprio sistema registra a juntada com a data, que pode servir para contar prazos.</p>
+
+<h2>O que é uma certidão</h2>
+<p>A <strong>certidão</strong> é um documento em que o servidor confirma oficialmente que algo aconteceu. Ela não decide nada: apenas registra um fato que vai orientar o próximo passo do processo.</p>
+
+<h2>Certidões comuns na fase do precatório</h2>
+<div class="table-wrap"><table>
+<tr><th>Certidão</th><th>O que costuma indicar</th></tr>
+<tr><td><strong>Trânsito em julgado</strong></td><td>A decisão não admite mais recurso. O processo pode seguir para os cálculos e a cobrança.</td></tr>
+<tr><td><strong>Decurso de prazo</strong></td><td>Terminou o prazo para alguém se manifestar, e o processo segue adiante.</td></tr>
+<tr><td><strong>Publicação ou intimação</strong></td><td>Uma decisão foi publicada ou alguém foi avisado. A partir daí, pode começar a correr um prazo.</td></tr>
+<tr><td><strong>Expedição de requisição</strong></td><td>O ofício requisitório (RPV ou precatório) foi enviado ao tribunal.</td></tr>
+</table></div>
+<p>Esses são exemplos gerais. O que vale é o texto da certidão do seu processo.</p>
+
+<h2>Como saber o que diz a sua certidão</h2>
+<ul>
+<li>Em muitos tribunais, o documento pode ser aberto clicando no andamento do processo; em outros, só com o acesso do advogado.</li>
+<li>Se não conseguir abrir, peça ao advogado que cuida da ação.</li>
+<li>Para acompanhar a requisição de pagamento na Justiça Federal do Nordeste, veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>.</li>
+</ul>
+
+<h2>E depois da juntada?</h2>
+<p>Depende da certidão. Se ela registrou o trânsito em julgado, o próximo passo costuma ser a fase de cálculos. Se registrou a expedição da requisição, o pagamento entra na fila do tribunal: veja <a href="/blog/expedicao-de-oficio-precatorio/">o que significa expedição de ofício</a> e <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+
+<h2>Cuidado com golpes</h2>
+<p>Golpistas usam andamentos reais do processo, como “juntada de certidão”, para dizer que o seu dinheiro foi liberado e pedir uma taxa. Juntada de certidão não é aviso de pagamento. Veja <a href="/blog/golpe-do-precatorio/">golpe do precatório</a>.</p>
+
+<h2>Quer antecipar o valor?</h2>
+<p>Se o seu processo já chegou à fase do precatório, você pode <a href="/">vender precatório</a> e receber à vista, sem esperar a fila. Veja como funciona a <a href="/antecipacao-de-precatorio/">antecipação de precatório</a>.</p>
+""",
+  cta=("Seu processo já está na fase do precatório?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Estou acompanhando meu processo e quero uma proposta para o meu precatório."),
+  related=["expedicao-de-oficio-precatorio","consultar-rpv-precatorio-trf5","golpe-do-precatorio"],
+))
+
+POSTS.insert(0, dict(
+  slug="expedicao-de-oficio-precatorio",
+  tag="Processo",
+  title="Expedição de ofício no precatório: o que significa e o que vem depois",
+  seo="Expedição de ofício no precatório: o que é | Antecipay",
+  desc="Apareceu “expedição de ofício” no seu processo? Veja o que significa, o que acontece depois, quanto tempo falta para receber e o que conferir agora.",
+  lead="Viu “expedição de ofício” ou “ofício requisitório expedido” no andamento do processo? É um bom sinal: o pedido de pagamento foi enviado. Veja o que vem depois.",
+  answer="Expedição de ofício, no precatório, significa que o juiz enviou ao tribunal o ofício requisitório: o pedido formal para que o governo pague o valor da condenação. É o começo da fila de pagamento, e não o pagamento em si. Depois disso, o tribunal confere a requisição, ela entra no orçamento do devedor e o valor é pago como RPV ou como precatório, conforme o valor.",
+  faq=[
+   ("Expedição de ofício quer dizer que vou receber logo?","Não necessariamente. Significa que o pedido de pagamento foi enviado ao tribunal. Se for RPV federal, o pagamento costuma sair em até 60 dias; se for precatório, depende da data de corte e da fila do devedor."),
+   ("Qual a diferença entre ofício requisitório e precatório?","O ofício requisitório é o documento que o juiz envia ao tribunal pedindo o pagamento. Ele pode ser uma RPV, para valores menores, ou um precatório, para valores acima do limite."),
+   ("O que fazer se o valor do ofício estiver errado?","Fale com o advogado que cuida da ação. Correções na requisição são pedidas ao juiz da execução."),
+  ],
+  body="""
+<h2>O que é o ofício requisitório</h2>
+<p>Quando a ação contra o governo termina e o valor está definido, o juiz da execução emite o <strong>ofício requisitório</strong>: um documento padronizado que pede ao presidente do tribunal o pagamento daquela quantia. Se o valor está dentro do limite de pequeno valor, ele vira uma <strong>RPV</strong>; acima disso, um <strong>precatório</strong>. Veja a diferença em <a href="/blog/o-que-e-precatorio-e-rpv/">o que é precatório e RPV</a>.</p>
+
+<h2>O que acontece depois da expedição</h2>
+<ol>
+<li><strong>O tribunal recebe e confere</strong> a requisição. Se estiver tudo certo, ela é registrada.</li>
+<li><strong>Entra na fila do orçamento.</strong> Precatórios apresentados até 1º de fevereiro entram no orçamento do ano seguinte.</li>
+<li><strong>Pagamento.</strong> A RPV federal é paga em até 60 dias depois de chegar ao tribunal. O precatório é pago até o fim do ano do orçamento, na ordem cronológica, respeitando as prioridades.</li>
+<li><strong>Saque.</strong> O valor é depositado em conta judicial em nome do credor.</li>
+</ol>
+
+<h2>Quanto tempo falta para receber</h2>
+<div class="table-wrap"><table>
+<tr><th>Situação</th><th>Prazo aproximado</th></tr>
+<tr><td>RPV federal</td><td>Até 60 dias depois de chegar ao tribunal</td></tr>
+<tr><td>Precatório federal apresentado até 1º de fevereiro</td><td>Até o fim do ano seguinte</td></tr>
+<tr><td>Precatório federal apresentado depois de 1º de fevereiro</td><td>Até o fim do segundo ano seguinte</td></tr>
+<tr><td>Precatório estadual ou municipal</td><td>Depende do limite anual de pagamento do devedor (1% a 5% da receita corrente líquida)</td></tr>
+</table></div>
+<p>Mais detalhes em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+
+<h2>O que conferir agora</h2>
+<ul>
+<li><strong>Os dados do ofício:</strong> nome, CPF e valor da condenação.</li>
+<li><strong>Os honorários do advogado:</strong> em geral, os honorários contratuais precisam ser pedidos ao juiz antes da expedição para saírem destacados. Se não saíram, o advogado precisa pedir depois.</li>
+<li><strong>A prioridade:</strong> quem tem 60 anos ou mais costuma ter a prioridade aplicada automaticamente; doença grave ou deficiência precisa de pedido. Veja <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>.</li>
+<li><strong>O andamento no tribunal:</strong> no TRF5, a consulta é feita pelo CPF. Veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>.</li>
+</ul>
+
+<h2>Outros termos do andamento</h2>
+<p>“Juntada de certidão” também aparece com frequência nessa fase. Veja <a href="/blog/juntada-de-certidao/">o que significa juntada de certidão</a>.</p>
+
+<h2>Já foi expedido: dá para vender?</h2>
+<p>Sim. Com o ofício expedido, o valor e o devedor estão definidos, e a análise para a compra fica mais simples. Se você não quer esperar a fila, veja como <a href="/">vender precatório</a> com a Antecipay ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+""",
+  cta=("Seu ofício já foi expedido?","Envie o número do processo e receba uma proposta por escrito para antecipar o valor.","Olá! O ofício do meu precatório foi expedido e quero uma proposta."),
+  related=["quanto-tempo-demora-precatorio","consultar-rpv-precatorio-trf5","o-que-e-precatorio-e-rpv"],
+))
+
+POSTS.insert(0, dict(
+  slug="consultar-rpv-precatorio-trf5",
+  tag="Consulta",
+  title="Como consultar RPV e precatório no TRF5 pelo CPF",
+  seo="Consultar RPV e precatório no TRF5 pelo CPF | Antecipay",
+  desc="Veja como consultar RPV e precatório no TRF5 pelo CPF ou pelo número do processo, quando o pagamento sai e onde sacar. Vale para AL, CE, PB, PE, RN e SE.",
+  lead="Tem uma ação contra a União ou o INSS em Alagoas, Ceará, Paraíba, Pernambuco, Rio Grande do Norte ou Sergipe? Veja como acompanhar a sua RPV ou o seu precatório no site do TRF5.",
+  answer="Para consultar RPV ou precatório no TRF5, acesse rpvprecatorio.trf5.jus.br, escolha “CPF/CNPJ” em “Consultar por”, digite o seu CPF e clique em Pesquisar. Também dá para buscar pelo número do processo. A RPV federal é paga em até 60 dias depois de chegar ao tribunal; o precatório entra no orçamento conforme a data de corte de 1º de fevereiro.",
+  faq=[
+   ("Preciso de advogado para consultar?","Não. A consulta pública no site do TRF5 é aberta a qualquer pessoa, pelo CPF ou pelo número do processo. Para ver o cálculo e os dados bancários pela internet, é preciso certificado digital ou a ajuda do advogado."),
+   ("Onde o dinheiro da RPV ou do precatório é depositado?","Numa conta judicial na Caixa ou no Banco do Brasil, em nome do beneficiário. Em geral, dá para sacar em qualquer agência do banco pagador, sem alvará, levando RG, CPF e comprovante de residência."),
+   ("A minha consulta não mostra nada. E agora?","A requisição pode ainda não ter sido expedida pelo juiz, ou ter sido feita com outros dados. Confira com o advogado ou com a vara onde corre o processo."),
+  ],
+  body="""
+<h2>Quais estados são atendidos pelo TRF5</h2>
+<p>O Tribunal Regional Federal da 5ª Região cuida das ações contra a União, o INSS e outros órgãos federais em <strong>Alagoas, Ceará, Paraíba, Pernambuco, Rio Grande do Norte e Sergipe</strong>. Se a sua ação correu na Justiça Federal de um desses estados, a RPV ou o precatório é pago pelo TRF5.</p>
+
+<h2>Passo a passo da consulta</h2>
+<ol>
+<li>Acesse o site de RPV e precatórios do TRF5: <a href="https://rpvprecatorio.trf5.jus.br/" target="_blank" rel="noopener">rpvprecatorio.trf5.jus.br</a>.</li>
+<li>Em <strong>“Consultar por”</strong>, escolha <strong>CPF/CNPJ</strong>.</li>
+<li>Digite o seu CPF no campo de pesquisa.</li>
+<li>Clique em <strong>Pesquisar</strong> e confira o resultado e o andamento da requisição.</li>
+</ol>
+<p>A consulta também pode ser feita pelo número do processo de execução, do processo originário ou do processo no TRF5, pelo número do requisitório ou pela OAB do advogado. Requisições muito antigas, de 2005 para trás, só aparecem em algumas dessas opções.</p>
+
+<h2>Quando o dinheiro sai</h2>
+<div class="table-wrap"><table>
+<tr><th>Tipo</th><th>Prazo</th></tr>
+<tr><td><strong>RPV</strong></td><td>Até 60 dias depois de a requisição chegar ao tribunal</td></tr>
+<tr><td><strong>Precatório federal</strong></td><td>Apresentado até 1º de fevereiro: pago até o fim do ano seguinte. Depois dessa data, fica para o orçamento do ano posterior.</td></tr>
+</table></div>
+<p>Algumas perguntas frequentes do site do TRF5 ainda citam a data de 2 de abril. Desde a EC 136/2025, a data de corte é 1º de fevereiro. Veja <a href="/blog/precatorios-2027-ec-136/">precatórios 2027</a> e <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+
+<h2>Onde sacar</h2>
+<p>O valor é depositado numa conta judicial na Caixa ou no Banco do Brasil, em nome do beneficiário. Em geral, o saque pode ser feito em qualquer agência do banco pagador, sem alvará, com RG, CPF e comprovante de residência. O alvará só é exigido quando o juiz determina ou quando a ação correu na Justiça Estadual com competência federal delegada. O dinheiro fica disponível por 2 anos; depois disso, volta para o Tesouro.</p>
+
+<h2>Prioridade e mudanças na requisição</h2>
+<p>A prioridade por idade é aplicada automaticamente. A prioridade por doença grave ou deficiência precisa ser pedida ao juiz da execução: veja <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>. Mudanças como inclusão de herdeiros ou registro de venda (cessão) também passam pela vara onde corre o processo, e não pelo tribunal.</p>
+
+<h2>Entendendo o andamento</h2>
+<p>Termos como “expedição de ofício” e “juntada de certidão” aparecem com frequência no acompanhamento. Veja o que significam em <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>.</p>
+
+<h2>Não quer esperar?</h2>
+<p>Se o seu precatório do TRF5 ainda vai demorar, você pode <a href="/">vender precatório</a> e receber à vista. A Antecipay fica em Natal, na área do TRF5, e analisa precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de toda a região. Faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+""",
+  cta=("Tem precatório no TRF5?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Tenho um precatório no TRF5 e quero uma proposta."),
+  related=["como-saber-se-tenho-precatorio","quanto-tempo-demora-precatorio","precatorio-inss"],
+))
+BY = {p["slug"]: p for p in POSTS}
+
 def build_post(p):
     url = f"{SITE}/blog/{p['slug']}/"
     ld = {"@context":"https://schema.org","@graph":[
@@ -899,7 +1056,7 @@ def build_inss():
   <span class="eyebrow">INSS</span>
   <h1>Venda o seu precatório do INSS e receba à vista</h1>
   <p class="lead">Ganhou uma ação de aposentadoria, auxílio, BPC ou revisão e está esperando o precatório? A Antecipay compra o seu crédito e você recebe agora, sem esperar a fila da União.</p>
-  <p style="margin-top:28px"><a class="btn btn-wa" href="{wa('Olá! Tenho um precatório do INSS e quero uma proposta.')}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a></p>
+  <p class="ctas"><a class="btn btn-wa" href="{wa('Olá! Tenho um precatório do INSS e quero uma proposta.')}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a><a class="btn btn-tel" href="tel:+5584994938383" aria-label="Ligar para (84) 99493-8383">{TEL_ICON}Ligar</a></p>
 </div></section>
 <article class="narrow">
   <div class="answer"><strong>Em resumo</strong>A Antecipay compra precatórios do INSS de credores de todo o Brasil. Você envia o número do processo, nossa equipe jurídica analisa, apresenta uma proposta por escrito com o valor líquido e, com a cessão assinada, você recebe à vista.</div>
@@ -958,7 +1115,7 @@ def build_rn():
   <span class="eyebrow">Rio Grande do Norte</span>
   <h1>Venda o seu precatório no Rio Grande do Norte</h1>
   <p class="lead">Tem valores a receber da União, do INSS, do Estado do RN ou de uma prefeitura potiguar? A Antecipay, empresa de Natal, compra o seu precatório e você recebe à vista.</p>
-  <p style="margin-top:28px"><a class="btn btn-wa" href="{wa('Olá! Tenho um precatório no RN e quero uma proposta.')}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a></p>
+  <p class="ctas"><a class="btn btn-wa" href="{wa('Olá! Tenho um precatório no RN e quero uma proposta.')}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a><a class="btn btn-tel" href="tel:+5584994938383" aria-label="Ligar para (84) 99493-8383">{TEL_ICON}Ligar</a></p>
 </div></section>
 <article class="narrow">
   <div class="answer"><strong>Em resumo</strong>A Antecipay Precatórios, sediada em Natal-RN, compra precatórios federais do TRF5 (União e INSS) e precatórios estaduais e municipais do TJRN. Você envia o número do processo, recebe uma proposta por escrito e, com a cessão assinada, recebe à vista.</div>
@@ -983,7 +1140,7 @@ def build_rn():
     <li><strong>Federal:</strong> no portal de RPV e precatórios do TRF5, pelo CPF ou pelo número do processo.</li>
     <li><strong>Estadual ou municipal:</strong> na área de precatórios do site do TJRN.</li>
   </ul>
-  <p>Passo a passo completo em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>. Se preferir, envie o número do processo que a nossa equipe consulta para você.</p>
+  <p>Passo a passo completo em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>. Se preferir, envie o número do processo que a nossa equipe consulta para você. Precatórios federais do RN são pagos pelo TRF5: veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5 pelo CPF</a>.</p>
   <p>Antes de decidir, veja <a href="/melhor-empresa-para-vender-precatorio/">como escolher a empresa para vender o precatório</a> e o guia <a href="/blog/empresas-que-compram-precatorios-natal/">como escolher empresa de precatório em Natal</a>. Para precatórios de outros estados, veja como <a href="/">vender precatório</a> em todo o Brasil.</p>
 
   <h2>Como funciona a venda</h2>
@@ -1031,7 +1188,7 @@ def build_natal():
   <span class="eyebrow">Natal-RN</span>
   <h1>Empresa que compra precatórios em Natal</h1>
   <p class="lead">A Antecipay é uma empresa de Natal que compra precatórios da União, do INSS, do Estado do RN e da Prefeitura de Natal. Você recebe à vista, com proposta por escrito e segurança jurídica.</p>
-  <p style="margin-top:28px"><a class="btn btn-wa" href="{wa('Olá! Sou de Natal e quero vender meu precatório.')}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a></p>
+  <p class="ctas"><a class="btn btn-wa" href="{wa('Olá! Sou de Natal e quero vender meu precatório.')}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a><a class="btn btn-tel" href="tel:+5584994938383" aria-label="Ligar para (84) 99493-8383">{TEL_ICON}Ligar</a></p>
 </div></section>
 <article class="narrow">
   <div class="answer"><strong>Em resumo</strong>A Antecipay Precatórios (CNPJ 64.382.432/0001-97) tem sede em Natal, na Incubadora do IFRN – Campus Natal Central, e compra precatórios federais, estaduais e municipais. Atendimento pelo WhatsApp (84) 99493-8383, de segunda a sexta, das 8h às 18h, e aos sábados, das 8h às 12h.</div>
@@ -1095,7 +1252,7 @@ def landing(slug, seo, desc, crumb, eyebrow, h1, lead, wa_msg, answer, body, faq
   <span class="eyebrow">{eyebrow}</span>
   <h1>{h1}</h1>
   <p class="lead">{lead}</p>
-  <p style="margin-top:28px"><a class="btn btn-wa" href="{wa(wa_msg)}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a></p>
+  <p class="ctas"><a class="btn btn-wa" href="{wa(wa_msg)}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a><a class="btn btn-tel" href="tel:+5584994938383" aria-label="Ligar para (84) 99493-8383">{TEL_ICON}Ligar</a></p>
 </div></section>
 <article class="narrow">
   {extra_top}
@@ -1282,7 +1439,7 @@ def build_calc():
   <ul>
     <li><strong>Devedor:</strong> precatórios federais costumam ter deságio menor, porque a União paga em prazo previsível. Estados e prefeituras variam muito.</li>
     <li><strong>Prazo até o pagamento:</strong> quanto mais longe o pagamento, maior o deságio.</li>
-    <li><strong>Situação do processo:</strong> precatório já expedido e inscrito tem menos risco que um ainda em fase de cálculo.</li>
+    <li><strong>Situação do processo:</strong> precatório <a href="/blog/expedicao-de-oficio-precatorio/">já expedido</a> e inscrito tem menos risco que um ainda em fase de cálculo.</li>
     <li><strong>Descontos:</strong> imposto de renda (em geral pelo regime de rendimentos acumulados), contribuição previdenciária e honorários.</li>
     <li><strong>Prioridades:</strong> a parcela superpreferencial de idosos, doentes graves e pessoas com deficiência é pessoal e não é transferida para quem compra.</li>
   </ul>

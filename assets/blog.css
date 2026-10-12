@@ -31,6 +31,9 @@ img,svg{display:block}
 .btn-wa{background:var(--green);color:#04130C}
 .btn-wa:hover{background:#1FDB93;transform:translateY(-2px)}
 .nav .btn{padding:12px 20px;font-size:.9rem}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn-tel{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-tel:hover{border-color:#fff}
 
 /* blog index */
 .hero{background:var(--ink);color:#fff;padding:72px 0 80px}
@@ -73,6 +76,8 @@ th{background:var(--ink);color:#fff;font:600 .8rem Montserrat,sans-serif;letter-
 .cta p{margin:0;color:rgba(7,17,31,.75)}
 .cta .btn{background:var(--ink);color:#fff}
 .cta .btn:hover{background:var(--ink-3)}
+.cta .btn-tel{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.cta .btn-tel:hover{background:rgba(7,17,31,.08)}
 .related{padding:24px 0 120px}
 .related h2{font-size:1.4rem;margin-bottom:24px}
 .related .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
