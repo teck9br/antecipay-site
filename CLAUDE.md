@@ -34,11 +34,14 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
 - Toda página nova: título ≤ 60 caracteres, description 120–160, um H1, canonical, JSON-LD (Service/FAQPage/Article), ≥ 3 links internos.
 - Microsoft Clarity (`yqi1puom0k`) com evento `whatsapp_click` em todas as páginas.
 
+## IndexNow (Bing, Yandex e outros)
+Depois do deploy de páginas novas ou alteradas, rode `python3 indexnow.py /caminho/da-pagina/` (sem argumentos, envia todo o sitemap). A chave está em `8082ba8677f2ebbf6a79e0da524d3676.txt`, na raiz; não apague esse arquivo.
+
 ## Auditoria de SEO
 `python3 seo_audit.py . --base https://antecipayprecatorios.com.br --out auditoria.md` (script em `seo_audit.py`).
 
 ## Pendências (out/2026)
-- Pedir indexação no Search Console de `/blog/empresas-que-compram-precatorios-natal/`.
+- Search Console (12/10/2026): 19 páginas indexadas; indexação solicitada para as 8 restantes (antecipação, trabalhista, vale a pena, golpe, herança, superpreferência, 2027 e artigo de Natal). Conferir em alguns dias em Indexação → Páginas.
 - Redirecionamento: `http://www` faz 2 saltos (http→https www→apex). Criar Redirect Rule na Cloudflare direto para a canônica e ativar HSTS; usar sempre a URL canônica em perfis e links externos.
 - **E-mail quebrado:** `antecipay.com.br` tem Null MX (não recebe e-mail) e o domínio do site não tem MX. Criar `contato@antecipayprecatorios.com.br` e trocar em todo lugar (index.html, build_blog.py, llms.txt, este arquivo).
 - **Receita Federal diverge do site:** razão social "Antecipay Soluções Financeiras e Tecnológicas Ltda", início 09/01/2026, endereço cadastral em Parnamirim-RN. O `/sobre/` ainda mostra "Razão social: Antecipay Precatórios". Dono decide: atualizar o endereço na Receita ou explicar Natal como escritório de atendimento.
