@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consultar RPV e precatório no TRF3 pelo CPF | Antecipay</title>
+<meta name="description" content="Veja como consultar RPV e precatório no TRF3, de São Paulo e Mato Grosso do Sul, pelo CPF, OAB ou número do processo, e quando o pagamento sai.">
+<link rel="canonical" href="https://antecipayprecatorios.com.br/blog/consultar-rpv-precatorio-trf3/">
+<meta name="theme-color" content="#07111F">
+<script>document.documentElement.classList.add('js')</script>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Antecipay">
+<meta property="og:title" content="Consultar RPV e precatório no TRF3 pelo CPF | Antecipay">
+<meta property="og:description" content="Veja como consultar RPV e precatório no TRF3, de São Paulo e Mato Grosso do Sul, pelo CPF, OAB ou número do processo, e quando o pagamento sai.">
+<meta property="og:url" content="https://antecipayprecatorios.com.br/blog/consultar-rpv-precatorio-trf3/">
+<meta property="og:image" content="https://antecipayprecatorios.com.br/og.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Inter;font-style:normal;font-weight:400 600;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format("woff2")}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400 900;font-display:swap;src:url(/assets/fonts/montserrat-latin.woff2) format("woff2")}
+:root{
+  --ink:#07111F;--ink-3:#1A2B4A;--paper:#fff;--mist:#F3F6FA;--line:#E3E9F2;
+  --text:#0B1526;--muted:#5B6B82;--green:#16C784;--green-d:#0B8457;--lime:#D7FF3A;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--text);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;letter-spacing:-.02em;line-height:1.15}
+h1,h2{text-wrap:balance}
+a{color:var(--green-d)}
+a,button,input,select,label{touch-action:manipulation}
+.skip{position:absolute;left:16px;top:-60px;z-index:70;background:var(--green);color:var(--ink);font:600 .95rem Montserrat,sans-serif;padding:12px 18px;border-radius:999px;text-decoration:none}
+.skip:focus{top:16px}
+main:focus{outline:0}
+img,svg{display:block}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.narrow{width:min(760px,100% - 40px);margin-inline:auto}
+
+/* header */
+.top{background:var(--ink);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{color:#fff;text-decoration:none;font:700 1.35rem/1 Montserrat,sans-serif;letter-spacing:-.03em}
+.menu{display:flex;gap:32px}
+.menu a{color:rgba(255,255,255,.78);text-decoration:none;font:600 .95rem Montserrat,sans-serif}
+.menu a:hover,.menu a[aria-current]{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem/1 Montserrat,sans-serif;padding:16px 26px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,background .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--green);color:#04130C}
+.btn-wa:hover{background:#1FDB93;transform:translateY(-2px)}
+.nav .btn{padding:12px 20px;font-size:.9rem}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn-tel{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-tel:hover{border-color:#fff}
+
+/* blog index */
+.hero{background:var(--ink);color:#fff;padding:72px 0 80px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 .78rem/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:3px;background:currentColor}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.4rem);font-weight:700;margin:16px 0}
+.hero p{color:rgba(255,255,255,.74);font-size:1.12rem;max-width:640px}
+.posts{padding:80px 0 120px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.card{display:flex;flex-direction:column;gap:12px;padding:32px;border:1px solid var(--line);border-radius:var(--r);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s,transform .2s}
+.card:hover{border-color:var(--green);box-shadow:0 18px 50px -18px rgba(7,17,31,.22);transform:translateY(-3px)}
+.card .tag{font:600 .72rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d)}
+.card h2{font-size:1.4rem;font-weight:700}
+.card p{color:var(--muted)}
+.card .more{margin-top:auto;padding-top:8px;font:600 .95rem Montserrat,sans-serif;color:var(--text)}
+
+/* article */
+.art-head{background:var(--ink);color:#fff;padding:56px 0 64px}
+.crumbs{font-size:.88rem;color:rgba(255,255,255,.6);margin-bottom:24px}
+.crumbs a{color:rgba(255,255,255,.8);text-decoration:none}
+.art-head h1{font-size:clamp(2rem,4.2vw,3rem);font-weight:700;margin:16px 0}
+.art-head .lead{color:rgba(255,255,255,.76);font-size:1.15rem}
+.meta{margin-top:24px;font-size:.9rem;color:rgba(255,255,255,.6)}
+article{padding:56px 0 24px}
+.answer{background:var(--mist);border-left:0;border-radius:var(--r);padding:24px 28px;margin-bottom:40px}
+.answer strong{display:block;font:600 .78rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);margin-bottom:8px}
+article h2{font-size:1.6rem;font-weight:700;margin:48px 0 16px}
+article h3{font-size:1.2rem;font-weight:600;margin:32px 0 12px}
+article p{margin-bottom:16px;font-size:1.06rem}
+article ul,article ol{margin:0 0 20px 22px}
+article li{margin-bottom:8px;font-size:1.06rem}
+table{width:100%;border-collapse:collapse;margin:8px 0 24px;font-size:.98rem}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--ink);color:#fff;font:600 .8rem Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin-bottom:24px}
+.table-wrap table{margin:0}
+.note{font-size:.92rem;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;margin-top:40px}
+.cta{background:var(--green);border-radius:24px;padding:40px;margin:48px 0;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.cta h2{margin:0;font-size:1.6rem;color:var(--ink)}
+.cta p{margin:0;color:rgba(7,17,31,.75)}
+.cta .btn{background:var(--ink);color:#fff}
+.cta .btn:hover{background:var(--ink-3)}
+.cta .btn-tel{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.cta .btn-tel:hover{background:rgba(7,17,31,.08)}
+.related{padding:24px 0 120px}
+.related h2{font-size:1.4rem;margin-bottom:24px}
+.related .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.related .card{padding:24px}
+.related .card h3{font-size:1.1rem;font-weight:600}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.68);padding:56px 0 32px;font-size:.95rem}
+.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer a{color:rgba(255,255,255,.8);text-decoration:none}
+footer a:hover{color:var(--green)}
+.foot ul{list-style:none;display:grid;gap:8px}
+.legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;font-size:.86rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.fab{position:fixed;right:calc(20px + env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(37,211,102,.6)}
+.fab svg{width:30px;height:30px}
+.js .fab{opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .25s,transform .25s,visibility .25s}
+.js .fab.on{opacity:1;visibility:visible;transform:none}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .grid,.related .grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap,.narrow{width:calc(100% - 40px)}
+  .nav .btn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .nav .btn{padding:12px}
+  .hero{padding:48px 0 56px}
+  .posts{padding:48px 0 72px}
+  .card{padding:24px}
+  .grid{gap:12px}
+  .art-head{padding:40px 0 48px}
+  article{padding:40px 0 16px}
+  article h2{font-size:1.35rem;margin-top:40px}
+  .answer{padding:20px}
+  .cta{padding:28px 24px}
+  .cta .btn{width:100%}
+  .related{padding-bottom:72px}
+  th,td{padding:10px 8px;font-size:.92rem}
+  th{font-size:.72rem;letter-spacing:0}
+}
+
+/* calculadora */
+.calc{background:var(--ink);color:#fff;border-radius:24px;padding:40px;margin:0 0 40px;display:grid;gap:24px;color-scheme:dark}
+.calc h2{margin:0;color:#fff;font-size:1.5rem}
+.calc .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.calc label{display:grid;gap:8px;font:600 .85rem Montserrat,sans-serif;color:rgba(255,255,255,.8)}
+.calc input,.calc select{height:52px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#0E1C33;color:#fff;padding:0 16px;font:500 1rem Inter,sans-serif;width:100%}
+.calc input::placeholder{color:rgba(255,255,255,.6)}
+.calc input:focus,.calc select:focus{outline:2px solid var(--green);outline-offset:1px}
+.calc .out{background:#0E1C33;border-radius:16px;padding:24px;display:grid;gap:8px}
+.calc .out small{font:600 .75rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.calc .range{font:700 clamp(1.6rem,4vw,2.2rem)/1.15 Montserrat,sans-serif;color:var(--lime)}
+.calc .out p{margin:0;color:rgba(255,255,255,.72);font-size:.95rem}
+.calc .btn{justify-self:start}
+@media (max-width:640px){.calc{padding:24px}.calc .fields{grid-template-columns:1fr}.calc .btn{width:100%}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}.btn-wa:hover,.card:hover{transform:none}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Como consultar RPV e precatório no TRF3 pelo CPF", "description": "Veja como consultar RPV e precatório no TRF3, de São Paulo e Mato Grosso do Sul, pelo CPF, OAB ou número do processo, e quando o pagamento sai.", "dateModified": "2026-10-07", "datePublished": "2026-10-07", "author": {"@type": "Organization", "@id": "https://antecipayprecatorios.com.br/#empresa", "name": "Antecipay Precatórios", "url": "https://antecipayprecatorios.com.br/"}, "publisher": {"@type": "Organization", "@id": "https://antecipayprecatorios.com.br/#empresa", "name": "Antecipay Precatórios", "logo": {"@type": "ImageObject", "url": "https://antecipayprecatorios.com.br/logo-512.png"}}, "mainEntityOfPage": "https://antecipayprecatorios.com.br/blog/consultar-rpv-precatorio-trf3/", "image": "https://antecipayprecatorios.com.br/og.png"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O TRF3 atende quais estados?", "acceptedAnswer": {"@type": "Answer", "text": "O TRF3 atende a Justiça Federal de São Paulo e de Mato Grosso do Sul."}}, {"@type": "Question", "name": "Minha requisição é antiga e não aparece. O que fazer?", "acceptedAnswer": {"@type": "Answer", "text": "Precatórios enviados antes de 1º de julho de 2006 e RPVs enviadas antes de 1º de julho de 2007 não aparecem nessa consulta. Nesses casos, use a consulta processual geral do tribunal ou fale com o advogado."}}, {"@type": "Question", "name": "Preciso de advogado para consultar?", "acceptedAnswer": {"@type": "Answer", "text": "Não. A consulta de requisições de pagamento é pública e pode ser feita pelo CPF do beneficiário."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://antecipayprecatorios.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://antecipayprecatorios.com.br/blog/"}, {"@type": "ListItem", "position": 3, "name": "Como consultar RPV e precatório no TRF3 pelo CPF", "item": "https://antecipayprecatorios.com.br/blog/consultar-rpv-precatorio-trf3/"}]}]}</script>
+<!-- Microsoft Clarity -->
+<script>
+if(!/^(localhost|127[.]0[.]0[.]1)$/.test(location.hostname))(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","yqi1puom0k");
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(a&&window.clarity){clarity("event","whatsapp_click");}});
+document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest('a[href^="tel:"]');if(t&&window.clarity){clarity("event","phone_click");}});
+</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="top">
+  <div class="wrap nav">
+    <a href="/" class="logo" translate="no">Antecipay</a>
+    <nav class="menu" aria-label="Principal">
+      <a href="/#como-funciona">Como funciona</a>
+      <a href="/#vantagens">Vantagens</a>
+      <a href="/#duvidas">Dúvidas</a>
+      <a href="/sobre/">Sobre</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/5584994938383?text=Ol%C3%A1%21%20Vim%20pelo%20blog%20da%20Antecipay%20e%20tenho%20um%20precat%C3%B3rio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8a9.8 9.8 0 01-5-1.37l-.36-.21-3.72.97.99-3.63-.23-.37A9.8 9.8 0 012.2 12 9.85 9.85 0 0112.05 2.2c2.63 0 5.1 1.03 6.96 2.89A9.78 9.78 0 0121.9 12a9.86 9.86 0 01-9.85 9.8zm8.38-18.18A11.76 11.76 0 0012.05.15C5.5.15.16 5.48.16 12.03c0 2.1.55 4.14 1.59 5.94L.06 24l6.17-1.62a11.87 11.87 0 005.81 1.48c6.55 0 11.89-5.33 11.89-11.88 0-3.18-1.24-6.16-3.49-8.4z"/></svg><span>Falar no WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+<section class="art-head">
+  <div class="narrow">
+    <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <a href="/blog/">Blog</a></nav>
+    <span class="eyebrow">Consulta</span>
+    <h1>Como consultar RPV e precatório no TRF3 pelo CPF</h1>
+    <p class="lead">Tem uma ação contra a União ou o INSS na Justiça Federal de São Paulo ou de Mato Grosso do Sul? Veja como acompanhar a sua RPV ou o seu precatório no TRF3.</p>
+    <p class="meta">Equipe Antecipay · Atualizado em 7 de outubro de 2026 · 3 min de leitura</p>
+  </div>
+</section>
+<article class="narrow">
+  <div class="answer"><strong>Resposta rápida</strong>Para consultar RPV ou precatório no TRF3, acesse a consulta de requisições de pagamento no site do tribunal e pesquise pelo CPF ou CNPJ do beneficiário, pela OAB do advogado, pelo número do processo de origem, do ofício requisitório ou do protocolo. A RPV é paga em até 60 dias depois de a requisição ser registrada no tribunal; o precatório segue a data de corte de 1º de fevereiro.</div>
+  
+<h2>Quais estados são atendidos pelo TRF3</h2>
+<p>O Tribunal Regional Federal da 3ª Região cuida das ações contra a União, o INSS e outros órgãos federais em <strong>São Paulo</strong> e <strong>Mato Grosso do Sul</strong>.</p>
+
+<h2>Passo a passo da consulta</h2>
+<ol>
+<li>Acesse a consulta de requisições de pagamento do TRF3: <a href="https://web.trf3.jus.br/consultas/Internet/ConsultaReqPag" target="_blank" rel="noopener">web.trf3.jus.br/consultas/Internet/ConsultaReqPag</a>.</li>
+<li>Escolha como pesquisar: <strong>CPF/CNPJ do beneficiário</strong>, OAB do advogado, número do processo de origem, número do ofício requisitório ou número do protocolo.</li>
+<li>Digite o dado e faça a pesquisa.</li>
+<li>Confira a situação da requisição, na modalidade em que foi feita: precatório, que segue o orçamento anual, ou RPV, que segue o orçamento mensal.</li>
+</ol>
+<p>Precatórios enviados antes de 1º de julho de 2006 e RPVs enviadas antes de 1º de julho de 2007 não aparecem nessa consulta; para eles, use a consulta processual geral do tribunal.</p>
+
+<h2>Quando o dinheiro sai</h2>
+<div class="table-wrap"><table>
+<tr><th>Tipo</th><th>Prazo</th></tr>
+<tr><td><strong>RPV</strong></td><td>Até 60 dias depois de a requisição ser registrada no tribunal</td></tr>
+<tr><td><strong>Precatório federal</strong></td><td>Apresentado até 1º de fevereiro: pago até o fim do ano seguinte. Depois dessa data, fica para o orçamento do ano posterior.</td></tr>
+</table></div>
+<p>Veja mais em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+
+<h2>Onde sacar</h2>
+<p>Na Justiça Federal, o valor costuma ser depositado numa conta judicial na Caixa ou no Banco do Brasil, em nome do beneficiário. Em geral, o saque é feito na agência do banco pagador, com RG, CPF e comprovante de residência. Se o juiz exigir alvará, o advogado orienta o caminho.</p>
+
+<h2>Termos do andamento</h2>
+<p>Se aparecer “expedição de ofício” ou “juntada de certidão” no processo, veja <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a> e <a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a>.</p>
+
+<h2>Não quer esperar?</h2>
+<p>A Antecipay compra precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de todo o Brasil. Veja como <a href="/">vender precatório</a> ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+
+  <div class="cta"><h2>Tem precatório no TRF3?</h2><p>Envie o número do processo e receba uma proposta por escrito, sem compromisso.</p><a class="btn" href="https://wa.me/5584994938383?text=Ol%C3%A1%21%20Tenho%20um%20precat%C3%B3rio%20no%20TRF3%20e%20quero%20uma%20proposta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8a9.8 9.8 0 01-5-1.37l-.36-.21-3.72.97.99-3.63-.23-.37A9.8 9.8 0 012.2 12 9.85 9.85 0 0112.05 2.2c2.63 0 5.1 1.03 6.96 2.89A9.78 9.78 0 0121.9 12a9.86 9.86 0 01-9.85 9.8zm8.38-18.18A11.76 11.76 0 0012.05.15C5.5.15.16 5.48.16 12.03c0 2.1.55 4.14 1.59 5.94L.06 24l6.17-1.62a11.87 11.87 0 005.81 1.48c6.55 0 11.89-5.33 11.89-11.88 0-3.18-1.24-6.16-3.49-8.4z"/></svg>Falar no WhatsApp</a><a class="btn btn-tel" href="tel:+5584994938383"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Ligar (84) 99493-8383</a></div>
+  <h2>Perguntas frequentes</h2><h3>O TRF3 atende quais estados?</h3><p>O TRF3 atende a Justiça Federal de São Paulo e de Mato Grosso do Sul.</p><h3>Minha requisição é antiga e não aparece. O que fazer?</h3><p>Precatórios enviados antes de 1º de julho de 2006 e RPVs enviadas antes de 1º de julho de 2007 não aparecem nessa consulta. Nesses casos, use a consulta processual geral do tribunal ou fale com o advogado.</p><h3>Preciso de advogado para consultar?</h3><p>Não. A consulta de requisições de pagamento é pública e pode ser feita pelo CPF do beneficiário.</p>
+  <p class="note">Conteúdo informativo, atualizado em 7 de outubro de 2026. As regras de pagamento de precatórios mudam com frequência e cada processo tem particularidades. Para uma análise do seu caso, fale com a nossa equipe.</p>
+</article>
+<section class="related"><div class="narrow"><h2>Leia também</h2><div class="grid"><a class="card" href="/blog/consultar-rpv-precatorio-trf1/"><span class="tag">Consulta</span><h3>Como consultar RPV e precatório no TRF1 pelo CPF</h3><span class="more">Ler artigo →</span></a><a class="card" href="/blog/consultar-rpv-precatorio-trf5/"><span class="tag">Consulta</span><h3>Como consultar RPV e precatório no TRF5 pelo CPF</h3><span class="more">Ler artigo →</span></a><a class="card" href="/blog/quanto-tempo-demora-precatorio/"><span class="tag">Prazos</span><h3>Quanto tempo demora para receber um precatório?</h3><span class="more">Ler artigo →</span></a></div></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a href="/" class="logo" translate="no">Antecipay</a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
+      <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/antecipacao-de-precatorio/">Antecipação de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/vender-precatorio-trabalhista/">Precatório trabalhista</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
+      <ul><li><a href="https://wa.me/5584994938383?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Antecipay." target="_blank" rel="noopener">WhatsApp (84) 99493-8383</a></li><li><a href="mailto:contato@antecipay.com.br">contato@antecipay.com.br</a></li><li>Av. Senador Salgado Filho, 1559 – Tirol, Natal-RN</li></ul>
+    </div>
+    <div class="legal"><span>© 2026 Antecipay Precatórios</span><span>CNPJ 64.382.432/0001-97</span></div>
+  </div>
+</footer>
+<a class="fab" href="https://wa.me/5584994938383?text=Ol%C3%A1%21%20Vim%20pelo%20blog%20e%20tenho%20um%20precat%C3%B3rio%20para%20antecipar." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8a9.8 9.8 0 01-5-1.37l-.36-.21-3.72.97.99-3.63-.23-.37A9.8 9.8 0 012.2 12 9.85 9.85 0 0112.05 2.2c2.63 0 5.1 1.03 6.96 2.89A9.78 9.78 0 0121.9 12a9.86 9.86 0 01-9.85 9.8zm8.38-18.18A11.76 11.76 0 0012.05.15C5.5.15.16 5.48.16 12.03c0 2.1.55 4.14 1.59 5.94L.06 24l6.17-1.62a11.87 11.87 0 005.81 1.48c6.55 0 11.89-5.33 11.89-11.88 0-3.18-1.24-6.16-3.49-8.4z"/></svg></a>
+<script>
+(function(){var f=document.querySelector('.fab'),t=document.querySelector('main > section');
+if(!f)return;if(!t||!('IntersectionObserver' in window)){f.classList.add('on');return;}
+new IntersectionObserver(function(es){f.classList.toggle('on',!es[0].isIntersecting);}).observe(t);})();
+</script>
+</body>
+</html>

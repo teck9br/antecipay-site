@@ -125,7 +125,7 @@ POSTS = [
 <li><strong>Estados:</strong> cada estado define por lei. Sem lei, o limite é de 40 salários mínimos.</li>
 <li><strong>Municípios:</strong> cada município define por lei. Sem lei, o limite é de 30 salários mínimos.</li>
 </ul>
-<p>Quem tem um crédito pouco acima do limite pode, em alguns casos, <strong>renunciar ao valor que excede</strong> para receber como RPV, bem mais rápido. É uma decisão que precisa ser feita no processo e vale a pena fazer as contas antes.</p>
+<p>Quem tem um crédito pouco acima do limite pode, em alguns casos, <strong>renunciar ao valor que excede</strong> para receber como RPV, bem mais rápido. É uma decisão que precisa ser feita no processo e vale a pena fazer as contas antes. E, quando o governo contesta só parte do cálculo, a parte aceita pode ser paga antes: veja <a href="/blog/valor-incontroverso-precatorio/">valor incontroverso</a>.</p>
 <h2>E se eu não quiser esperar?</h2>
 <p>O precatório é um direito de crédito e pode ser <strong>vendido (cedido)</strong> a terceiros, como a Antecipay. Você recebe um valor à vista agora e quem compra passa a receber do governo no futuro. Veja como <a href="/">vender precatório</a> com segurança e entenda o desconto no artigo <a href="/blog/desagio-precatorio/">Deságio: por que recebo menos ao antecipar</a>. Se a sua ação foi contra o INSS, veja <a href="/blog/precatorio-inss/">como funciona o precatório do INSS</a>.</p>
 """,
@@ -161,7 +161,7 @@ POSTS = [
 <h2>Quem tem prioridade na fila</h2>
 <p>A Constituição garante prioridade a credores com <strong>60 anos ou mais</strong>, com <strong>doença grave</strong> ou com <strong>deficiência</strong>. Eles podem receber antes uma parte do crédito, até um limite legal. O restante segue a fila normal. Entenda quem tem direito em <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>.</p>
 <h2>O valor é corrigido enquanto espero?</h2>
-<p>Sim. Pelas regras atuais, o valor é atualizado pelo IPCA, com juros simples de 2% ao ano. Se essa soma passar da Selic, vale a Selic, que funciona como teto. Ainda assim, esperar anos significa adiar planos, e é por isso que muitos credores preferem <a href="/">vender o precatório</a> e receber à vista. Para estimar quanto receberia, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+<p>Sim. Pelas regras atuais, o valor é atualizado pelo IPCA, com juros simples de 2% ao ano. Se essa soma passar da Selic, vale a Selic, que funciona como teto. Se o governo contestou só parte da conta, dá para pedir antes o pagamento da parte aceita (<a href="/blog/valor-incontroverso-precatorio/">valor incontroverso</a>). Ainda assim, esperar anos significa adiar planos, e é por isso que muitos credores preferem <a href="/">vender o precatório</a> e receber à vista. Para estimar quanto receberia, use a <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
 """,
   cta=("Não quer esperar a fila?","A Antecipay compra o seu precatório e você recebe à vista.","Olá! Li o artigo sobre prazos e quero antecipar meu precatório."),
   related=["como-saber-se-tenho-precatorio","desagio-precatorio","o-que-e-precatorio-e-rpv"],
@@ -188,11 +188,11 @@ POSTS = [
 <h2>2. Encontre o TRF da sua região</h2>
 <div class="table-wrap"><table>
 <tr><th>Tribunal</th><th>Estados</th></tr>
-<tr><td>TRF1</td><td>DF, GO, TO, MT, BA, PI, MA, PA, AM, AC, RR, RO, AP</td></tr>
+<tr><td><a href="/blog/consultar-rpv-precatorio-trf1/">TRF1</a></td><td>DF, GO, TO, MT, BA, PI, MA, PA, AM, AC, RR, RO, AP</td></tr>
 <tr><td>TRF2</td><td>RJ, ES</td></tr>
-<tr><td>TRF3</td><td>SP, MS</td></tr>
+<tr><td><a href="/blog/consultar-rpv-precatorio-trf3/">TRF3</a></td><td>SP, MS</td></tr>
 <tr><td>TRF4</td><td>RS, PR, SC</td></tr>
-<tr><td>TRF5</td><td>PE, CE, AL, SE, RN, PB</td></tr>
+<tr><td><a href="/blog/consultar-rpv-precatorio-trf5/">TRF5</a></td><td>PE, CE, AL, SE, RN, PB</td></tr>
 <tr><td>TRF6</td><td>MG</td></tr>
 </table></div>
 <h2>3. Faça a consulta</h2>
@@ -201,7 +201,7 @@ POSTS = [
 <li>Pesquise pelo seu <strong>CPF</strong> (ou CNPJ) ou pelo <strong>número do processo</strong>.</li>
 <li>Anote o número do precatório, o valor, o ano do orçamento e a situação (por exemplo, "inscrito", "pago" ou "aguardando pagamento").</li>
 </ol>
-<p>No Rio Grande do Norte, por exemplo, precatórios federais são consultados no portal do <strong>TRF5</strong> (veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>), e os estaduais e municipais no <strong>TJRN</strong>.</p>
+<p>No Rio Grande do Norte, por exemplo, precatórios federais são consultados no portal do <strong>TRF5</strong> (veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>), e os estaduais e municipais no <strong>TJRN</strong>. Em São Paulo, veja <a href="/blog/consultar-precatorio-tjsp/">como consultar precatório no TJSP</a>.</p>
 <h2>4. Não encontrou nada?</h2>
 <p>A ação pode ainda não ter chegado à fase de pagamento, ou o precatório pode ter sido expedido com outros dados. Nesse caso, fale com o advogado que cuidou da ação ou envie o número do processo para a nossa equipe, que fazemos a análise. Se o andamento mostra termos como <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício</a> ou <a href="/blog/juntada-de-certidao/">juntada de certidão</a>, veja o que cada um significa.</p>
 <h2>Achei meu precatório. E agora?</h2>
@@ -290,7 +290,7 @@ POSTS.insert(0, dict(
 <h2>Tem imposto de renda?</h2>
 <p>Em geral, sim. Os atrasados previdenciários são tributados pelo regime de <strong>rendimentos recebidos acumuladamente (RRA)</strong>, que divide o valor pelos meses de atraso e costuma resultar em imposto menor. Aposentados com doença grave prevista em lei podem ser isentos, e os juros de mora sobre verbas alimentares não são tributados.</p>
 <h2>Como consultar o seu precatório do INSS</h2>
-<p>Entre no portal do TRF da sua região e pesquise pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>. No Nordeste, veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar no TRF5</a>.</p>
+<p>Entre no portal do TRF da sua região e pesquise pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>. No Nordeste, veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar no TRF5</a>; também há guias para o <a href="/blog/consultar-rpv-precatorio-trf1/">TRF1</a> e o <a href="/blog/consultar-rpv-precatorio-trf3/">TRF3</a>.</p>
 <h2>Não quer esperar?</h2>
 <p>O precatório do INSS pode ser vendido, como qualquer precatório (entenda <a href="/blog/o-que-e-precatorio-e-rpv/">o que é precatório e RPV</a>). Você recebe um valor à vista agora e quem compra passa a receber da União no futuro. Veja <a href="/vender-precatorio-inss/">como funciona a venda do precatório do INSS na Antecipay</a> e, para os demais casos, como <a href="/">vender precatório</a>.</p>
 """,
@@ -768,7 +768,7 @@ POSTS.insert(0, dict(
   ],
   body="""
 <h2>O que é o ofício requisitório</h2>
-<p>Quando a ação contra o governo termina e o valor está definido, o juiz da execução emite o <strong>ofício requisitório</strong>: um documento padronizado que pede ao presidente do tribunal o pagamento daquela quantia. Se o valor está dentro do limite de pequeno valor, ele vira uma <strong>RPV</strong>; acima disso, um <strong>precatório</strong>. Veja a diferença em <a href="/blog/o-que-e-precatorio-e-rpv/">o que é precatório e RPV</a>.</p>
+<p>Quando a ação contra o governo termina e o valor está definido, o juiz da execução emite o <strong>ofício requisitório</strong>: um documento padronizado que pede ao presidente do tribunal o pagamento daquela quantia. Se o valor está dentro do limite de pequeno valor, ele vira uma <strong>RPV</strong>; acima disso, um <strong>precatório</strong>. Veja a diferença em <a href="/blog/o-que-e-precatorio-e-rpv/">o que é precatório e RPV</a>. Se o governo contestou só parte da conta, a parte aceita pode ser requisitada antes: veja <a href="/blog/valor-incontroverso-precatorio/">valor incontroverso</a>.</p>
 
 <h2>O que acontece depois da expedição</h2>
 <ol>
@@ -847,13 +847,198 @@ POSTS.insert(0, dict(
 <p>A prioridade por idade é aplicada automaticamente. A prioridade por doença grave ou deficiência precisa ser pedida ao juiz da execução: veja <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>. Mudanças como inclusão de herdeiros ou registro de venda (cessão) também passam pela vara onde corre o processo, e não pelo tribunal.</p>
 
 <h2>Entendendo o andamento</h2>
-<p>Termos como “expedição de ofício” e “juntada de certidão” aparecem com frequência no acompanhamento. Veja o que significam em <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>.</p>
+<p>Termos como “expedição de ofício” e “juntada de certidão” aparecem com frequência no acompanhamento. Veja o que significam em <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a> e <a href="/blog/consultar-rpv-precatorio-trf3/">consulta no TRF3</a>.</p>
 
 <h2>Não quer esperar?</h2>
 <p>Se o seu precatório do TRF5 ainda vai demorar, você pode <a href="/">vender precatório</a> e receber à vista. A Antecipay fica em Natal, na área do TRF5, e analisa precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de toda a região. Faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
 """,
   cta=("Tem precatório no TRF5?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Tenho um precatório no TRF5 e quero uma proposta."),
   related=["como-saber-se-tenho-precatorio","quanto-tempo-demora-precatorio","precatorio-inss"],
+))
+BY = {p["slug"]: p for p in POSTS}
+
+POSTS.insert(0, dict(
+  slug="valor-incontroverso-precatorio",
+  tag="Processo",
+  title="Valor incontroverso no precatório: receba a parte que não está em discussão",
+  seo="Valor incontroverso no precatório: o que é | Antecipay",
+  desc="Entenda o que é valor incontroverso, quando o governo contesta só parte da conta, e como pedir o precatório ou a RPV dessa parte antes do fim da discussão.",
+  lead="O governo concordou com uma parte da conta e discute o resto? Essa parte aceita é o valor incontroverso, e você pode pedir o pagamento dela antes do fim da discussão.",
+  answer="Valor incontroverso é a parte da conta que o governo não contestou. Quando a Fazenda Pública impugna só parte do cálculo, o Código de Processo Civil (art. 535, §4º) permite cobrar desde logo a parte não questionada, e o STF confirmou que é possível expedir precatório ou RPV dessa parcela (Tema 28). Assim, o credor não precisa esperar a discussão sobre o restante para entrar na fila de pagamento.",
+  faq=[
+   ("Valor incontroverso é pago mais rápido?","Ele entra na fila antes, porque não depende do fim da discussão. Depois de expedido, segue as mesmas regras de pagamento de qualquer RPV ou precatório."),
+   ("Quem pede a expedição do valor incontroverso?","O advogado do credor, ao juiz da execução, quando a Fazenda contesta só parte do cálculo."),
+   ("Se a parte incontroversa for pequena, vira RPV?","Não necessariamente. O que define se o pagamento sai por RPV ou por precatório é o valor total executado. Se o total passar do limite, a parte incontroversa sai como precatório."),
+  ],
+  body="""
+<h2>O que é valor incontroverso</h2>
+<p>Depois que o credor ganha a ação contra o governo, vem a fase de cobrança: o credor apresenta o cálculo do que tem a receber, e a Fazenda Pública pode contestar (impugnar) essa conta. Se ela contesta só uma parte, o restante é o <strong>valor incontroverso</strong>, ou seja, a parte sobre a qual não há discussão.</p>
+<p><em>Exemplo hipotético:</em> o credor cobra R$ 100 mil e o governo diz que deve R$ 80 mil. Os R$ 80 mil são incontroversos; os R$ 20 mil restantes ficam em discussão.</p>
+
+<h2>O que diz a lei</h2>
+<ul>
+<li><strong>Código de Processo Civil, art. 535, §4º:</strong> quando a impugnação é parcial, a parte não questionada pode ser cobrada desde logo.</li>
+<li><strong>STF, Tema 28 de repercussão geral:</strong> o Supremo confirmou que é constitucional expedir precatório ou RPV para pagar a parte incontroversa e autônoma da condenação.</li>
+</ul>
+
+<h2>RPV ou precatório?</h2>
+<p>O que define o caminho é o <strong>valor total executado</strong>, e não só a parte incontroversa. A Constituição proíbe dividir o crédito para que uma parte saia como RPV e outra como precatório (art. 100, §8º). Se o total passar do limite de pequeno valor, a parte incontroversa sai como precatório, mesmo que seja pequena. Veja a diferença em <a href="/blog/o-que-e-precatorio-e-rpv/">o que é precatório e RPV</a>.</p>
+
+<h2>Como pedir</h2>
+<p>O advogado do credor pede ao juiz da execução a expedição do ofício da parte incontroversa. Depois disso, o caminho é o mesmo de qualquer requisição: veja <a href="/blog/expedicao-de-oficio-precatorio/">o que acontece depois da expedição de ofício</a> e <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+
+<h2>E a parte em discussão?</h2>
+<p>Ela continua sendo discutida no processo. Se, ao final, o credor tiver direito a ela, o valor pode gerar uma nova requisição de pagamento.</p>
+
+<h2>Dá para vender a parte incontroversa?</h2>
+<p>Sim. Depois de expedido, o precatório da parte incontroversa pode ser vendido como qualquer outro, por <a href="/blog/cessao-de-precatorio/">contrato de cessão de crédito</a>. Se você não quer esperar a fila, veja como <a href="/">vender precatório</a> com a Antecipay ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+""",
+  cta=("Tem valor incontroverso a receber?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Tenho um valor incontroverso no meu processo e quero uma proposta."),
+  related=["expedicao-de-oficio-precatorio","o-que-e-precatorio-e-rpv","cessao-de-precatorio"],
+))
+
+POSTS.insert(0, dict(
+  slug="consultar-precatorio-tjsp",
+  tag="Consulta",
+  title="Como consultar precatório no TJSP: posição na fila e pagamento",
+  seo="Consultar precatório no TJSP: fila e pagamento | Antecipay",
+  desc="Veja como consultar precatório no TJSP, acompanhar a posição na fila de pagamento, pedir prioridade e levantar o valor. Guia para credores do Estado e de SP.",
+  lead="Tem precatório contra o Estado de São Paulo, um município paulista ou uma autarquia? Veja onde acompanhar a posição na fila e o que fazer quando o pagamento sai.",
+  answer="Para consultar precatório no TJSP, acesse a página de precatórios do tribunal (tjsp.jus.br/precatorios). No menu Credores, a “Lista de Precatórios Disponibilizados e Pendentes de Pagamentos” mostra a posição na fila, e a lista de “Pagamentos Disponibilizados” mostra o que já foi pago. As listas de pendentes são atualizadas todo mês, por volta do dia 5.",
+  faq=[
+   ("Dá para consultar precatório do TJSP pelo CPF?","A página oficial de precatórios do TJSP não informa consulta por CPF. Se você não sabe o número do precatório ou do processo, peça ao advogado que cuidou da ação."),
+   ("Como pedir prioridade por doença grave no TJSP?","Nos precatórios eletrônicos, a partir de 2016, o pedido é feito ao juízo da execução, com cópia do RG e do CPF e atestado médico. Nos precatórios físicos, anteriores a 2016, o pedido é protocolado na Depre."),
+   ("Onde recebo o dinheiro do precatório do TJSP?","A Depre deposita o valor em conta ligada ao processo de origem. O levantamento é feito no juízo onde correu a ação, por mandado de levantamento em nome do advogado."),
+  ],
+  body="""
+<h2>Quem paga pelo TJSP</h2>
+<p>No Tribunal de Justiça de São Paulo, os precatórios do <strong>Estado de São Paulo</strong>, dos <strong>municípios paulistas</strong> e das autarquias estaduais e municipais são administrados pela <strong>Depre</strong>, a Diretoria de Execuções de Precatórios e Cálculos.</p>
+
+<h2>Passo a passo da consulta</h2>
+<ol>
+<li>Acesse a página de precatórios do TJSP: <a href="https://www.tjsp.jus.br/precatorios" target="_blank" rel="noopener">tjsp.jus.br/precatorios</a>.</li>
+<li>No menu <strong>Credores</strong>, abra a <strong>“Lista de Precatórios Disponibilizados e Pendentes de Pagamentos”</strong>.</li>
+<li>Localize o ente devedor (o Estado ou o município) e o seu precatório na lista, para ver a posição na fila.</li>
+<li>Se o precatório já foi pago, ele aparece na lista de <strong>“Pagamentos Disponibilizados”</strong>.</li>
+</ol>
+<p>As listas de pendentes são atualizadas mensalmente, por volta do dia 5, e os precatórios pagos no mês anterior saem delas. O TJSP informa que está substituindo o sistema de listas, então vale conferir os dois sistemas disponíveis na página. A “Pesquisa de Precatórios e Pagamentos” cobre registros até maio de 2018. Nos precatórios eletrônicos, também dá para acompanhar os autos digitais com a senha fornecida pelo advogado.</p>
+
+<h2>Consulta por CPF</h2>
+<p>A página oficial de precatórios do TJSP não informa consulta por CPF. Para encontrar o seu precatório com segurança, tenha em mãos o número do precatório ou do processo, que o advogado da ação pode informar.</p>
+
+<h2>Prioridade por idade, doença ou deficiência</h2>
+<ul>
+<li><strong>Precatórios eletrônicos (a partir de 2016):</strong> a prioridade por idade já consta do ofício requisitório. Para doença grave ou deficiência que não constem do ofício, o pedido é feito ao juízo da execução, com cópia do RG e do CPF e atestado médico.</li>
+<li><strong>Precatórios físicos (anteriores a 2016):</strong> o pedido é protocolado na Depre, com os mesmos documentos.</li>
+</ul>
+<p>Entenda os limites em <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>.</p>
+
+<h2>Quando o pagamento sai</h2>
+<p>A Depre deposita o valor em conta vinculada ao processo de origem. O levantamento é feito no juízo onde correu a ação, por <strong>mandado de levantamento</strong> em nome do advogado; na Capital, esse trâmite passa pela Upefaz. O andamento pode ser acompanhado na consulta processual do 1º grau.</p>
+
+<h2>Quanto tempo demora</h2>
+<p>Estados e municípios pagam dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho do estoque de precatórios, e a espera pode ser longa. Veja <a href="/vender-precatorio-estadual/">precatório estadual</a>, <a href="/vender-precatorio-municipal/">precatório municipal</a> e <a href="/blog/precatorios-2027-ec-136/">o que mudou com a EC 136</a>.</p>
+
+<h2>Não quer esperar a fila?</h2>
+<p>A Antecipay compra precatórios de todo o Brasil, inclusive de São Paulo. Veja como <a href="/">vender precatório</a> com proposta por escrito ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+""",
+  cta=("Tem precatório em São Paulo?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Tenho um precatório no TJSP e quero uma proposta."),
+  related=["consultar-rpv-precatorio-trf3","quanto-tempo-demora-precatorio","superpreferencia-precatorio"],
+))
+
+POSTS.insert(0, dict(
+  slug="consultar-rpv-precatorio-trf3",
+  tag="Consulta",
+  title="Como consultar RPV e precatório no TRF3 pelo CPF",
+  seo="Consultar RPV e precatório no TRF3 pelo CPF | Antecipay",
+  desc="Veja como consultar RPV e precatório no TRF3, de São Paulo e Mato Grosso do Sul, pelo CPF, OAB ou número do processo, e quando o pagamento sai.",
+  lead="Tem uma ação contra a União ou o INSS na Justiça Federal de São Paulo ou de Mato Grosso do Sul? Veja como acompanhar a sua RPV ou o seu precatório no TRF3.",
+  answer="Para consultar RPV ou precatório no TRF3, acesse a consulta de requisições de pagamento no site do tribunal e pesquise pelo CPF ou CNPJ do beneficiário, pela OAB do advogado, pelo número do processo de origem, do ofício requisitório ou do protocolo. A RPV é paga em até 60 dias depois de a requisição ser registrada no tribunal; o precatório segue a data de corte de 1º de fevereiro.",
+  faq=[
+   ("O TRF3 atende quais estados?","O TRF3 atende a Justiça Federal de São Paulo e de Mato Grosso do Sul."),
+   ("Minha requisição é antiga e não aparece. O que fazer?","Precatórios enviados antes de 1º de julho de 2006 e RPVs enviadas antes de 1º de julho de 2007 não aparecem nessa consulta. Nesses casos, use a consulta processual geral do tribunal ou fale com o advogado."),
+   ("Preciso de advogado para consultar?","Não. A consulta de requisições de pagamento é pública e pode ser feita pelo CPF do beneficiário."),
+  ],
+  body="""
+<h2>Quais estados são atendidos pelo TRF3</h2>
+<p>O Tribunal Regional Federal da 3ª Região cuida das ações contra a União, o INSS e outros órgãos federais em <strong>São Paulo</strong> e <strong>Mato Grosso do Sul</strong>.</p>
+
+<h2>Passo a passo da consulta</h2>
+<ol>
+<li>Acesse a consulta de requisições de pagamento do TRF3: <a href="https://web.trf3.jus.br/consultas/Internet/ConsultaReqPag" target="_blank" rel="noopener">web.trf3.jus.br/consultas/Internet/ConsultaReqPag</a>.</li>
+<li>Escolha como pesquisar: <strong>CPF/CNPJ do beneficiário</strong>, OAB do advogado, número do processo de origem, número do ofício requisitório ou número do protocolo.</li>
+<li>Digite o dado e faça a pesquisa.</li>
+<li>Confira a situação da requisição, na modalidade em que foi feita: precatório, que segue o orçamento anual, ou RPV, que segue o orçamento mensal.</li>
+</ol>
+<p>Precatórios enviados antes de 1º de julho de 2006 e RPVs enviadas antes de 1º de julho de 2007 não aparecem nessa consulta; para eles, use a consulta processual geral do tribunal.</p>
+
+<h2>Quando o dinheiro sai</h2>
+<div class="table-wrap"><table>
+<tr><th>Tipo</th><th>Prazo</th></tr>
+<tr><td><strong>RPV</strong></td><td>Até 60 dias depois de a requisição ser registrada no tribunal</td></tr>
+<tr><td><strong>Precatório federal</strong></td><td>Apresentado até 1º de fevereiro: pago até o fim do ano seguinte. Depois dessa data, fica para o orçamento do ano posterior.</td></tr>
+</table></div>
+<p>Veja mais em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>
+
+<h2>Onde sacar</h2>
+<p>Na Justiça Federal, o valor costuma ser depositado numa conta judicial na Caixa ou no Banco do Brasil, em nome do beneficiário. Em geral, o saque é feito na agência do banco pagador, com RG, CPF e comprovante de residência. Se o juiz exigir alvará, o advogado orienta o caminho.</p>
+
+<h2>Termos do andamento</h2>
+<p>Se aparecer “expedição de ofício” ou “juntada de certidão” no processo, veja <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a> e <a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a>.</p>
+
+<h2>Não quer esperar?</h2>
+<p>A Antecipay compra precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de todo o Brasil. Veja como <a href="/">vender precatório</a> ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+""",
+  cta=("Tem precatório no TRF3?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Tenho um precatório no TRF3 e quero uma proposta."),
+  related=["consultar-rpv-precatorio-trf1","consultar-rpv-precatorio-trf5","quanto-tempo-demora-precatorio"],
+))
+
+POSTS.insert(0, dict(
+  slug="consultar-rpv-precatorio-trf1",
+  tag="Consulta",
+  title="Como consultar RPV e precatório no TRF1 pelo CPF",
+  seo="Consultar RPV e precatório no TRF1 pelo CPF | Antecipay",
+  desc="Veja como consultar RPV e precatório no TRF1 pelo CPF, onde ver a data e o banco do pagamento e quanto tempo falta. Vale para DF, BA, GO, PA e outros estados.",
+  lead="Tem uma ação contra a União ou o INSS no Distrito Federal, na Bahia, em Goiás, no Pará ou em outro estado do TRF1? Veja como acompanhar a sua RPV ou o seu precatório.",
+  answer="Para consultar RPV ou precatório no TRF1, acesse o site do tribunal (trf1.jus.br), clique na aba “Processual”, escolha “RPVs e Precatórios” e pesquise pelo CPF. Na aba “Movimentação”, aparecem as datas e o banco do depósito. A RPV federal é paga em até 60 dias depois de chegar ao tribunal; o precatório segue a data de corte de 1º de fevereiro.",
+  faq=[
+   ("O TRF1 atende quais estados?","Acre, Amapá, Amazonas, Bahia, Distrito Federal, Goiás, Maranhão, Mato Grosso, Pará, Piauí, Rondônia, Roraima e Tocantins. Minas Gerais passou para o TRF6 em 2022."),
+   ("Onde vejo a data e o banco do pagamento?","Na aba “Movimentação” do resultado da consulta de RPVs e precatórios."),
+   ("A consulta não mostra nada. E agora?","A requisição pode ainda não ter sido expedida pelo juiz, ou ter sido feita com outros dados. Confira com o advogado ou com a vara onde corre o processo."),
+  ],
+  body="""
+<h2>Quais estados são atendidos pelo TRF1</h2>
+<p>O Tribunal Regional Federal da 1ª Região cuida das ações contra a União, o INSS e outros órgãos federais em <strong>Acre, Amapá, Amazonas, Bahia, Distrito Federal, Goiás, Maranhão, Mato Grosso, Pará, Piauí, Rondônia, Roraima e Tocantins</strong>. Minas Gerais, que fazia parte do TRF1, passou para o TRF6 em 2022.</p>
+
+<h2>Passo a passo da consulta</h2>
+<ol>
+<li>Acesse o site do TRF1: <a href="https://www.trf1.jus.br/" target="_blank" rel="noopener">trf1.jus.br</a>.</li>
+<li>No menu do alto da página, clique na aba <strong>“Processual”</strong>.</li>
+<li>Escolha <strong>“RPVs e Precatórios”</strong> e abra a consulta.</li>
+<li>Pesquise pelo seu <strong>CPF</strong>. Aparece a lista de processos encontrados com o nome da parte.</li>
+<li>Abra o resultado e veja a aba <strong>“Movimentação”</strong>, com as datas e o banco onde a RPV ou o precatório será depositado.</li>
+</ol>
+<p>O TRF1 lançou um novo portal no fim de 2023. Se os menus estiverem com outro nome, procure por “RPVs e Precatórios” na página inicial.</p>
+
+<h2>Quando o dinheiro sai</h2>
+<div class="table-wrap"><table>
+<tr><th>Tipo</th><th>Prazo</th></tr>
+<tr><td><strong>RPV</strong></td><td>Até 60 dias depois de a requisição chegar ao tribunal</td></tr>
+<tr><td><strong>Precatório federal</strong></td><td>Apresentado até 1º de fevereiro: pago até o fim do ano seguinte. Depois dessa data, fica para o orçamento do ano posterior.</td></tr>
+</table></div>
+<p>Veja mais em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a> e <a href="/blog/precatorios-2027-ec-136/">precatórios 2027</a>.</p>
+
+<h2>Onde sacar</h2>
+<p>Na Justiça Federal, o valor costuma ser depositado numa conta judicial na Caixa ou no Banco do Brasil, em nome do beneficiário. Em geral, o saque é feito na agência do banco pagador, com RG, CPF e comprovante de residência. Se o juiz exigir alvará, o advogado orienta o caminho.</p>
+
+<h2>Termos do andamento</h2>
+<p>Se aparecer “expedição de ofício” ou “juntada de certidão” no processo, veja <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf3/">consulta no TRF3</a> e <a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a>.</p>
+
+<h2>Não quer esperar?</h2>
+<p>A Antecipay compra precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de todo o Brasil. Veja como <a href="/">vender precatório</a> ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+""",
+  cta=("Tem precatório no TRF1?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Tenho um precatório no TRF1 e quero uma proposta."),
+  related=["consultar-rpv-precatorio-trf3","consultar-rpv-precatorio-trf5","precatorio-inss"],
 ))
 BY = {p["slug"]: p for p in POSTS}
 
@@ -1283,7 +1468,7 @@ def build_municipal():
   <p>É a dívida de uma prefeitura (ou de uma autarquia municipal) reconhecida em decisão judicial definitiva e que passa do limite de RPV do município. Esse limite é definido por lei de cada cidade. O precatório é expedido pelo Tribunal de Justiça do estado e entra na fila de pagamento daquela prefeitura.</p>
   <h2>Por que a espera costuma ser longa</h2>
   <p>Muitas prefeituras estão no regime especial de pagamento. Com a Emenda Constitucional 136/2025, estados e municípios passaram a pagar precatórios dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho da dívida. Quando a fila é grande, ela anda devagar, e a espera pode levar vários anos.</p>
-  <p>Cada município é um caso: há prefeituras em dia e outras com anos de atraso. Por isso analisamos o devedor antes de fazer a proposta. Se o seu precatório é de outro devedor, veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-estadual/">precatório estadual</a> ou <a href="/vender-precatorio-inss/">precatório do INSS</a>, ou a página principal sobre como <a href="/">vender precatório</a>. Também compramos <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
+  <p>Cada município é um caso: há prefeituras em dia e outras com anos de atraso. Por isso analisamos o devedor antes de fazer a proposta. Para municípios paulistas, veja <a href="/blog/consultar-precatorio-tjsp/">como consultar precatório no TJSP</a>. Se o seu precatório é de outro devedor, veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-estadual/">precatório estadual</a> ou <a href="/vender-precatorio-inss/">precatório do INSS</a>, ou a página principal sobre como <a href="/">vender precatório</a>. Também compramos <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
   <h2>Vender ou esperar?</h2>
   <div class="table-wrap"><table>
     <tr><th>Opção</th><th>Vantagem</th><th>Ponto de atenção</th></tr>
@@ -1314,7 +1499,7 @@ def build_estadual():
   <h2>O que é precatório estadual</h2>
   <p>É a dívida de um estado (ou de uma autarquia estadual, como institutos de previdência e universidades estaduais) reconhecida na Justiça e acima do limite de RPV fixado por lei estadual. É expedido pelo Tribunal de Justiça e entra na fila do estado devedor. Também são comuns precatórios de servidores públicos, por diferenças salariais, e de desapropriações.</p>
   <h2>Quanto tempo leva para receber</h2>
-  <p>Pela EC 136/2025, os estados pagam dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho do estoque de precatórios. Alguns estados estão em dia; outros têm filas de muitos anos. A posição na fila e a data de inscrição fazem diferença no prazo. Veja o que mudou em <a href="/blog/precatorios-2027-ec-136/">precatórios 2027 e a EC 136</a>.</p>
+  <p>Pela EC 136/2025, os estados pagam dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho do estoque de precatórios. Alguns estados estão em dia; outros têm filas de muitos anos. A posição na fila e a data de inscrição fazem diferença no prazo. Em São Paulo, veja <a href="/blog/consultar-precatorio-tjsp/">como consultar precatório no TJSP</a>. Veja o que mudou em <a href="/blog/precatorios-2027-ec-136/">precatórios 2027 e a EC 136</a>.</p>
   <p>Se o seu precatório é do Rio Grande do Norte, veja a página <a href="/vender-precatorio-rn/">vender precatório no RN</a>. Para outros devedores, veja <a href="/vender-precatorio-federal/">precatório federal</a>, <a href="/vender-precatorio-municipal/">precatório municipal</a> e <a href="/vender-precatorio-inss/">precatório do INSS</a>, ou a página principal sobre como <a href="/">vender precatório</a>. Também compramos <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
   <h2>O que influencia a proposta</h2>
   <ul>
