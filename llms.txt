@@ -17,7 +17,7 @@
 - [Sobre a Antecipay](https://antecipayprecatorios.com.br/sobre/): quem somos, dados da empresa e como funciona
 - [Calculadora de precatório](https://antecipayprecatorios.com.br/calculadora-precatorio/): estimativa de quanto vale o precatório à vista
 - [Vender precatório trabalhista](https://antecipayprecatorios.com.br/vender-precatorio-trabalhista/): compra de precatórios de ações trabalhistas contra órgãos públicos
-- [Antecipação de precatório](https://antecipayprecatorios.com.br/antecipacao-de-precatorio/): como funciona a antecipação, diferença para empréstimo e antecipação parcial
+- [Compra e antecipação de precatório](https://antecipayprecatorios.com.br/antecipacao-de-precatorio/): como funciona a compra de precatório, diferença para empréstimo e antecipação parcial
 - [Precatório federal](https://antecipayprecatorios.com.br/vender-precatorio-federal/): prazo de pagamento e venda de precatórios da União
 - [Vender precatório estadual](https://antecipayprecatorios.com.br/vender-precatorio-estadual/): compra de precatórios de estados
 - [Vender precatório municipal](https://antecipayprecatorios.com.br/vender-precatorio-municipal/): compra de precatórios de prefeituras
@@ -29,6 +29,7 @@
 
 ## Guias
 
+- [Precatório judicial: o que é e como funciona](https://antecipayprecatorios.com.br/blog/precatorio-judicial/): Entenda o que é precatório judicial, quando a dívida do governo vira precatório ou RPV, as etapas até o pagamento e como consultar ou vender o seu.
 - [Como consultar RPV e precatório no TRF1 pelo CPF](https://antecipayprecatorios.com.br/blog/consultar-rpv-precatorio-trf1/): Veja como consultar RPV e precatório no TRF1 pelo CPF, onde ver a data e o banco do pagamento e quanto tempo falta. Vale para DF, BA, GO, PA e outros estados.
 - [Como consultar RPV e precatório no TRF3 pelo CPF](https://antecipayprecatorios.com.br/blog/consultar-rpv-precatorio-trf3/): Veja como consultar RPV e precatório no TRF3, de São Paulo e Mato Grosso do Sul, pelo CPF, OAB ou número do processo, e quando o pagamento sai.
 - [Como consultar precatório no TJSP: posição na fila e pagamento](https://antecipayprecatorios.com.br/blog/consultar-precatorio-tjsp/): Veja como consultar precatório no TJSP, acompanhar a posição na fila de pagamento, pedir prioridade e levantar o valor. Guia para credores do Estado e de SP.
