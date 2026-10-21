@@ -5,14 +5,14 @@
 Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que compra e antecipa precatórios federais, estaduais e municipais de credores de todo o Brasil. Objetivo do site: gerar contatos pelo WhatsApp e ranquear para "vender precatório".
 
 ## Stack e deploy
-- HTML/CSS/JS estático, sem framework. Fontes Montserrat + Inter hospedadas no próprio site (`assets/fonts/`, woff2 variável, subconjunto latino); não usar Google Fonts.
+- HTML/CSS/JS estático, sem framework. Fontes Montserrat + Inter hospedadas no próprio site (`assets/fonts/`, woff2 variável, subconjunto latino); não usar Google Fonts. As duas são pré-carregadas e têm fontes de reserva ("Inter Fallback"/"Montserrat Fallback", Arial com `size-adjust`) para o texto não pular na troca. O Render serve `/assets/fonts/*` com cache de 1 ano (`immutable`): se trocar um arquivo de fonte, **mude o nome do arquivo**.
 - Hospedagem: **Render** (static site `srv-datsbgmk1f9s739g200g`), deploy automático a cada commit na branch `main` de `github.com/teck9br/antecipay-site`.
 - DNS no Registro.br: `A @ 216.24.57.1` e `CNAME www → antecipay-site.onrender.com`.
 - Domínio canônico: `https://antecipayprecatorios.com.br/` (sem www).
 
 ## Estrutura
 - `index.html` — home (editada à mão; foco SEO "vender precatório"). Tem FAQ com JSON-LD gerado a partir dos `<details>`.
-- `build_blog.py` — **gerador** de todas as outras páginas. Rode `python3 build_blog.py` depois de editar. Gera:
+- `build_blog.py` — **gerador** de todas as outras páginas. Rode `python3 build_blog.py` depois de editar (no Windows: `PYTHONUTF8=1 python build_blog.py`, senão falha com UnicodeEncodeError). Gera:
   - `blog/` (índice + artigos da lista `POSTS`), `sobre/`
   - páginas de serviço: `vender-precatorio-inss/`, `-rn/`, `-federal/`, `-estadual/`, `-municipal/`, `empresa-que-compra-precatorio-natal/`, `melhor-empresa-para-vender-precatorio/`, `calculadora-precatorio/`, `antecipacao-de-precatorio/`
   - `sitemap.xml` e `llms.txt`
