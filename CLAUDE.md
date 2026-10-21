@@ -18,6 +18,7 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
   - páginas por estado no modelo da de Natal (lista `ESTADOS` → `build_estados()`): `empresa-que-compra-precatorio-sao-paulo/`, `-paraiba/`, `-pernambuco/`, `-ceara/`. A empresa não tem escritório nesses estados: o texto diz "sede em Natal, atendimento 100% digital". Para um estado novo, acrescente um `dict` em `ESTADOS` com fatos próprios do estado (tribunais, devedores, como consultar), não texto copiado
   - `sitemap.xml` e `llms.txt`
   - Para novo artigo: adicione um `dict` em `POSTS`. Para nova página de serviço: use a função `landing(...)`, depois inclua no `build_sitemap`, no rodapé (`FOOT`) e no `llms.txt`.
+- Autoria: os artigos são assinados pela advogada **Dra. Thayná Cabral** (`AUTORA` em `build_blog.py` → página `equipe/thayna-cabral/`, `author` Person no JSON-LD). OAB, foto, bio e perfis dela estão vazios em `AUTORA`: preencher e rodar o build (campos vazios não aparecem). Perfis da empresa ficam em `SAME_AS` (hoje só o Instagram @antecipayprecatorios); ao criar LinkedIn/Facebook/Google Meu Negócio, acrescente lá e no `sameAs` do JSON-LD do `index.html`.
 - `assets/blog.css` — estilos das páginas geradas (escala de espaçamento de 8 px). O gerador embute esse CSS no `<head>` de cada página; edite o arquivo e rode o build.
 - `robots.txt` libera robôs de IA; `privacidade.html`; favicons e `og.png`.
 

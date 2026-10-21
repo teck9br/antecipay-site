@@ -4,8 +4,25 @@ import json, os, urllib.parse, html
 
 SITE = "https://antecipayprecatorios.com.br"
 WA = "5584994938383"
-UPDATED = "2026-10-16"
-UPDATED_BR = "16 de outubro de 2026"
+UPDATED = "2026-10-21"
+UPDATED_BR = "21 de outubro de 2026"
+
+# Perfis oficiais da empresa (entram no "sameAs" do JSON-LD e no rodapé)
+SAME_AS = ["https://www.instagram.com/antecipayprecatorios/"]
+
+# Advogada que assina os artigos. Campos vazios não aparecem na página:
+# preencha e rode o build.
+AUTORA = dict(
+    slug="thayna-cabral",
+    nome="Thayná Cabral",
+    tratamento="Dra.",
+    cargo="Advogada",
+    oab="",        # ex.: "OAB/RN 12.345"
+    foto="",       # ex.: "/assets/equipe/thayna-cabral.webp" (quadrada, 400 px)
+    bio="",        # 2 a 4 frases: formação, experiência, área de atuação
+    same_as=[],    # perfis profissionais dela: LinkedIn, Instagram, JusBrasil...
+)
+AUTORA_URL = f"/equipe/{AUTORA['slug']}/"
 
 def wa(msg):
     return f"https://wa.me/{WA}?text=" + urllib.parse.quote(msg)
@@ -73,7 +90,7 @@ FOOT = f"""<footer>
     <div class="foot">
       <div><a href="/" class="logo" translate="no">Antecipay</a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
       <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/antecipacao-de-precatorio/">Compra de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/vender-precatorio-trabalhista/">Precatório trabalhista</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/empresa-que-compra-precatorio-sao-paulo/">Precatórios em São Paulo</a></li><li><a href="/empresa-que-compra-precatorio-paraiba/">Precatórios na Paraíba</a></li><li><a href="/empresa-que-compra-precatorio-pernambuco/">Precatórios em Pernambuco</a></li><li><a href="/empresa-que-compra-precatorio-ceara/">Precatórios no Ceará</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
-      <ul><li><a href="{wa('Olá! Vim pelo site da Antecipay.')}" target="_blank" rel="noopener">WhatsApp (84) 99493-8383</a></li><li><a href="mailto:contato@antecipay.com.br">contato@antecipay.com.br</a></li><li>Av. Senador Salgado Filho, 1559 – Tirol, Natal-RN</li></ul>
+      <ul><li><a href="{wa('Olá! Vim pelo site da Antecipay.')}" target="_blank" rel="noopener">WhatsApp (84) 99493-8383</a></li><li><a href="mailto:contato@antecipay.com.br">contato@antecipay.com.br</a></li><li><a href="https://www.instagram.com/antecipayprecatorios/" target="_blank" rel="noopener">Instagram @antecipayprecatorios</a></li><li>Av. Senador Salgado Filho, 1559 – Tirol, Natal-RN</li></ul>
     </div>
     <div class="legal"><span>© 2026 Antecipay Precatórios</span><span>CNPJ 64.382.432/0001-97</span></div>
   </div>
@@ -303,11 +320,11 @@ BY = {p["slug"]: p for p in POSTS}
 POSTS.insert(0, dict(
   slug="como-vender-precatorio",
   tag="Vender precatório",
-  title="Como vender precatório com segurança: passo a passo",
-  seo="Como vender precatório com segurança | Antecipay",
-  desc="Veja como vender precatório passo a passo: quem pode vender, documentos, como é feita a proposta, o contrato de cessão e como evitar golpes.",
-  lead="Vender o precatório é a forma de receber agora um valor que o governo só pagaria no futuro. Veja como funciona a venda, do primeiro contato ao dinheiro na conta, e o que conferir para fazer isso com segurança.",
-  answer="Para vender precatório, você envia o número do processo a uma empresa compradora, recebe uma proposta por escrito com o valor líquido e, se aceitar, assina um contrato de cessão de crédito, que é comunicado ao tribunal. O pagamento é feito à vista ao credor. A venda é permitida pela Constituição (art. 100, §13).",
+  title="Documentos e passo a passo para vender precatório com segurança",
+  seo="Documentos para vender precatório: passo a passo | Antecipay",
+  desc="Quais documentos são pedidos para vender precatório, quem pode vender, como a proposta é calculada e os cuidados para não cair em golpe na cessão.",
+  lead="Já decidiu vender e quer saber o que separar? Veja os documentos, as etapas da cessão e o que conferir para fazer tudo com segurança.",
+  answer="Para vender precatório, separe documento de identidade e CPF, o número do processo e os dados bancários. Com isso, a empresa compradora analisa o processo e apresenta uma proposta por escrito com o valor líquido. Se você aceitar, assina um contrato de cessão de crédito, que é comunicado ao tribunal, e recebe à vista. A venda é permitida pela Constituição (art. 100, §13).",
   faq=[
    ("Quem pode vender precatório?","O titular do crédito, seja pessoa física ou empresa. Herdeiros também podem vender, depois de regularizada a sucessão no processo."),
    ("Preciso de advogado para vender precatório?","Não é obrigatório, mas é recomendado avisar o advogado que cuidou da ação, porque os honorários contratuais dele costumam ser descontados do crédito."),
@@ -315,6 +332,16 @@ POSTS.insert(0, dict(
    ("Quanto tempo leva para vender precatório?","Depende da análise do processo. Na Antecipay, depois da proposta aprovada e da cessão assinada, o pagamento é feito em até 72 horas."),
   ],
   body="""
+<p>Este guia mostra os documentos e as etapas da venda. Para pedir uma proposta agora, veja como <a href="/">vender precatório</a> com a Antecipay.</p>
+
+<h2>Documentos normalmente pedidos</h2>
+<ul>
+<li>Documento de identidade e CPF (ou CNPJ, se for empresa).</li>
+<li>Número do processo e, se tiver, o ofício requisitório.</li>
+<li>Comprovante de endereço e dados bancários para o pagamento.</li>
+<li>Em caso de herança, documentos da sucessão.</li>
+</ul>
+
 <h2>Quem pode vender precatório</h2>
 <p>Pode vender quem é o <strong>titular do crédito</strong>: a pessoa física ou empresa que ganhou a ação. Se o titular faleceu, os <strong>herdeiros</strong> podem vender depois de regularizar a sucessão no processo (veja <a href="/blog/precatorio-de-heranca/">precatório de herança</a>). Precatórios federais, do INSS, estaduais, municipais e trabalhistas podem ser vendidos.</p>
 
@@ -326,14 +353,6 @@ POSTS.insert(0, dict(
 <li><strong>Assine o contrato de cessão de crédito</strong>, que identifica o precatório, as partes e o valor pago.</li>
 <li><strong>Receba à vista.</strong> A cessão é comunicada ao tribunal e quem comprou passa a receber do governo no futuro.</li>
 </ol>
-
-<h2>Documentos normalmente pedidos</h2>
-<ul>
-<li>Documento de identidade e CPF (ou CNPJ, se for empresa).</li>
-<li>Número do processo e, se tiver, o ofício requisitório.</li>
-<li>Comprovante de endereço e dados bancários para o pagamento.</li>
-<li>Em caso de herança, documentos da sucessão.</li>
-</ul>
 
 <h2>Como é calculada a proposta</h2>
 <p>O valor oferecido leva em conta quem deve (União, Estado ou Município), o prazo previsto para o governo pagar, o valor do crédito e os descontos que incidem sobre ele, como honorários contratuais e imposto de renda. Quanto mais longa e incerta a espera, maior tende a ser o desconto.</p>
@@ -708,8 +727,8 @@ POSTS.insert(0, dict(
   slug="juntada-de-certidao",
   tag="Processo",
   title="Juntada de certidão: o que significa no processo",
-  seo="Juntada de certidão: o que significa no processo | Antecipay",
-  desc="“Juntada de certidão” apareceu no seu processo? Veja o que significa, as certidões mais comuns na fase do precatório e o que costuma vir depois.",
+  seo="Juntada de certidão: o que significa e o que vem depois",
+  desc="Viu “juntada de certidão” no andamento do processo? Entenda em 1 minuto o que significa, se o dinheiro foi liberado e qual costuma ser o próximo passo.",
   lead="O andamento do processo mostra “juntada de certidão” e você não sabe se é bom ou ruim? Na maioria das vezes, é só um registro. Veja como entender.",
   answer="Juntada de certidão significa que um documento chamado certidão foi incluído no processo. Na certidão, um servidor da vara ou do tribunal confirma oficialmente um fato, como a publicação de uma decisão, o fim de um prazo ou o trânsito em julgado. Sozinha, a juntada não quer dizer que o pagamento saiu: para saber o que mudou, é preciso ler a certidão ou perguntar ao advogado.",
   faq=[
@@ -757,15 +776,16 @@ POSTS.insert(0, dict(
 POSTS.insert(0, dict(
   slug="expedicao-de-oficio-precatorio",
   tag="Processo",
-  title="Expedição de ofício no precatório: o que significa e o que vem depois",
-  seo="Expedição de ofício no precatório: o que é | Antecipay",
-  desc="Apareceu “expedição de ofício” no seu processo? Veja o que significa, o que acontece depois, quanto tempo falta para receber e o que conferir agora.",
+  title="Expedição de ofício requisitório: o que significa e o que vem depois",
+  seo="Expedição de ofício requisitório: o que significa?",
+  desc="Expedição de ofício requisitório deferida? Veja o que significa, o que quer dizer “ofício informando valor depositado” e quanto falta para receber.",
   lead="Viu “expedição de ofício” ou “ofício requisitório expedido” no andamento do processo? É um bom sinal: o pedido de pagamento foi enviado. Veja o que vem depois.",
   answer="Expedição de ofício, no precatório, significa que o juiz enviou ao tribunal o ofício requisitório: o pedido formal para que o governo pague o valor da condenação. É o começo da fila de pagamento, e não o pagamento em si. Depois disso, o tribunal confere a requisição, ela entra no orçamento do devedor e o valor é pago como RPV ou como precatório, conforme o valor.",
   faq=[
    ("Expedição de ofício quer dizer que vou receber logo?","Não necessariamente. Significa que o pedido de pagamento foi enviado ao tribunal. Se for RPV federal, o pagamento costuma sair em até 60 dias; se for precatório, depende da data de corte e da fila do devedor."),
    ("Qual a diferença entre ofício requisitório e precatório?","O ofício requisitório é o documento que o juiz envia ao tribunal pedindo o pagamento. Ele pode ser uma RPV, para valores menores, ou um precatório, para valores acima do limite."),
    ("O que fazer se o valor do ofício estiver errado?","Fale com o advogado que cuida da ação. Correções na requisição são pedidas ao juiz da execução."),
+   ("O que significa “ofício informando valor depositado”?","Que o processo recebeu a comunicação de que o valor da RPV ou do precatório foi depositado em conta judicial. É o aviso de que o pagamento saiu. O próximo passo é o saque ou o levantamento, conforme as regras do tribunal."),
   ],
   body="""
 <h2>O que é o ofício requisitório</h2>
@@ -778,6 +798,15 @@ POSTS.insert(0, dict(
 <li><strong>Pagamento.</strong> A RPV federal é paga em até 60 dias depois de chegar ao tribunal. O precatório é pago até o fim do ano do orçamento, na ordem cronológica, respeitando as prioridades.</li>
 <li><strong>Saque.</strong> O valor é depositado em conta judicial em nome do credor.</li>
 </ol>
+
+<h2>Termos que aparecem no andamento</h2>
+<div class="table-wrap"><table>
+<tr><th>Andamento</th><th>O que significa</th></tr>
+<tr><td><strong>Expedição de ofício requisitório deferida</strong></td><td>O juiz autorizou a emissão do ofício. O próximo passo é a expedição em si.</td></tr>
+<tr><td><strong>Ofício requisitório expedido</strong></td><td>O pedido de pagamento foi emitido e enviado ao tribunal.</td></tr>
+<tr><td><strong>Ofício informando valor depositado</strong></td><td>Chegou ao processo a comunicação de que o valor foi depositado em conta judicial. O pagamento saiu: falta o saque ou o levantamento.</td></tr>
+</table></div>
+<p>A redação muda um pouco de um tribunal para outro. Na dúvida, abra o documento no andamento ou pergunte ao advogado.</p>
 
 <h2>Quanto tempo falta para receber</h2>
 <div class="table-wrap"><table>
@@ -810,9 +839,9 @@ POSTS.insert(0, dict(
 POSTS.insert(0, dict(
   slug="consultar-rpv-precatorio-trf5",
   tag="Consulta",
-  title="Como consultar RPV e precatório no TRF5 pelo CPF",
-  seo="Consultar RPV e precatório no TRF5 pelo CPF | Antecipay",
-  desc="Veja como consultar RPV e precatório no TRF5 pelo CPF ou pelo número do processo, quando o pagamento sai e onde sacar. Vale para AL, CE, PB, PE, RN e SE.",
+  title="Consulta de RPV e precatório no TRF5 pelo CPF: passo a passo",
+  seo="Consulta RPV TRF5 pelo CPF: INSS e União | Antecipay",
+  desc="Consulta de RPV e precatório do INSS e da União no TRF5 pelo CPF: passo a passo, quando o dinheiro sai e onde sacar. Vale para AL, CE, PB, PE, RN e SE.",
   lead="Tem uma ação contra a União ou o INSS em Alagoas, Ceará, Paraíba, Pernambuco, Rio Grande do Norte ou Sergipe? Veja como acompanhar a sua RPV ou o seu precatório no site do TRF5.",
   answer="Para consultar RPV ou precatório no TRF5, acesse rpvprecatorio.trf5.jus.br, escolha “CPF/CNPJ” em “Consultar por”, digite o seu CPF e clique em Pesquisar. Também dá para buscar pelo número do processo. A RPV federal é paga em até 60 dias depois de chegar ao tribunal; o precatório entra no orçamento conforme a data de corte de 1º de fevereiro.",
   faq=[
@@ -902,8 +931,8 @@ POSTS.insert(0, dict(
   slug="consultar-precatorio-tjsp",
   tag="Consulta",
   title="Como consultar precatório no TJSP: posição na fila e pagamento",
-  seo="Consultar precatório no TJSP: fila e pagamento | Antecipay",
-  desc="Veja como consultar precatório no TJSP, acompanhar a posição na fila de pagamento, pedir prioridade e levantar o valor. Guia para credores do Estado e de SP.",
+  seo="Consulta de precatório no TJSP: fila e pagamento | Antecipay",
+  desc="Consulta de precatório no TJSP passo a passo: onde ver a posição na fila, como pedir prioridade e como levantar o valor. Para credores do Estado e de SP.",
   lead="Tem precatório contra o Estado de São Paulo, um município paulista ou uma autarquia? Veja onde acompanhar a posição na fila e o que fazer quando o pagamento sai.",
   answer="Para consultar precatório no TJSP, acesse a página de precatórios do tribunal (tjsp.jus.br/precatorios). No menu Credores, a “Lista de Precatórios Disponibilizados e Pendentes de Pagamentos” mostra a posição na fila, e a lista de “Pagamentos Disponibilizados” mostra o que já foi pago. As listas de pendentes são atualizadas todo mês, por volta do dia 5.",
   faq=[
@@ -950,9 +979,9 @@ POSTS.insert(0, dict(
 POSTS.insert(0, dict(
   slug="consultar-rpv-precatorio-trf3",
   tag="Consulta",
-  title="Como consultar RPV e precatório no TRF3 pelo CPF",
-  seo="Consultar RPV e precatório no TRF3 pelo CPF | Antecipay",
-  desc="Veja como consultar RPV e precatório no TRF3, de São Paulo e Mato Grosso do Sul, pelo CPF, OAB ou número do processo, e quando o pagamento sai.",
+  title="Consulta de RPV e precatório no TRF3 pelo CPF: passo a passo",
+  seo="Consulta RPV TRF3 pelo CPF: passo a passo | Antecipay",
+  desc="Consulta de RPV e precatório no TRF3 pelo CPF: passo a passo da consulta de requisição de pagamento em SP e MS e quando o dinheiro sai.",
   lead="Tem uma ação contra a União ou o INSS na Justiça Federal de São Paulo ou de Mato Grosso do Sul? Veja como acompanhar a sua RPV ou o seu precatório no TRF3.",
   answer="Para consultar RPV ou precatório no TRF3, acesse a consulta de requisições de pagamento no site do tribunal e pesquise pelo CPF ou CNPJ do beneficiário, pela OAB do advogado, pelo número do processo de origem, do ofício requisitório ou do protocolo. A RPV é paga em até 60 dias depois de a requisição ser registrada no tribunal; o precatório segue a data de corte de 1º de fevereiro.",
   faq=[
@@ -1094,11 +1123,19 @@ POSTS.insert(0, dict(
 ))
 BY = {p["slug"]: p for p in POSTS}
 
+def autora_ld():
+    d = {"@type":"Person","@id":SITE+AUTORA_URL+"#pessoa","name":AUTORA["nome"],"honorificPrefix":AUTORA["tratamento"],
+         "jobTitle":AUTORA["cargo"],"url":SITE+AUTORA_URL,"worksFor":{"@id":SITE+"/#empresa"}}
+    if AUTORA["oab"]: d["identifier"] = AUTORA["oab"]
+    if AUTORA["foto"]: d["image"] = SITE + AUTORA["foto"]
+    if AUTORA["same_as"]: d["sameAs"] = AUTORA["same_as"]
+    return d
+
 def build_post(p):
     url = f"{SITE}/blog/{p['slug']}/"
     ld = {"@context":"https://schema.org","@graph":[
       {"@type":"Article","headline":p["title"],"description":p["desc"],"dateModified":UPDATED,"datePublished":UPDATED,
-       "author":{"@type":"Organization","@id":SITE+"/#empresa","name":"Antecipay Precatórios","url":SITE+"/"},"publisher":{"@type":"Organization","@id":SITE+"/#empresa","name":"Antecipay Precatórios","logo":{"@type":"ImageObject","url":SITE+"/logo-512.png"}},
+       "author":autora_ld(),"publisher":{"@type":"Organization","@id":SITE+"/#empresa","name":"Antecipay Precatórios","logo":{"@type":"ImageObject","url":SITE+"/logo-512.png"}},
        "mainEntityOfPage":url,"image":SITE+"/og.png"},
       {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in p["faq"]]},
       {"@type":"BreadcrumbList","itemListElement":[
@@ -1118,7 +1155,7 @@ def build_post(p):
     <span class="eyebrow">{p['tag']}</span>
     <h1>{p['title']}</h1>
     <p class="lead">{p['lead']}</p>
-    <p class="meta">Equipe Antecipay · Atualizado em {UPDATED_BR} · {mins} min de leitura</p>
+    <p class="meta">Por <a href="{AUTORA_URL}">{AUTORA['tratamento']} {AUTORA['nome']}</a>, {AUTORA['cargo'].lower()} · Atualizado em {UPDATED_BR} · {mins} min de leitura</p>
   </div>
 </section>
 <article class="narrow">
@@ -1169,6 +1206,50 @@ def build_index():
     open("blog/index.html","w").write(out)
 
 
+def build_autora():
+    a = AUTORA
+    url = SITE + AUTORA_URL
+    nome = f"{a['tratamento']} {a['nome']}"
+    ld = {"@context":"https://schema.org","@type":"ProfilePage","url":url,"name":nome,"mainEntity":autora_ld()}
+    foto = f'<img src="{a["foto"]}" alt="{html.escape(nome)}" width="160" height="160" style="border-radius:50%;margin-bottom:16px">' if a["foto"] else ""
+    oab = f" · {a['oab']}" if a["oab"] else ""
+    bio = f"<p>{html.escape(a['bio'])}</p>" if a["bio"] else ""
+    perfis = ("<p>Perfis: " + ", ".join(f'<a href="{u}" target="_blank" rel="noopener">{html.escape(u.split("//")[-1].rstrip("/"))}</a>' for u in a["same_as"]) + "</p>") if a["same_as"] else ""
+    artigos = "".join(f'<li><a href="/blog/{p["slug"]}/">{p["title"]}</a></li>' for p in POSTS)
+    out = head(f"{nome}, advogada da Antecipay Precatórios",
+               f"{nome} é advogada da Antecipay Precatórios, de Natal-RN, e assina os guias do blog sobre precatórios, RPV, cessão e consulta nos tribunais.", url,
+               '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="") + f"""
+<main id="conteudo" tabindex="-1">
+<section class="art-head"><div class="narrow">
+  <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <a href="/sobre/">Sobre</a> <span aria-hidden="true">›</span> <span aria-current="page">{a['nome']}</span></nav>
+  <span class="eyebrow">Equipe</span>
+  {foto}
+  <h1>{nome}</h1>
+  <p class="lead">{a['cargo']} da Antecipay Precatórios{oab}</p>
+</div></section>
+<article class="narrow">
+  {bio}
+  <h2>Na Antecipay</h2>
+  <p>{nome} é advogada da <a href="/sobre/">Antecipay Precatórios</a>, empresa de Natal-RN que compra precatórios federais, estaduais e municipais de credores de todo o Brasil. Ela assina os guias do blog, escritos para quem tem um precatório ou uma RPV a receber e quer entender o processo sem juridiquês.</p>
+  <h2>Como trabalhamos</h2>
+  <ul>
+    <li><strong>Proposta por escrito</strong>, com o valor líquido, antes de qualquer assinatura.</li>
+    <li><strong>Cessão de crédito</strong> nos termos do art. 100, §13, da Constituição, comunicada ao tribunal e ao devedor.</li>
+    <li><strong>Nenhuma cobrança antecipada</strong> do credor.</li>
+    <li><strong>Pagamento em até 72 horas</strong> depois da proposta aprovada e da cessão assinada.</li>
+  </ul>
+  <p>Veja como <a href="/">vender precatório</a> com a Antecipay, ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+  {perfis}
+  <h2>Artigos</h2>
+  <ul>{artigos}</ul>
+  {cta("Tem um precatório?", "Envie o número do processo e receba uma proposta por escrito.", "Olá! Vim pelo site da Antecipay e quero uma proposta para o meu precatório.")}
+</article>
+<div style="height:80px"></div>
+</main>
+""" + FOOT
+    os.makedirs(AUTORA_URL.strip("/"), exist_ok=True)
+    open(AUTORA_URL.strip("/") + "/index.html","w").write(out)
+
 def build_sobre():
     url = SITE + "/sobre/"
     ld = {"@context":"https://schema.org","@type":"AboutPage","url":url,"name":"Sobre a Antecipay",
@@ -1177,14 +1258,15 @@ def build_sobre():
         "description":"Empresa que compra e antecipa precatórios federais, estaduais e municipais em todo o Brasil.",
         "areaServed":{"@type":"Country","name":"Brasil"},
         "address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"},
-        "knowsAbout":["Precatórios","RPV","Cessão de crédito","Precatórios do INSS","Precatórios federais","Precatórios estaduais","Precatórios municipais"]}}
-    out = head("Sobre a Antecipay | Compra e antecipação de precatórios", "Conheça a Antecipay: empresa de Natal-RN que compra e antecipa precatórios federais, estaduais e municipais em todo o Brasil. CNPJ 64.382.432/0001-97.", url,
+        "knowsAbout":["Precatórios","RPV","Cessão de crédito","Precatórios do INSS","Precatórios federais","Precatórios estaduais","Precatórios municipais"],
+        "sameAs":SAME_AS,"employee":{"@id":SITE+AUTORA_URL+"#pessoa"}}}
+    out = head("O que é a Antecipay Precatórios? Quem somos e CNPJ", "A Antecipay Precatórios é uma empresa de Natal-RN que compra precatórios federais, estaduais e municipais. Veja quem somos, a nossa advogada e o CNPJ.", url,
                '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="sobre") + f"""
 <main id="conteudo" tabindex="-1">
 <section class="art-head"><div class="narrow">
   <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <span aria-current="page">Sobre</span></nav>
   <span class="eyebrow">Sobre nós</span>
-  <h1>Sobre a Antecipay</h1>
+  <h1>O que é a Antecipay Precatórios</h1>
   <p class="lead">A Antecipay compra e antecipa precatórios federais, estaduais e municipais. Quem tem valores a receber do governo recebe à vista, sem esperar a fila de pagamentos.</p>
 </div></section>
 <article class="narrow">
@@ -1213,6 +1295,9 @@ def build_sobre():
   <p>Atendemos credores de <strong>todo o Brasil</strong>, com processos em qualquer tribunal federal (TRF1 a TRF6) ou estadual. Nossa sede fica em Natal, no Rio Grande do Norte.</p>
   <p>A Antecipay Precatórios não tem relação com a AnteciPay, da Ecx Pay, que é outra empresa.</p>
 
+  <h2>Equipe jurídica</h2>
+  <p>A análise jurídica dos precatórios e a revisão dos conteúdos do blog ficam com a <a href="{AUTORA_URL}">{AUTORA['tratamento']} {AUTORA['nome']}</a>, advogada da Antecipay.</p>
+
   <h2>Dados da empresa</h2>
   <div class="table-wrap"><table>
     <tr><td><strong>Razão social</strong></td><td>Antecipay Precatórios</td></tr>
@@ -1221,6 +1306,7 @@ def build_sobre():
     <tr><td><strong>WhatsApp</strong></td><td>(84) 99493-8383</td></tr>
     <tr><td><strong>E-mail</strong></td><td>contato@antecipay.com.br</td></tr>
     <tr><td><strong>Site</strong></td><td>antecipayprecatorios.com.br</td></tr>
+    <tr><td><strong>Instagram</strong></td><td><a href="https://www.instagram.com/antecipayprecatorios/" target="_blank" rel="noopener">@antecipayprecatorios</a></td></tr>
   </table></div>
 
   {cta("Quer antecipar o seu precatório?", "Envie o número do processo e receba uma proposta por escrito.", "Olá! Vim pela página Sobre e quero uma proposta para o meu precatório.")}
@@ -1267,7 +1353,8 @@ def build_llms():
 - [Vender precatório do INSS]({SITE}/vender-precatorio-inss/): compra e antecipação de precatórios do INSS
 - [Vender precatório no RN]({SITE}/vender-precatorio-rn/): precatórios do TRF5 e do TJRN (Estado do RN e municípios)
 - [Empresa que compra precatórios em Natal]({SITE}/empresa-que-compra-precatorio-natal/): sede, contato e atendimento em Natal-RN
-""" + "".join(f"- [Empresa que compra precatórios {e['em']}]({SITE}/{e['slug']}/): precatórios do {e['tj']} e do {e['trf']}, atendimento 100% digital\n" for e in ESTADOS) + f"""- [Blog]({SITE}/blog/): guias sobre precatórios
+""" + "".join(f"- [Empresa que compra precatórios {e['em']}]({SITE}/{e['slug']}/): precatórios do {e['tj']} e do {e['trf']}, atendimento 100% digital\n" for e in ESTADOS) + f"""- [{AUTORA['tratamento']} {AUTORA['nome']}]({SITE}{AUTORA_URL}): advogada da Antecipay, autora dos guias do blog
+- [Blog]({SITE}/blog/): guias sobre precatórios
 
 ## Guias
 
@@ -1411,7 +1498,7 @@ def build_natal():
     ld={"@context":"https://schema.org","@graph":[
         {"@type":"FinancialService","@id":SITE+"/#empresa","name":"Antecipay Precatórios","url":SITE+"/","logo":SITE+"/logo-512.png","image":SITE+"/logo-512.png",
          "telephone":"+55-84-99493-8383","email":"contato@antecipay.com.br","taxID":"64.382.432/0001-97",
-         "description":"Empresa de Natal-RN que compra precatórios federais, estaduais e municipais.",
+         "description":"Empresa de Natal-RN que compra precatórios federais, estaduais e municipais.","sameAs":SAME_AS,
          "address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"},
          "areaServed":[{"@type":"City","name":"Natal"},{"@type":"State","name":"Rio Grande do Norte"},{"@type":"Country","name":"Brasil"}],
          "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}]},
@@ -1836,9 +1923,9 @@ def build_calc():
          ("Quanto se paga por um precatório?","Precatórios federais costumam ser comprados por uma parte maior do valor que os estaduais e municipais, porque o pagamento da União é mais previsível. A faixa exata varia em cada caso."),
          ("A estimativa da calculadora é uma proposta?","Não. É uma faixa indicativa. A proposta da Antecipay é feita por escrito, depois da análise do processo."),
          ("Preciso pagar algo para simular ou pedir proposta?","Não. A simulação e a proposta são gratuitas e sem compromisso.")]
-    landing("calculadora-precatorio","Quanto vale meu precatório? Calculadora | Antecipay",
-        "Calcule quanto vale o seu precatório federal, estadual ou municipal se vender agora. Estimativa gratuita e proposta por escrito pelo WhatsApp.",
-        "Calculadora","Calculadora","Quanto vale o meu precatório?",
+    landing("calculadora-precatorio","Simulador de precatório: quanto vale o seu? | Antecipay",
+        "Simulador gratuito: calcule quanto vale o seu precatório federal, estadual ou municipal se vender agora e quanto tempo esperaria na fila do governo.",
+        "Calculadora","Calculadora e simulador","Calculadora de precatório: quanto vale o meu?",
         "Descubra em segundos quanto você poderia receber à vista ao vender o seu precatório, e quanto tempo esperaria se não vendesse.",
         msg,"O valor de venda de um precatório depende do devedor, do prazo até o pagamento, da situação do processo e dos descontos. Precatórios federais costumam ter deságio menor que os estaduais e municipais. Use a calculadora abaixo para uma estimativa e peça a proposta exata pelo WhatsApp.",
         body, faq, "Calculadora de precatório", extra_top=calc)
@@ -1878,7 +1965,7 @@ def build_federal():
         body, faq, "Compra de precatório federal")
 
 def build_sitemap():
-    urls = ["/", "/antecipacao-de-precatorio/", "/calculadora-precatorio/", "/vender-precatorio-federal/", "/vender-precatorio-estadual/", "/vender-precatorio-municipal/", "/vender-precatorio-trabalhista/", "/melhor-empresa-para-vender-precatorio/", "/vender-precatorio-inss/", "/vender-precatorio-rn/", "/empresa-que-compra-precatorio-natal/"] + [f"/{e['slug']}/" for e in ESTADOS] + ["/sobre/", "/blog/"] + [f"/blog/{p['slug']}/" for p in POSTS] + ["/privacidade.html"]
+    urls = ["/", "/antecipacao-de-precatorio/", "/calculadora-precatorio/", "/vender-precatorio-federal/", "/vender-precatorio-estadual/", "/vender-precatorio-municipal/", "/vender-precatorio-trabalhista/", "/melhor-empresa-para-vender-precatorio/", "/vender-precatorio-inss/", "/vender-precatorio-rn/", "/empresa-que-compra-precatorio-natal/"] + [f"/{e['slug']}/" for e in ESTADOS] + ["/sobre/", AUTORA_URL, "/blog/"] + [f"/blog/{p['slug']}/" for p in POSTS] + ["/privacidade.html"]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{UPDATED}</lastmod></url>\n" for u in urls)
     xml += "</urlset>\n"
@@ -1964,5 +2051,5 @@ def build_trabalhista():
 
 if __name__ == "__main__":
     for p in POSTS: build_post(p)
-    build_index(); build_sobre(); build_inss(); build_rn(); build_natal(); build_estados(); build_federal(); build_municipal(); build_estadual(); build_melhor(); build_calc(); build_antecipacao(); build_trabalhista(); build_llms(); build_sitemap()
+    build_index(); build_sobre(); build_autora(); build_inss(); build_rn(); build_natal(); build_estados(); build_federal(); build_municipal(); build_estadual(); build_melhor(); build_calc(); build_antecipacao(); build_trabalhista(); build_llms(); build_sitemap()
     print("ok", len(POSTS), "artigos")
