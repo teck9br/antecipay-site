@@ -15,6 +15,7 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
 - `build_blog.py` — **gerador** de todas as outras páginas. Rode `python3 build_blog.py` depois de editar (no Windows: `PYTHONUTF8=1 python build_blog.py`, senão falha com UnicodeEncodeError). Gera:
   - `blog/` (índice + artigos da lista `POSTS`), `sobre/`
   - páginas de serviço: `vender-precatorio-inss/`, `-rn/`, `-federal/`, `-estadual/`, `-municipal/`, `empresa-que-compra-precatorio-natal/`, `melhor-empresa-para-vender-precatorio/`, `calculadora-precatorio/`, `antecipacao-de-precatorio/`
+  - páginas por estado no modelo da de Natal (lista `ESTADOS` → `build_estados()`): `empresa-que-compra-precatorio-sao-paulo/`, `-paraiba/`, `-pernambuco/`, `-ceara/`. A empresa não tem escritório nesses estados: o texto diz "sede em Natal, atendimento 100% digital". Para um estado novo, acrescente um `dict` em `ESTADOS` com fatos próprios do estado (tribunais, devedores, como consultar), não texto copiado
   - `sitemap.xml` e `llms.txt`
   - Para novo artigo: adicione um `dict` em `POSTS`. Para nova página de serviço: use a função `landing(...)`, depois inclua no `build_sitemap`, no rodapé (`FOOT`) e no `llms.txt`.
 - `assets/blog.css` — estilos das páginas geradas (escala de espaçamento de 8 px). O gerador embute esse CSS no `<head>` de cada página; edite o arquivo e rode o build.

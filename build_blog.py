@@ -72,7 +72,7 @@ FOOT = f"""<footer>
   <div class="wrap">
     <div class="foot">
       <div><a href="/" class="logo" translate="no">Antecipay</a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
-      <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/antecipacao-de-precatorio/">Compra de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/vender-precatorio-trabalhista/">Precatório trabalhista</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
+      <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/antecipacao-de-precatorio/">Compra de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/vender-precatorio-trabalhista/">Precatório trabalhista</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/empresa-que-compra-precatorio-sao-paulo/">Precatórios em São Paulo</a></li><li><a href="/empresa-que-compra-precatorio-paraiba/">Precatórios na Paraíba</a></li><li><a href="/empresa-que-compra-precatorio-pernambuco/">Precatórios em Pernambuco</a></li><li><a href="/empresa-que-compra-precatorio-ceara/">Precatórios no Ceará</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
       <ul><li><a href="{wa('Olá! Vim pelo site da Antecipay.')}" target="_blank" rel="noopener">WhatsApp (84) 99493-8383</a></li><li><a href="mailto:contato@antecipay.com.br">contato@antecipay.com.br</a></li><li>Av. Senador Salgado Filho, 1559 – Tirol, Natal-RN</li></ul>
     </div>
     <div class="legal"><span>© 2026 Antecipay Precatórios</span><span>CNPJ 64.382.432/0001-97</span></div>
@@ -1267,7 +1267,7 @@ def build_llms():
 - [Vender precatório do INSS]({SITE}/vender-precatorio-inss/): compra e antecipação de precatórios do INSS
 - [Vender precatório no RN]({SITE}/vender-precatorio-rn/): precatórios do TRF5 e do TJRN (Estado do RN e municípios)
 - [Empresa que compra precatórios em Natal]({SITE}/empresa-que-compra-precatorio-natal/): sede, contato e atendimento em Natal-RN
-- [Blog]({SITE}/blog/): guias sobre precatórios
+""" + "".join(f"- [Empresa que compra precatórios {e['em']}]({SITE}/{e['slug']}/): precatórios do {e['tj']} e do {e['trf']}, atendimento 100% digital\n" for e in ESTADOS) + f"""- [Blog]({SITE}/blog/): guias sobre precatórios
 
 ## Guias
 
@@ -1437,7 +1437,7 @@ def build_natal():
     <tr><td>Estado do Rio Grande do Norte</td><td>TJRN</td></tr>
     <tr><td>Prefeitura de Natal e demais municípios do RN</td><td>TJRN</td></tr>
   </table></div>
-  <p>Também atendemos credores de todo o Brasil. Veja como <a href="/">vender precatório</a> de qualquer tribunal, <a href="/vender-precatorio-rn/">vender precatório no RN</a> e <a href="/vender-precatorio-inss/">vender precatório do INSS</a>.</p>
+  <p>Também atendemos credores de todo o Brasil, como os de <a href="/empresa-que-compra-precatorio-sao-paulo/">São Paulo</a>, da <a href="/empresa-que-compra-precatorio-paraiba/">Paraíba</a>, de <a href="/empresa-que-compra-precatorio-pernambuco/">Pernambuco</a> e do <a href="/empresa-que-compra-precatorio-ceara/">Ceará</a>. Veja como <a href="/">vender precatório</a> de qualquer tribunal, <a href="/vender-precatorio-rn/">vender precatório no RN</a> e <a href="/vender-precatorio-inss/">vender precatório do INSS</a>.</p>
 
   <h2>Por que vender para uma empresa de Natal</h2>
   <ul>
@@ -1472,6 +1472,148 @@ def build_natal():
 """ + FOOT
     os.makedirs("empresa-que-compra-precatorio-natal", exist_ok=True)
     open("empresa-que-compra-precatorio-natal/index.html","w").write(out)
+
+# Páginas por estado no modelo da página de Natal. A empresa não tem escritório
+# nesses estados: o texto deixa claro que a sede é em Natal e o atendimento é digital.
+ESTADOS = [
+    {"slug":"empresa-que-compra-precatorio-sao-paulo","uf":"SP","nome":"São Paulo","em":"em São Paulo","de":"de São Paulo","capital":"São Paulo",
+     "seo":"Empresa que compra precatórios em São Paulo | Antecipay",
+     "desc":"A Antecipay compra precatórios do Estado de SP, da Prefeitura de São Paulo e de outros municípios paulistas (TJSP), e federais do TRF3. Pagamento à vista.",
+     "lead":"Tem precatório do Estado de São Paulo, da Prefeitura de São Paulo, de outro município paulista, da União ou do INSS? A Antecipay compra o seu precatório e você recebe à vista, com proposta por escrito.",
+     "trf":"TRF3","trf_ufs":"São Paulo e Mato Grosso do Sul","tj":"TJSP",
+     "devedores":[("União, INSS e autarquias federais","TRF3"),("Estado de São Paulo e autarquias estaduais","TJSP"),("Prefeitura de São Paulo e demais municípios paulistas","TJSP")],
+     "consulta":"""<ul>
+    <li><strong>Estadual ou municipal (TJSP):</strong> na página de precatórios do tribunal (tjsp.jus.br/precatorios), no menu Credores, a “Lista de Precatórios Disponibilizados e Pendentes de Pagamentos” mostra a posição na fila. Quem administra os pagamentos é a Depre, a Diretoria de Execuções de Precatórios e Cálculos.</li>
+    <li><strong>Federal (TRF3):</strong> na consulta de requisições de pagamento do TRF3, pelo CPF do beneficiário ou pelo número do processo.</li>
+  </ul>
+  <p>Passo a passo em <a href="/blog/consultar-precatorio-tjsp/">como consultar precatório no TJSP</a> e <a href="/blog/consultar-rpv-precatorio-trf3/">como consultar RPV e precatório no TRF3</a>.</p>""",
+     "extra":"""<h2>Por que tantos credores paulistas vendem o precatório</h2>
+  <p>São Paulo concentra muitos precatórios do país, e a fila do Estado e de várias prefeituras paulistas é longa. Pelas regras atuais, estados e municípios pagam dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho da dívida. Na prática, quem está no fim da fila pode esperar anos. Vender o precatório troca essa espera por um valor à vista.</p>""",
+     "faq":[("A Antecipay compra precatório do Estado de São Paulo?","Sim. Compramos precatórios do Estado de São Paulo e de suas autarquias, da Prefeitura de São Paulo e de outros municípios paulistas, todos pagos pelo TJSP, além de precatórios federais do TRF3."),
+            ("A Antecipay tem escritório em São Paulo?","Não. A sede é em Natal-RN, na Incubadora do IFRN, e o atendimento é 100% digital. Credores de São Paulo enviam o número do processo pelo WhatsApp e assinam a cessão sem sair de casa."),
+            ("Dá para consultar precatório do TJSP pelo CPF?","A página oficial de precatórios do TJSP não informa consulta por CPF. Tenha em mãos o número do precatório ou do processo, que o advogado da ação pode informar."),
+            ("Em quanto tempo recebo?","Depois da proposta aprovada e do contrato de cessão assinado, o pagamento é feito em até 72 horas.")]},
+    {"slug":"empresa-que-compra-precatorio-paraiba","uf":"PB","nome":"Paraíba","em":"na Paraíba","de":"da Paraíba","capital":"João Pessoa",
+     "seo":"Empresa que compra precatórios na Paraíba | Antecipay",
+     "desc":"A Antecipay compra precatórios do Estado da Paraíba, de João Pessoa e de outros municípios paraibanos (TJPB), e federais do TRF5. Pagamento à vista.",
+     "lead":"Tem precatório do Estado da Paraíba, da Prefeitura de João Pessoa, de Campina Grande, da União ou do INSS? A Antecipay, empresa vizinha de Natal, compra o seu precatório e você recebe à vista.",
+     "trf":"TRF5","trf_ufs":"Alagoas, Ceará, Paraíba, Pernambuco, Rio Grande do Norte e Sergipe","tj":"TJPB",
+     "devedores":[("União, INSS e autarquias federais","TRF5 – Seção Judiciária da Paraíba"),("Estado da Paraíba e autarquias estaduais","TJPB"),("Prefeituras de João Pessoa, Campina Grande e demais municípios","TJPB")],
+     "consulta":"""<ul>
+    <li><strong>Estadual ou municipal (TJPB):</strong> na área de precatórios do site do TJPB (tjpb.jus.br), que publica a lista de ordem cronológica dos precatórios pendentes. A lista é pública e mostra a posição na fila.</li>
+    <li><strong>Federal (TRF5):</strong> no site de RPV e precatórios do TRF5 (rpvprecatorio.trf5.jus.br), pelo CPF ou pelo número do processo.</li>
+  </ul>
+  <p>Passo a passo da consulta federal em <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>. Se preferir, envie o número do processo que a nossa equipe consulta para você.</p>""",
+     "extra":"""<h2>Cuidado com golpes</h2>
+  <p>O próprio TJPB alerta que não pede depósitos nem adiantamento de taxas, custas ou impostos para liberar precatório. Quem compra precatório também não deve cobrar nada de você: na Antecipay, a proposta é por escrito e não existe cobrança antecipada. Veja como reconhecer o <a href="/blog/golpe-do-precatorio/">golpe do precatório</a>.</p>""",
+     "faq":[("A Antecipay compra precatório do Estado da Paraíba?","Sim. Compramos precatórios do Estado da Paraíba, da Prefeitura de João Pessoa e de outros municípios paraibanos, pagos pelo TJPB, além de precatórios federais do TRF5."),
+            ("A Antecipay tem escritório na Paraíba?","Não. A sede é em Natal-RN, na Incubadora do IFRN, a cerca de 180 km de João Pessoa. O atendimento é 100% digital, pelo WhatsApp."),
+            ("O Estado da Paraíba faz acordo direto com credores?","O Estado já abriu editais de acordo direto, com desconto sobre o valor do precatório e seguindo a ordem cronológica. Vale comparar a proposta do acordo com a nossa antes de decidir."),
+            ("Em quanto tempo recebo?","Depois da proposta aprovada e do contrato de cessão assinado, o pagamento é feito em até 72 horas.")]},
+    {"slug":"empresa-que-compra-precatorio-pernambuco","uf":"PE","nome":"Pernambuco","em":"em Pernambuco","de":"de Pernambuco","capital":"Recife",
+     "seo":"Empresa que compra precatórios em Pernambuco | Antecipay",
+     "desc":"A Antecipay compra precatórios do Estado de Pernambuco, do Recife e de outros municípios pernambucanos (TJPE), e federais do TRF5. Pagamento à vista.",
+     "lead":"Tem precatório do Estado de Pernambuco, da Prefeitura do Recife, de outro município pernambucano, da União ou do INSS? A Antecipay compra o seu precatório e você recebe à vista, com proposta por escrito.",
+     "trf":"TRF5","trf_ufs":"Alagoas, Ceará, Paraíba, Pernambuco, Rio Grande do Norte e Sergipe","tj":"TJPE",
+     "devedores":[("União, INSS e autarquias federais","TRF5 – Seção Judiciária de Pernambuco"),("Estado de Pernambuco e autarquias estaduais","TJPE"),("Prefeituras do Recife, Jaboatão, Olinda e demais municípios","TJPE")],
+     "consulta":"""<ul>
+    <li><strong>Estadual ou municipal (TJPE):</strong> na área de precatórios do site do TJPE (tjpe.jus.br). Os tribunais publicam a lista de ordem cronológica de cada devedor, sem o nome completo do credor, onde você confere a posição na fila pelo número do precatório.</li>
+    <li><strong>Federal (TRF5):</strong> no site de RPV e precatórios do TRF5 (rpvprecatorio.trf5.jus.br), pelo CPF ou pelo número do processo. O TRF5 tem sede no Recife.</li>
+  </ul>
+  <p>Passo a passo da consulta federal em <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>. Se você não sabe o número do processo, veja <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>.</p>""",
+     "extra":"""<h2>Precatório federal ou estadual: a espera muda muito</h2>
+  <p>O precatório federal do TRF5 inscrito até 1º de fevereiro é pago até o fim do ano seguinte. Já o precatório do Estado de Pernambuco ou de uma prefeitura depende do limite anual que cada ente reserva para a fila, entre 1% e 5% da receita corrente líquida, e a espera costuma ser bem maior. Por isso a proposta de compra também muda de um tipo para outro. Veja <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a>.</p>""",
+     "faq":[("A Antecipay compra precatório do Estado de Pernambuco?","Sim. Compramos precatórios do Estado de Pernambuco, da Prefeitura do Recife e de outros municípios pernambucanos, pagos pelo TJPE, além de precatórios federais do TRF5."),
+            ("A Antecipay tem escritório em Pernambuco?","Não. A sede é em Natal-RN, na Incubadora do IFRN, e o atendimento é 100% digital. Credores de Pernambuco resolvem tudo pelo WhatsApp."),
+            ("Precatório do INSS em Pernambuco é pago por qual tribunal?","Pelo TRF5, que atende as ações contra a União e o INSS em Pernambuco, Alagoas, Ceará, Paraíba, Rio Grande do Norte e Sergipe."),
+            ("Em quanto tempo recebo?","Depois da proposta aprovada e do contrato de cessão assinado, o pagamento é feito em até 72 horas.")]},
+    {"slug":"empresa-que-compra-precatorio-ceara","uf":"CE","nome":"Ceará","em":"no Ceará","de":"do Ceará","capital":"Fortaleza",
+     "seo":"Empresa que compra precatórios no Ceará | Antecipay",
+     "desc":"A Antecipay compra precatórios do Estado do Ceará, de Fortaleza e de outros municípios cearenses (TJCE), e federais do TRF5. Proposta por escrito e à vista.",
+     "lead":"Tem precatório do Estado do Ceará, da Prefeitura de Fortaleza, de outro município cearense, da União ou do INSS? A Antecipay compra o seu precatório e você recebe à vista, com proposta por escrito.",
+     "trf":"TRF5","trf_ufs":"Alagoas, Ceará, Paraíba, Pernambuco, Rio Grande do Norte e Sergipe","tj":"TJCE",
+     "devedores":[("União, INSS e autarquias federais","TRF5 – Seção Judiciária do Ceará"),("Estado do Ceará e autarquias estaduais","TJCE"),("Prefeituras de Fortaleza, Caucaia, Juazeiro do Norte e demais municípios","TJCE")],
+     "consulta":"""<ul>
+    <li><strong>Estadual ou municipal (TJCE):</strong> na página do serviço de precatórios do TJCE (tjce.jus.br), que reúne as listas de ordem cronológica de cada ente devedor. O crédito mais antigo é pago primeiro.</li>
+    <li><strong>Federal (TRF5):</strong> no site de RPV e precatórios do TRF5 (rpvprecatorio.trf5.jus.br), pelo CPF ou pelo número do processo.</li>
+  </ul>
+  <p>Passo a passo da consulta federal em <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>. Se preferir, envie o número do processo que a nossa equipe consulta para você.</p>""",
+     "extra":"""<h2>Acordo direto ou venda?</h2>
+  <p>O Estado do Ceará já abriu editais de acordo direto com credores, conduzidos pelo juízo de conciliação de precatórios do TJCE. No acordo, você recebe antes da fila, mas com desconto, e só quando há edital aberto. Na venda, você recebe à vista quando quiser. Compare as duas propostas: veja <a href="/blog/desagio-precatorio/">o que é deságio e como ele é calculado</a>.</p>""",
+     "faq":[("A Antecipay compra precatório do Estado do Ceará?","Sim. Compramos precatórios do Estado do Ceará, da Prefeitura de Fortaleza e de outros municípios cearenses, pagos pelo TJCE, além de precatórios federais do TRF5."),
+            ("A Antecipay tem escritório no Ceará?","Não. A sede é em Natal-RN, na Incubadora do IFRN, e o atendimento é 100% digital. Credores do Ceará resolvem tudo pelo WhatsApp."),
+            ("Onde vejo a fila de precatórios de Fortaleza?","Na página do serviço de precatórios do TJCE, que publica as listas de ordem cronológica de cada devedor, inclusive a do Município de Fortaleza."),
+            ("Em quanto tempo recebo?","Depois da proposta aprovada e do contrato de cessão assinado, o pagamento é feito em até 72 horas.")]},
+]
+
+def build_estados():
+    for e in ESTADOS:
+        url = SITE + f"/{e['slug']}/"
+        msg = f"Olá! Tenho um precatório {e['de']} e quero uma proposta."
+        ld={"@context":"https://schema.org","@graph":[
+            {"@type":"Service","name":f"Compra de precatórios {e['em']}","serviceType":"Antecipação de precatório","url":url,
+             "areaServed":[{"@type":"State","name":e["nome"]},{"@type":"City","name":e["capital"]}],
+             "provider":{"@type":"FinancialService","@id":SITE+"/#empresa","name":"Antecipay Precatórios","url":SITE+"/","telephone":"+55-84-99493-8383","logo":SITE+"/logo-512.png",
+               "address":{"@type":"PostalAddress","streetAddress":"Av. Senador Salgado Filho, 1559 – Tirol","postalCode":"59015-000","addressLocality":"Natal","addressRegion":"RN","addressCountry":"BR"}}},
+            {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in e["faq"]]}]}
+        faq_html="".join(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>" for q,a in e["faq"])
+        rows="".join(f"<tr><td>{d}</td><td>{t}</td></tr>" for d,t in e["devedores"])
+        out = head(e["seo"], e["desc"], url, '<script type="application/ld+json">'+json.dumps(ld, ensure_ascii=False)+'</script>', current="") + f"""
+<main id="conteudo" tabindex="-1">
+<section class="art-head"><div class="narrow">
+  <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a> <span aria-hidden="true">›</span> <span aria-current="page">{e['nome']}</span></nav>
+  <span class="eyebrow">{e['nome']}</span>
+  <h1>Empresa que compra precatórios {e['em']}</h1>
+  <p class="lead">{e['lead']}</p>
+  <p class="ctas"><a class="btn btn-wa" href="{wa(msg)}" target="_blank" rel="noopener">{WA_ICON}Quero uma proposta</a><a class="btn btn-tel" href="tel:+5584994938383" aria-label="Ligar para (84) 99493-8383">{TEL_ICON}Ligar</a></p>
+</div></section>
+<article class="narrow">
+  <div class="answer"><strong>Em resumo</strong>A Antecipay Precatórios (CNPJ 64.382.432/0001-97) tem sede em Natal-RN e compra precatórios {e['de']}: estaduais e municipais do {e['tj']} e federais do {e['trf']}. O atendimento é 100% digital, pelo WhatsApp (84) 99493-8383, e o pagamento sai em até 72 horas depois da cessão assinada.</div>
+
+  <h2>Precatórios que compramos {e['em']}</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Devedor</th><th>Tribunal</th></tr>
+    {rows}
+  </table></div>
+  <p>O {e['trf']} cuida das ações contra a União e o INSS em {e['trf_ufs']}. Veja também como <a href="/vender-precatorio-estadual/">vender precatório estadual</a>, <a href="/vender-precatorio-municipal/">vender precatório municipal</a> e <a href="/vender-precatorio-inss/">vender precatório do INSS</a>.</p>
+
+  {e['extra']}
+
+  <h2>Como consultar o seu precatório</h2>
+  {e['consulta']}
+
+  <h2>Atendimento {e['em']} sem sair de casa</h2>
+  <ul>
+    <li><strong>100% digital:</strong> você envia o número do processo e assina a cessão pelo celular.</li>
+    <li><strong>Proposta por escrito</strong>, com o valor líquido, antes de qualquer assinatura.</li>
+    <li><strong>Pagamento em até 72 horas</strong> depois da proposta aprovada e da cessão assinada.</li>
+    <li><strong>Nenhuma cobrança antecipada.</strong></li>
+    <li><strong>Empresa com endereço que você pode conferir:</strong> sede em Natal-RN, na Incubadora do IFRN.</li>
+  </ul>
+
+  <h2>Como funciona</h2>
+  <ol>
+    <li>Envie o número do processo pelo WhatsApp.</li>
+    <li>Nossa equipe jurídica analisa o precatório.</li>
+    <li>Você recebe a proposta por escrito.</li>
+    <li>Assinamos o contrato de <a href="/blog/cessao-de-precatorio/">cessão de crédito</a> e o valor é pago à vista.</li>
+  </ol>
+  <p>Antes de decidir, veja <a href="/melhor-empresa-para-vender-precatorio/">como escolher a empresa para vender o precatório</a> ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+
+  <h2>Quem somos</h2>
+  <p><strong>Antecipay Precatórios</strong><br>Av. Senador Salgado Filho, 1559 – Tirol<br>Incubadora do IFRN – Campus Natal Central<br>Natal-RN, CEP 59015-000<br>WhatsApp (84) 99493-8383 · contato@antecipay.com.br</p>
+  <p>Saiba mais <a href="/sobre/">sobre a Antecipay</a> e sobre a nossa <a href="/empresa-que-compra-precatorio-natal/">sede em Natal</a>.</p>
+
+  {cta(f"Tem precatório {e['de']}?", "Envie o número do processo e receba uma proposta por escrito.", msg)}
+  <h2>Perguntas frequentes</h2>
+  {faq_html}
+  {NOTE}
+</article>
+<div style="height:80px"></div>
+</main>
+""" + FOOT
+        os.makedirs(e["slug"], exist_ok=True)
+        open(f"{e['slug']}/index.html","w").write(out)
 
 
 def landing(slug, seo, desc, crumb, eyebrow, h1, lead, wa_msg, answer, body, faq, service_name, extra_top=""):
@@ -1736,7 +1878,7 @@ def build_federal():
         body, faq, "Compra de precatório federal")
 
 def build_sitemap():
-    urls = ["/", "/antecipacao-de-precatorio/", "/calculadora-precatorio/", "/vender-precatorio-federal/", "/vender-precatorio-estadual/", "/vender-precatorio-municipal/", "/vender-precatorio-trabalhista/", "/melhor-empresa-para-vender-precatorio/", "/vender-precatorio-inss/", "/vender-precatorio-rn/", "/empresa-que-compra-precatorio-natal/", "/sobre/", "/blog/"] + [f"/blog/{p['slug']}/" for p in POSTS] + ["/privacidade.html"]
+    urls = ["/", "/antecipacao-de-precatorio/", "/calculadora-precatorio/", "/vender-precatorio-federal/", "/vender-precatorio-estadual/", "/vender-precatorio-municipal/", "/vender-precatorio-trabalhista/", "/melhor-empresa-para-vender-precatorio/", "/vender-precatorio-inss/", "/vender-precatorio-rn/", "/empresa-que-compra-precatorio-natal/"] + [f"/{e['slug']}/" for e in ESTADOS] + ["/sobre/", "/blog/"] + [f"/blog/{p['slug']}/" for p in POSTS] + ["/privacidade.html"]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{UPDATED}</lastmod></url>\n" for u in urls)
     xml += "</urlset>\n"
@@ -1822,5 +1964,5 @@ def build_trabalhista():
 
 if __name__ == "__main__":
     for p in POSTS: build_post(p)
-    build_index(); build_sobre(); build_inss(); build_rn(); build_natal(); build_federal(); build_municipal(); build_estadual(); build_melhor(); build_calc(); build_antecipacao(); build_trabalhista(); build_llms(); build_sitemap()
+    build_index(); build_sobre(); build_inss(); build_rn(); build_natal(); build_estados(); build_federal(); build_municipal(); build_estadual(); build_melhor(); build_calc(); build_antecipacao(); build_trabalhista(); build_llms(); build_sitemap()
     print("ok", len(POSTS), "artigos")
