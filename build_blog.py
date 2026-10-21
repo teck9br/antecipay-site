@@ -18,7 +18,7 @@ AUTORA = dict(
     tratamento="Dra.",
     cargo="Advogada",
     oab="",        # ex.: "OAB/RN 12.345"
-    foto="",       # ex.: "/assets/equipe/thayna-cabral.webp" (quadrada, 400 px)
+    foto="/assets/equipe/thayna-cabral.webp",  # quadrada, 400 px
     bio="",        # 2 a 4 frases: formação, experiência, área de atuação
     same_as=[],    # perfis profissionais dela: LinkedIn, Instagram, JusBrasil...
 )
