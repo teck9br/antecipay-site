@@ -1134,6 +1134,8 @@ POSTS.insert(0, dict(
    ("Um novo governador pode pagar a fila mais rápido?","Pode depositar valores acima do mínimo ou abrir acordos diretos, mas o mínimo anual é fixado pela Constituição e a ordem de pagamento é controlada pelo TJRN. Na prática, a velocidade da fila depende mais do tamanho da dívida e da arrecadação do que de quem governa."),
    ("O que é o acordo direto?","É um edital do tribunal em que o credor aceita receber com desconto, em geral de 40%, para passar na frente com a verba reservada para os acordos. Quem não for contemplado continua na posição original da fila."),
    ("Vender o precatório tira meu lugar na fila?","Não. Na cessão, o precatório continua na mesma posição; muda apenas quem vai receber quando chegar a vez. Você recebe à vista e a empresa compradora assume a espera."),
+   ("Advogado pode antecipar os honorários do precatório?","Pode. Os honorários contratuais destacados no precatório e os honorários de sucumbência são crédito do próprio advogado e podem ser cedidos. A Antecipay compra honorários com a mesma análise e proposta por escrito."),
+   ("A Antecipay só atende o RN?","Não. A Antecipay tem sede em Natal e compra precatórios e honorários de credores de todo o Brasil, com atendimento 100% digital. Este artigo trata do RN e de Natal porque é sobre o orçamento desses dois devedores."),
    ("Tenho precatório trabalhista contra o Estado ou contra Natal. Vale o mesmo?","Sim. Precatórios trabalhistas contra o Estado ou o Município são expedidos pela Justiça do Trabalho (TRT21) e também se sujeitam ao limite anual do devedor. Confira a situação no TRT21 e no TJRN."),
   ],
   body="""
@@ -1181,13 +1183,16 @@ POSTS.insert(0, dict(
 
 <h2>A alternativa da antecipação privada</h2>
 <p>Quem não quer depender do calendário da fila nem da abertura de editais pode <strong>vender o precatório</strong> a uma empresa privada. A operação se chama <a href="/blog/cessao-de-precatorio/">cessão de crédito</a> e é permitida pelo art. 100, §13, da Constituição. Você recebe à vista e a empresa passa a receber do governo quando chegar a vez do precatório.</p>
-<p>Na Antecipay Precatórios, o caminho é este:</p>
+<p>A Antecipay Precatórios tem sede em Natal e <strong>atende credores de todo o Brasil</strong>, com atendimento 100% digital. O caminho é este:</p>
 <ol>
 <li>Você envia o número do processo pelo WhatsApp.</li>
 <li>Nossa equipe jurídica analisa o processo, a posição na fila e a situação do devedor.</li>
 <li>Você recebe uma <strong>proposta por escrito, com o valor líquido</strong>, sem custo e sem compromisso.</li>
 <li>Se aceitar, a cessão é assinada e o pagamento cai em <strong>até 72 horas</strong>. Depois, a cessão é comunicada ao tribunal (art. 100, §14).</li>
 </ol>
+<h3>Advogado: os honorários também podem ser antecipados</h3>
+<p>O advogado que tem <strong>honorários contratuais destacados no precatório</strong> ou <strong>honorários de sucumbência</strong> enfrenta a mesma fila do cliente. Esses honorários são crédito do próprio advogado, de natureza alimentar (Súmula Vinculante 47 do STF), e podem ser cedidos da mesma forma. <strong>A Antecipay também compra honorários</strong>, com análise do processo, proposta por escrito e pagamento em até 72 horas após a cessão assinada. Assim, advogado e cliente podem antecipar juntos, cada um a sua parte do crédito.</p>
+
 <p>Como na fila e no acordo direto, a antecipação tem um custo: o <a href="/blog/desagio-precatorio/">deságio</a>, que varia conforme o devedor, o valor e o tempo estimado de espera. A diferença é que <strong>você sabe o valor e a data antes de decidir</strong>. Compare as três opções:</p>
 <div class="table-wrap"><table>
 <tr><th></th><th>Esperar a fila</th><th>Acordo direto</th><th>Vender o precatório</th></tr>
@@ -1200,7 +1205,7 @@ POSTS.insert(0, dict(
 <h2>Conclusão</h2>
 <p>Seja qual for o resultado das urnas, <strong>a fila dos precatórios do RN e de Natal continuará presa ao limite constitucional e à arrecadação</strong>. Entender essas regras ajuda a não criar expectativa com promessas e a escolher com calma entre esperar, aderir a um edital ou antecipar. Se você quer saber quanto receberia hoje, faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a> ou peça uma simulação à nossa equipe. Veja também como <a href="/vender-precatorio-rn/">vender precatório no RN</a>, as regras do <a href="/vender-precatorio-estadual/">precatório estadual</a>, do <a href="/vender-precatorio-municipal/">precatório municipal</a> e do <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
 """,
-  cta=("Quer previsibilidade, seja qual for o governo?","Envie o número do processo e receba uma simulação por escrito, transparente e sem compromisso.","Olá! Tenho um precatório do RN/Natal e quero uma simulação."),
+  cta=("Quer previsibilidade, seja qual for o governo?","Credor ou advogado: envie o número do processo e receba uma simulação por escrito, transparente e sem compromisso.","Olá! Tenho um precatório (ou honorários) e quero uma simulação."),
   related=["precatorios-2027-ec-136","vale-a-pena-vender-precatorio","desagio-precatorio"],
 ))
 BY = {p["slug"]: p for p in POSTS}

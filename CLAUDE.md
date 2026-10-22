@@ -29,6 +29,7 @@ Site institucional de **antecipayprecatorios.com.br**: empresa de Natal-RN que c
 - Endereço: Av. Senador Salgado Filho, 1559 – Tirol, Incubadora do IFRN – Campus Natal Central, Natal-RN, CEP 59015-000
 - Horário: seg–sex 8h–18h, sáb 8h–12h
 - Pagamento em até 72 h após proposta aprovada e cessão assinada.
+- Também compra **honorários advocatícios** (contratuais destacados e de sucumbência). Atua em todo o território nacional (sede em Natal, atendimento 100% digital).
 
 ## Regras de conteúdo
 - Português do Brasil, linguagem simples, sem juridiquês.
