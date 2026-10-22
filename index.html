@@ -378,15 +378,11 @@ header .nav{transition:background-color .3s,height .4s var(--ease)}
 header.scrolled .nav{height:58px}
 @media (max-width:1000px){.js .draw.steps::before{transform:scaleY(0);transform-origin:top}}
 @media (prefers-reduced-motion:reduce){.hi{animation:none}.js .rv,.js .step .n,.js .draw.steps::before{opacity:1;transform:none;transition:none}.scribble path{animation:none;stroke-dashoffset:0}.hl{transition:none}}
-/* faixa de tribunais rolando (formato Colina Tech: marcas soltas em cinza, título com destaque circulado) */
+/* faixa de tribunais rolando (formato Colina Tech: marcas soltas em cinza, título com destaque em verde) */
 main{overflow-x:clip}
 .tribs{padding:72px 0 16px}
 .tribs h2{font:700 clamp(1.3rem,2.6vw,1.75rem)/1.3 Montserrat,"Montserrat Fallback",sans-serif;letter-spacing:-.02em;color:var(--ink);text-align:center;margin-bottom:40px}
-.circ{position:relative;display:inline-block;color:var(--green-d);padding:0 .3em;white-space:nowrap}
-.circ svg{position:absolute;left:-6%;top:-48%;width:112%;height:196%;overflow:visible;pointer-events:none}
-.circ path{fill:none;stroke:var(--green);stroke-opacity:.45;stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
-.js .circ path{stroke-dashoffset:1;transition:stroke-dashoffset 1.3s var(--ease) .35s}
-.js .in .circ path{stroke-dashoffset:0}
+.circ{color:var(--green-d)}
 .marquee{display:flex;overflow:hidden}
 .track{display:flex;flex:none;margin:0;padding:0;list-style:none;animation:slide 60s linear infinite}
 .track li{flex:none;width:170px;height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center}
@@ -395,8 +391,8 @@ main{overflow-x:clip}
 .track li:hover b{color:var(--ink)}
 .track li:hover span{color:var(--muted)}
 @keyframes slide{to{transform:translateX(-100%)}}
-@media (max-width:640px){.tribs{padding-top:52px}.tribs h2{margin-bottom:28px}.circ{white-space:normal}.track li{width:136px;height:80px}.track b{font-size:1.35rem}}
-@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;justify-content:center}.track[aria-hidden]{display:none}.marquee{justify-content:center}.js .circ path{stroke-dashoffset:0;transition:none}}
+@media (max-width:640px){.tribs{padding-top:52px}.tribs h2{margin-bottom:28px}.track li{width:136px;height:80px}.track b{font-size:1.35rem}}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;justify-content:center}.track[aria-hidden]{display:none}.marquee{justify-content:center}}
 </style>
 <!-- Microsoft Clarity -->
 <script>
@@ -480,7 +476,7 @@ document.addEventListener("click",function(e){var t=e.target.closest&&e.target.c
 
 <div class="tribs" aria-label="Tribunais de onde vêm os precatórios que compramos">
   <div class="wrap">
-    <h2 class="rv">Compramos precatórios de <span class="circ">tribunais de todo o Brasil<svg viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M168 6C96 2 18 9 8 30c-9 19 60 27 140 26 82-1 146-9 144-28C290 10 220 2 132 7"/></svg></span></h2>
+    <h2 class="rv">Compramos precatórios de <span class="circ">tribunais de todo o Brasil</span></h2>
     <div class="marquee"><ul class="track"><li><b>TRF1</b><span>Federal · 1ª Região</span></li><li><b>TRF2</b><span>Federal · 2ª Região</span></li><li><b>TRF3</b><span>Federal · 3ª Região</span></li><li><b>TRF4</b><span>Federal · 4ª Região</span></li><li><b>TRF5</b><span>Federal · 5ª Região</span></li><li><b>TRF6</b><span>Federal · 6ª Região</span></li><li><b>TJRN</b><span>Estadual · RN</span></li><li><b>TJSP</b><span>Estadual · SP</span></li><li><b>TJPB</b><span>Estadual · PB</span></li><li><b>TJPE</b><span>Estadual · PE</span></li><li><b>TJCE</b><span>Estadual · CE</span></li><li><b>TJRJ</b><span>Estadual · RJ</span></li><li><b>TJMG</b><span>Estadual · MG</span></li><li><b>TJBA</b><span>Estadual · BA</span></li><li><b>TRTs</b><span>Justiça do Trabalho</span></li></ul><ul class="track" aria-hidden="true"><li><b>TRF1</b><span>Federal · 1ª Região</span></li><li><b>TRF2</b><span>Federal · 2ª Região</span></li><li><b>TRF3</b><span>Federal · 3ª Região</span></li><li><b>TRF4</b><span>Federal · 4ª Região</span></li><li><b>TRF5</b><span>Federal · 5ª Região</span></li><li><b>TRF6</b><span>Federal · 6ª Região</span></li><li><b>TJRN</b><span>Estadual · RN</span></li><li><b>TJSP</b><span>Estadual · SP</span></li><li><b>TJPB</b><span>Estadual · PB</span></li><li><b>TJPE</b><span>Estadual · PE</span></li><li><b>TJCE</b><span>Estadual · CE</span></li><li><b>TJRJ</b><span>Estadual · RJ</span></li><li><b>TJMG</b><span>Estadual · MG</span></li><li><b>TJBA</b><span>Estadual · BA</span></li><li><b>TRTs</b><span>Justiça do Trabalho</span></li></ul></div>
   </div>
 </div>
