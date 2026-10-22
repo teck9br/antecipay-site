@@ -43,7 +43,7 @@ def head(title, desc, url, extra_ld="", current="blog"):
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
-<meta name="theme-color" content="#EDF3F0">
+<meta name="theme-color" content="#07111F">
 <script>document.documentElement.classList.add('js')</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
