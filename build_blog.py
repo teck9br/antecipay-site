@@ -1121,6 +1121,88 @@ POSTS.insert(0, dict(
   cta=("Tem um precatório judicial?","Envie o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Tenho um precatório judicial e quero uma proposta."),
   related=["o-que-e-precatorio-e-rpv","quanto-tempo-demora-precatorio","como-vender-precatorio"],
 ))
+POSTS.insert(0, dict(
+  slug="eleicoes-precatorios-rn-natal",
+  tag="Orçamento",
+  title="Eleições, orçamento e a fila dos precatórios no RN e em Natal",
+  seo="Eleições e precatórios no RN e em Natal | Antecipay",
+  desc="Troca de governo muda a fila dos precatórios? Entenda como o orçamento do RN e de Natal limita os pagamentos, como funcionam os acordos diretos e a antecipação.",
+  lead="Em ano de eleição, o assunto precatório volta ao noticiário e às conversas entre credores. Veja, sem lado político, o que de fato define o ritmo da fila no Estado e na capital.",
+  answer="A eleição não acelera nem para a fila dos precatórios. O ritmo é definido pela Constituição: desde a EC 136/2025, estados e municípios pagam dentro de um limite anual de 1% a 5% da receita corrente líquida, conforme o tamanho da dívida, e o TJRN paga pela ordem cronológica. Promessas de campanha não mudam esse teto. Quem precisa de previsibilidade pode esperar a fila, aderir a um acordo direto quando houver edital (com deságio de até 40%) ou vender o precatório a uma empresa privada.",
+  faq=[
+   ("O pagamento de precatórios para durante a eleição?","Não. O precatório é uma ordem da Justiça e o pagamento é feito pelo tribunal, com os recursos que o governo deposita dentro do limite anual. O calendário eleitoral não suspende essa obrigação."),
+   ("Um novo governador pode pagar a fila mais rápido?","Pode depositar valores acima do mínimo ou abrir acordos diretos, mas o mínimo anual é fixado pela Constituição e a ordem de pagamento é controlada pelo TJRN. Na prática, a velocidade da fila depende mais do tamanho da dívida e da arrecadação do que de quem governa."),
+   ("O que é o acordo direto?","É um edital do tribunal em que o credor aceita receber com desconto, em geral de 40%, para passar na frente com a verba reservada para os acordos. Quem não for contemplado continua na posição original da fila."),
+   ("Vender o precatório tira meu lugar na fila?","Não. Na cessão, o precatório continua na mesma posição; muda apenas quem vai receber quando chegar a vez. Você recebe à vista e a empresa compradora assume a espera."),
+   ("Tenho precatório trabalhista contra o Estado ou contra Natal. Vale o mesmo?","Sim. Precatórios trabalhistas contra o Estado ou o Município são expedidos pela Justiça do Trabalho (TRT21) e também se sujeitam ao limite anual do devedor. Confira a situação no TRT21 e no TJRN."),
+  ],
+  body="""
+<p>Com a campanha de 2026 nas ruas, o assunto aparece em debates, entrevistas e grupos de mensagem: quem tem precatório quer saber se a próxima gestão vai pagar mais rápido, mais devagar ou do mesmo jeito. A resposta honesta é que <strong>a velocidade da fila depende muito mais de regras constitucionais e do tamanho do orçamento do que de quem ocupa o cargo</strong>. Este texto explica essas regras, sem tomar partido de nenhum governo, passado, atual ou futuro.</p>
+
+<h2>Bastidores do orçamento: por que o precatório disputa espaço</h2>
+<p>Todo ano, o governo do Estado e a Prefeitura de Natal enviam ao Legislativo a <strong>lei orçamentária</strong> com a previsão do que vão arrecadar e gastar no ano seguinte. Boa parte desse dinheiro já chega com destino definido por lei, antes de qualquer escolha política:</p>
+<ul>
+<li><strong>Educação:</strong> pelo menos 25% da receita de impostos (art. 212 da Constituição).</li>
+<li><strong>Saúde:</strong> pelo menos 12% da receita de impostos nos estados e 15% nos municípios (Lei Complementar 141/2012).</li>
+<li><strong>Pessoal:</strong> salários, aposentadorias e pensões, com limites fixados pela Lei de Responsabilidade Fiscal.</li>
+<li><strong>Dívidas:</strong> parcelas de empréstimos e financiamentos.</li>
+</ul>
+<p>O que sobra precisa cobrir custeio, obras e investimentos. Os precatórios entram nessa conta como despesa obrigatória, mas com um teto próprio. Pela <a href="/blog/precatorios-2027-ec-136/">EC 136/2025</a>, estados e municípios pagam precatórios dentro de um <strong>limite anual de 1% a 5% da receita corrente líquida</strong>, conforme o tamanho do estoque da dívida. A mesma emenda acabou com o prazo final, que era 2029, para quitar os atrasados.</p>
+<p>Na prática, isso quer dizer que <strong>a fila anda no ritmo da arrecadação</strong>. Se a receita cresce, o valor reservado aos precatórios cresce junto; se a dívida acumulada é grande, a fila leva anos para andar, seja qual for o governo.</p>
+
+<h3>E a troca de gestão?</h3>
+<p>Quem toma posse em janeiro de 2027 recebe um orçamento já votado no ano anterior. Os precatórios apresentados até <strong>1º de fevereiro de 2026</strong> entram no orçamento de 2027; os apresentados depois disso ficam para 2028. Uma nova gestão pode decidir depositar mais do que o mínimo ou propor acordos diretos, mas não pode pagar abaixo do limite constitucional nem mudar a ordem da fila, que é controlada pelo Tribunal de Justiça.</p>
+<p>A capital está em outro calendário: a eleição para prefeito foi em 2024 e a próxima é em 2028. Para os credores do Município de Natal, a eleição de 2026 não muda o comando da Prefeitura.</p>
+
+<h2>A fila do regime especial e os acordos diretos</h2>
+<p>O Estado do Rio Grande do Norte e o Município de Natal pagam seus precatórios pelo <strong>regime especial</strong> do art. 101 do ADCT. Funciona assim:</p>
+<ol>
+<li>O governo deposita mensalmente, numa conta administrada pelo <strong>TJRN</strong>, o valor correspondente ao seu limite anual.</li>
+<li>O tribunal paga os credores pela <strong>ordem cronológica</strong>, com prioridade para créditos alimentares e para quem tem <a href="/blog/superpreferencia-precatorio/">superpreferência</a> (60 anos ou mais, doença grave ou deficiência).</li>
+<li>Os precatórios trabalhistas, expedidos pelo <strong>TRT21</strong>, e os federais contra o Estado ou o Município também dependem desses recursos. Em regra, no regime especial o Tribunal de Justiça administra as contas e reparte o dinheiro com a Justiça do Trabalho e a Justiça Federal.</li>
+</ol>
+
+<h3>Como funcionam os editais de acordo direto</h3>
+<p>Parte dos recursos pode ser destinada a <strong>acordos diretos</strong>. O tribunal publica um edital com o valor disponível, e o credor que aceitar um desconto passa na frente com essa verba. A Constituição permite redução de <strong>até 40%</strong> do valor atualizado (art. 102, §1º, do ADCT). Dois exemplos recentes no RN:</p>
+<div class="table-wrap"><table>
+<tr><th>Edital</th><th>Devedor</th><th>Valor reservado</th><th>Deságio</th><th>Adesão</th></tr>
+<tr><td>Nº 01/2025 (TJRN)</td><td>Estado do RN</td><td>R$ 70 milhões</td><td>40%</td><td>3 a 14 de novembro de 2025</td></tr>
+<tr><td>Nº 02/2025 (TJRN)</td><td>Município de Natal</td><td>R$ 35 milhões</td><td>40%</td><td>10 a 21 de novembro de 2025</td></tr>
+</table></div>
+<p>O que costuma valer nesses editais:</p>
+<ul>
+<li>A inscrição é feita pelo advogado do processo, no sistema de precatórios do TJRN, e o prazo é curto e improrrogável.</li>
+<li>Só entram precatórios <strong>sem recurso pendente, sem discussão de cálculo e sem transferência de titularidade em andamento</strong>.</li>
+<li>Ao aderir, o credor aceita o deságio e renuncia a discussões sobre o crédito.</li>
+<li><strong>Manifestar interesse não garante o pagamento</strong>: se a verba acabar, quem não foi contemplado continua na posição original da fila.</li>
+<li>Os editais podem ser revistos. Em 2025, um edital estadual de R$ 100 milhões foi suspenso depois de apontamentos do Conselho Nacional de Justiça sobre a ordem cronológica e acabou substituído pelo edital nº 01/2025.</li>
+</ul>
+<p>O acordo direto pode ser uma boa saída, mas <strong>não tem data certa</strong>: depende de o governo reservar verba, de o tribunal abrir edital e de o seu precatório se encaixar nas regras.</p>
+
+<h2>A alternativa da antecipação privada</h2>
+<p>Quem não quer depender do calendário da fila nem da abertura de editais pode <strong>vender o precatório</strong> a uma empresa privada. A operação se chama <a href="/blog/cessao-de-precatorio/">cessão de crédito</a> e é permitida pelo art. 100, §13, da Constituição. Você recebe à vista e a empresa passa a receber do governo quando chegar a vez do precatório.</p>
+<p>Na Antecipay Precatórios, o caminho é este:</p>
+<ol>
+<li>Você envia o número do processo pelo WhatsApp.</li>
+<li>Nossa equipe jurídica analisa o processo, a posição na fila e a situação do devedor.</li>
+<li>Você recebe uma <strong>proposta por escrito, com o valor líquido</strong>, sem custo e sem compromisso.</li>
+<li>Se aceitar, a cessão é assinada e o pagamento cai em <strong>até 72 horas</strong>. Depois, a cessão é comunicada ao tribunal (art. 100, §14).</li>
+</ol>
+<p>Como na fila e no acordo direto, a antecipação tem um custo: o <a href="/blog/desagio-precatorio/">deságio</a>, que varia conforme o devedor, o valor e o tempo estimado de espera. A diferença é que <strong>você sabe o valor e a data antes de decidir</strong>. Compare as três opções:</p>
+<div class="table-wrap"><table>
+<tr><th></th><th>Esperar a fila</th><th>Acordo direto</th><th>Vender o precatório</th></tr>
+<tr><td><strong>Quanto recebe</strong></td><td>Valor integral corrigido</td><td>Até 40% a menos</td><td>Valor da proposta aceita</td></tr>
+<tr><td><strong>Quando</strong></td><td>Incerto, pode levar anos</td><td>Só se houver edital e verba</td><td>Até 72 h após a cessão assinada</td></tr>
+<tr><td><strong>Quem decide</strong></td><td>Orçamento e ordem da fila</td><td>Edital do tribunal</td><td>Você, com a proposta em mãos</td></tr>
+</table></div>
+<p>Antes de decidir, desconfie de quem pede pagamento antecipado para “liberar” o seu precatório; veja <a href="/blog/golpe-do-precatorio/">como evitar o golpe do precatório</a>. E se você tem 60 anos ou mais ou doença grave, confira primeiro se tem direito à superpreferência, que é pessoal e não passa para quem compra.</p>
+
+<h2>Conclusão</h2>
+<p>Seja qual for o resultado das urnas, <strong>a fila dos precatórios do RN e de Natal continuará presa ao limite constitucional e à arrecadação</strong>. Entender essas regras ajuda a não criar expectativa com promessas e a escolher com calma entre esperar, aderir a um edital ou antecipar. Se você quer saber quanto receberia hoje, faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a> ou peça uma simulação à nossa equipe. Veja também como <a href="/vender-precatorio-rn/">vender precatório no RN</a>, as regras do <a href="/vender-precatorio-estadual/">precatório estadual</a>, do <a href="/vender-precatorio-municipal/">precatório municipal</a> e do <a href="/vender-precatorio-trabalhista/">precatório trabalhista</a>.</p>
+""",
+  cta=("Quer previsibilidade, seja qual for o governo?","Envie o número do processo e receba uma simulação por escrito, transparente e sem compromisso.","Olá! Tenho um precatório do RN/Natal e quero uma simulação."),
+  related=["precatorios-2027-ec-136","vale-a-pena-vender-precatorio","desagio-precatorio"],
+))
 BY = {p["slug"]: p for p in POSTS}
 
 def autora_ld():
