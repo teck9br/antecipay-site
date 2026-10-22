@@ -43,7 +43,7 @@ def head(title, desc, url, extra_ld="", current="blog"):
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
-<meta name="theme-color" content="#07111F">
+<meta name="theme-color" content="#EDF3F0">
 <script>document.documentElement.classList.add('js')</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
@@ -72,7 +72,7 @@ document.addEventListener("click",function(e){{var t=e.target.closest&&e.target.
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="top">
   <div class="wrap nav">
-    <a href="/" class="logo" translate="no">Antecipay</a>
+    <a href="/" class="logo" translate="no">Antecipay<small>Precatórios</small></a>
     <nav class="menu" aria-label="Principal">
       <a href="/#como-funciona">Como funciona</a>
       <a href="/#vantagens">Vantagens</a>
@@ -88,7 +88,7 @@ document.addEventListener("click",function(e){{var t=e.target.closest&&e.target.
 FOOT = f"""<footer>
   <div class="wrap">
     <div class="foot">
-      <div><a href="/" class="logo" translate="no">Antecipay</a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
+      <div><a href="/" class="logo" translate="no">Antecipay<small>Precatórios</small></a><p style="margin-top:12px;max-width:340px">Sediada em Natal-RN, atendendo credores de todo o Brasil.</p></div>
       <ul><li><a href="/">Vender precatório</a></li><li><a href="/calculadora-precatorio/">Calculadora de precatório</a></li><li><a href="/antecipacao-de-precatorio/">Compra de precatório</a></li><li><a href="/vender-precatorio-federal/">Precatório federal</a></li><li><a href="/vender-precatorio-estadual/">Precatório estadual</a></li><li><a href="/vender-precatorio-municipal/">Precatório municipal</a></li><li><a href="/vender-precatorio-trabalhista/">Precatório trabalhista</a></li><li><a href="/melhor-empresa-para-vender-precatorio/">Como escolher a empresa</a></li><li><a href="/sobre/">Sobre a Antecipay</a></li><li><a href="/vender-precatorio-inss/">Precatório do INSS</a></li><li><a href="/vender-precatorio-rn/">Precatório no RN</a></li><li><a href="/empresa-que-compra-precatorio-natal/">Empresa de precatórios em Natal</a></li><li><a href="/empresa-que-compra-precatorio-sao-paulo/">Precatórios em São Paulo</a></li><li><a href="/empresa-que-compra-precatorio-paraiba/">Precatórios na Paraíba</a></li><li><a href="/empresa-que-compra-precatorio-pernambuco/">Precatórios em Pernambuco</a></li><li><a href="/empresa-que-compra-precatorio-ceara/">Precatórios no Ceará</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacidade.html">Política de Privacidade</a></li></ul>
       <ul><li><a href="{wa('Olá! Vim pelo site da Antecipay.')}" target="_blank" rel="noopener">WhatsApp (84) 99493-8383</a></li><li><a href="mailto:contato@antecipay.com.br">contato@antecipay.com.br</a></li><li><a href="https://www.instagram.com/antecipayprecatorios/" target="_blank" rel="noopener">Instagram @antecipayprecatorios</a></li><li>Av. Senador Salgado Filho, 1559 – Tirol, Natal-RN</li></ul>
     </div>

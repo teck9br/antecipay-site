@@ -1,0 +1,25 @@
+PROJETO – SITE ANTECIPAY PRECATÓRIOS (antecipayprecatorios.com.br)
+Backup gerado em 03/10/2026
+
+ONDE O SITE VIVE
+- Código publicado: GitHub  -> https://github.com/teck9br/antecipay-site
+- Hospedagem: Render (static site "antecipay-site"), atualiza sozinho a cada "Commit changes" no GitHub
+- Domínio: Registro.br  -> A @ 216.24.57.1 | CNAME www -> antecipay-site.onrender.com
+- Google Search Console e Bing Webmaster Tools: propriedade https://antecipayprecatorios.com.br/
+- Microsoft Clarity: projeto yqi1puom0k
+- Quadro de design (Claude): "Antecipay – Espaçamentos responsivos" em claude.ai/code/artifacts
+
+ARQUIVOS
+- index.html ............ página inicial (Vender precatório)
+- sobre/, vender-precatorio-inss/, vender-precatorio-rn/ ... páginas de serviço
+- blog/ ................. blog e artigos
+- assets/blog.css ....... estilo do blog e páginas internas
+- privacidade.html, robots.txt, llms.txt, sitemap.xml
+- favicon.*, apple-touch-icon.png, logo-512.png, og.png
+- build_blog.py ......... gerador do blog, páginas internas, llms.txt e sitemap
+                          (para novo artigo: adicionar em POSTS e rodar: python3 build_blog.py)
+
+COMO PUBLICAR UMA ALTERAÇÃO
+1) Abra https://github.com/teck9br/antecipay-site/upload/main
+2) Arraste os arquivos/pastas alterados
+3) Clique em "Commit changes" – o Render publica em ~1 minuto
