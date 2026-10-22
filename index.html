@@ -276,7 +276,10 @@ header{inset:14px 0 auto;background:none!important;box-shadow:none!important;bac
 header .nav{height:64px;padding:0 10px 0 24px;border-radius:999px;background:rgba(7,17,31,.38);-webkit-backdrop-filter:var(--gl-blur);backdrop-filter:var(--gl-blur);
   border:1px solid var(--gl-dark-edge);box-shadow:var(--gl-dark-shadow);transition:background-color .3s}
 header.scrolled .nav{background:rgba(7,17,31,.78)}
-.logo small{font:600 .62em/1 Montserrat,"Montserrat Fallback",sans-serif;color:var(--green);margin-left:6px;letter-spacing:0}
+.logo small{font:600 .62em/1 Montserrat,"Montserrat Fallback",sans-serif;color:var(--green);margin-left:0;letter-spacing:0;white-space:nowrap}
+header .logo{padding:10px 0}
+.type .more{padding:12px 0 4px}
+p a,li a{overflow-wrap:anywhere}
 
 /* hero: mais brilho atrás do formulário */
 .hero::after{content:"";position:absolute;left:-10%;bottom:-10%;width:640px;height:520px;background:radial-gradient(closest-side,rgba(56,189,248,.10),transparent);z-index:-1}
@@ -386,7 +389,7 @@ main{overflow-x:clip}
   background:var(--gl-light);-webkit-backdrop-filter:var(--gl-blur);backdrop-filter:var(--gl-blur);border:1px solid var(--gl-light-edge);box-shadow:var(--gl-light-shadow);transition:transform .35s var(--ease)}
 .track li:hover{transform:translateY(-2px)}
 .track b{font:700 1.08rem/1 Montserrat,"Montserrat Fallback",sans-serif;color:var(--ink);letter-spacing:-.01em}
-.track span{font-size:.74rem;line-height:1;color:var(--muted);white-space:nowrap}
+.track span{font-size:.78rem;line-height:1;color:var(--muted);white-space:nowrap}
 @keyframes slide{to{transform:translateX(-100%)}}
 @media (max-width:640px){.tribs{padding-top:40px}.track li{height:60px;padding:0 20px}}
 @media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;justify-content:center;padding-right:0}.track[aria-hidden]{display:none}.marquee{-webkit-mask:none;mask:none;justify-content:center}.track li{transition:none}}
