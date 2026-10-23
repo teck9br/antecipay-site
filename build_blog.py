@@ -17,9 +17,11 @@ AUTORA = dict(
     nome="Thayná Cabral",
     tratamento="Dra.",
     cargo="Advogada",
-    oab="",        # ex.: "OAB/RN 12.345"
+    oab="OAB/RN 21.175",
     foto="/assets/equipe/thayna-cabral.webp",  # quadrada, 400 px
-    bio="",        # 2 a 4 frases: formação, experiência, área de atuação
+    bio=("Advogada inscrita na OAB do Rio Grande do Norte sob o nº 21.175, fundadora do escritório "
+         "Thayná Cabral Advocacia, em Natal-RN, com atuação em Direito Previdenciário, Trabalhista e Cível. "
+         "Na Antecipay, é responsável pela análise jurídica dos precatórios e pela revisão dos guias do blog."),
     same_as=[],    # perfis profissionais dela: LinkedIn, Instagram, JusBrasil...
 )
 AUTORA_URL = f"/equipe/{AUTORA['slug']}/"
