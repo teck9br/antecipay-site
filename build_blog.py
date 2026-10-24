@@ -22,7 +22,7 @@ AUTORA = dict(
     bio=("Advogada inscrita na OAB do Rio Grande do Norte sob o nº 21.175, fundadora do escritório "
          "Thayná Cabral Advocacia, em Natal-RN, com atuação em Direito Previdenciário, Trabalhista e Cível. "
          "Na Antecipay, é responsável pela análise jurídica dos precatórios e pela revisão dos guias do blog."),
-    same_as=[],    # perfis profissionais dela: LinkedIn, Instagram, JusBrasil...
+    same_as=["https://thaynacabraladvocacia.com.br/"],    # perfis profissionais dela: site do escritório, LinkedIn, Instagram, JusBrasil...
 )
 AUTORA_URL = f"/equipe/{AUTORA['slug']}/"
 
