@@ -190,13 +190,13 @@ POSTS = [
   slug="como-saber-se-tenho-precatorio",
   tag="Consulta",
   title="Como saber se tenho precatório a receber",
-  seo="Tenho precatório? Como consultar pelo CPF | Antecipay",
-  desc="Passo a passo para consultar precatório e RPV pelo CPF ou número do processo nos tribunais federais (TRF) e estaduais (TJ).",
+  seo="Tenho precatório? Consulte pelo CPF no TRF e TJ | Antecipay",
+  desc="Como consultar precatório e RPV pelo CPF no TRF1, TRF2, TRF3, TRF5 e no TJ do seu estado, que dados levar e o que fazer se não achar nada.",
   lead="Muita gente tem valores a receber do governo e não sabe. Veja como consultar o seu precatório ou RPV pelo CPF ou pelo número do processo.",
   answer="Você consulta no site do tribunal onde correu a ação: no TRF da sua região, se for contra a União ou o INSS, e no Tribunal de Justiça do seu estado, se for contra o Estado ou o Município. Em geral basta o CPF ou o número do processo.",
   faq=[
    ("Como consultar precatório pelo CPF?","Acesse o portal de precatórios do tribunal responsável (TRF ou TJ) e procure a consulta por CPF/CNPJ ou por número do processo."),
-   ("Qual tribunal consultar para precatório do INSS?","Ações contra o INSS correm na Justiça Federal. A consulta é feita no TRF da sua região. No Rio Grande do Norte, é o TRF5."),
+      ("Qual tribunal consultar para precatório do INSS?","Ações contra o INSS correm na Justiça Federal. A consulta é feita no TRF da sua região. No Rio Grande do Norte, é o TRF5; no Rio de Janeiro e no Espírito Santo, é o TRF2."),
    ("Onde consulto precatório do Estado ou do Município?","No site do Tribunal de Justiça do seu estado, na área de precatórios."),
   ],
   body="""
@@ -209,7 +209,7 @@ POSTS = [
 <div class="table-wrap"><table>
 <tr><th>Tribunal</th><th>Estados</th></tr>
 <tr><td><a href="/blog/consultar-rpv-precatorio-trf1/">TRF1</a></td><td>DF, GO, TO, MT, BA, PI, MA, PA, AM, AC, RR, RO, AP</td></tr>
-<tr><td>TRF2</td><td>RJ, ES</td></tr>
+<tr><td><a href="/blog/consultar-rpv-precatorio-trf2/">TRF2</a></td><td>RJ, ES</td></tr>
 <tr><td><a href="/blog/consultar-rpv-precatorio-trf3/">TRF3</a></td><td>SP, MS</td></tr>
 <tr><td>TRF4</td><td>RS, PR, SC</td></tr>
 <tr><td><a href="/blog/consultar-rpv-precatorio-trf5/">TRF5</a></td><td>PE, CE, AL, SE, RN, PB</td></tr>
@@ -222,6 +222,8 @@ POSTS = [
 <li>Anote o número do precatório, o valor, o ano do orçamento e a situação (por exemplo, "inscrito", "pago" ou "aguardando pagamento").</li>
 </ol>
 <p>No Rio Grande do Norte, por exemplo, precatórios federais são consultados no portal do <strong>TRF5</strong> (veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar RPV e precatório no TRF5</a>), e os estaduais e municipais no <strong>TJRN</strong>. Em São Paulo, veja <a href="/blog/consultar-precatorio-tjsp/">como consultar precatório no TJSP</a>.</p>
+<h2 id="trf2">Consulta pelo CPF no TRF2 (RJ e ES)</h2>
+<p>No TRF2, só o CPF não basta: a consulta pública do eproc pede o CPF e mais um número (registro do precatório ou RPV, processo de origem ou requisição). Veja o passo a passo em <a href="/blog/consultar-rpv-precatorio-trf2/">como consultar precatório pelo CPF no TRF2</a>.</p>
 <h2>4. Não encontrou nada?</h2>
 <p>A ação pode ainda não ter chegado à fase de pagamento, ou o precatório pode ter sido expedido com outros dados. Nesse caso, fale com o advogado que cuidou da ação ou envie o número do processo para a nossa equipe, que fazemos a análise. Se o andamento mostra termos como <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício</a> ou <a href="/blog/juntada-de-certidao/">juntada de certidão</a>, veja o que cada um significa.</p>
 <h2>Achei meu precatório. E agora?</h2>
@@ -310,7 +312,7 @@ POSTS.insert(0, dict(
 <h2>Tem imposto de renda?</h2>
 <p>Em geral, sim. Os atrasados previdenciários são tributados pelo regime de <strong>rendimentos recebidos acumuladamente (RRA)</strong>, que divide o valor pelos meses de atraso e costuma resultar em imposto menor. Aposentados com doença grave prevista em lei podem ser isentos, e os juros de mora sobre verbas alimentares não são tributados.</p>
 <h2>Como consultar o seu precatório do INSS</h2>
-<p>Entre no portal do TRF da sua região e pesquise pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>. No Nordeste, veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar no TRF5</a>; também há guias para o <a href="/blog/consultar-rpv-precatorio-trf1/">TRF1</a> e o <a href="/blog/consultar-rpv-precatorio-trf3/">TRF3</a>.</p>
+<p>Entre no portal do TRF da sua região e pesquise pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>. No Nordeste, veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar no TRF5</a>; também há guias para o <a href="/blog/consultar-rpv-precatorio-trf1/">TRF1</a>, o <a href="/blog/consultar-rpv-precatorio-trf2/">TRF2</a> e o <a href="/blog/consultar-rpv-precatorio-trf3/">TRF3</a>.</p>
 <h2>Não quer esperar?</h2>
 <p>O precatório do INSS pode ser vendido, como qualquer precatório (entenda <a href="/blog/o-que-e-precatorio-e-rpv/">o que é precatório e RPV</a>). Você recebe um valor à vista agora e quem compra passa a receber da União no futuro. Veja <a href="/vender-precatorio-inss/">como funciona a venda do precatório do INSS na Antecipay</a> e, para os demais casos, como <a href="/">vender precatório</a>.</p>
 """,
@@ -879,7 +881,7 @@ POSTS.insert(0, dict(
 <p>A prioridade por idade é aplicada automaticamente. A prioridade por doença grave ou deficiência precisa ser pedida ao juiz da execução: veja <a href="/blog/superpreferencia-precatorio/">superpreferência no precatório</a>. Mudanças como inclusão de herdeiros ou registro de venda (cessão) também passam pela vara onde corre o processo, e não pelo tribunal.</p>
 
 <h2>Entendendo o andamento</h2>
-<p>Termos como “expedição de ofício” e “juntada de certidão” aparecem com frequência no acompanhamento. Veja o que significam em <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a> e <a href="/blog/consultar-rpv-precatorio-trf3/">consulta no TRF3</a>.</p>
+<p>Termos como “expedição de ofício” e “juntada de certidão” aparecem com frequência no acompanhamento. Veja o que significam em <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a>, <a href="/blog/consultar-rpv-precatorio-trf2/">consulta no TRF2</a> e <a href="/blog/consultar-rpv-precatorio-trf3/">consulta no TRF3</a>.</p>
 
 <h2>Não quer esperar?</h2>
 <p>Se o seu precatório do TRF5 ainda vai demorar, você pode <a href="/">vender precatório</a> e receber à vista. A Antecipay fica em Natal, na área do TRF5, e analisa precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de toda a região. Faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
@@ -1016,7 +1018,7 @@ POSTS.insert(0, dict(
 <p>Na Justiça Federal, o valor costuma ser depositado numa conta judicial na Caixa ou no Banco do Brasil, em nome do beneficiário. Em geral, o saque é feito na agência do banco pagador, com RG, CPF e comprovante de residência. Se o juiz exigir alvará, o advogado orienta o caminho.</p>
 
 <h2>Termos do andamento</h2>
-<p>Se aparecer “expedição de ofício” ou “juntada de certidão” no processo, veja <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a> e <a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a>.</p>
+<p>Se aparecer “expedição de ofício” ou “juntada de certidão” no processo, veja <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a>, <a href="/blog/consultar-rpv-precatorio-trf2/">consulta no TRF2</a> e <a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a>.</p>
 
 <h2>Não quer esperar?</h2>
 <p>A Antecipay compra precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de todo o Brasil. Veja como <a href="/">vender precatório</a> ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
@@ -1064,7 +1066,7 @@ POSTS.insert(0, dict(
 <p>Na Justiça Federal, o valor costuma ser depositado numa conta judicial na Caixa ou no Banco do Brasil, em nome do beneficiário. Em geral, o saque é feito na agência do banco pagador, com RG, CPF e comprovante de residência. Se o juiz exigir alvará, o advogado orienta o caminho.</p>
 
 <h2>Termos do andamento</h2>
-<p>Se aparecer “expedição de ofício” ou “juntada de certidão” no processo, veja <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf3/">consulta no TRF3</a> e <a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a>.</p>
+<p>Se aparecer “expedição de ofício” ou “juntada de certidão” no processo, veja <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a> e <a href="/blog/juntada-de-certidao/">juntada de certidão</a>. Para outros tribunais, veja <a href="/blog/consultar-rpv-precatorio-trf2/">consulta no TRF2</a>, <a href="/blog/consultar-rpv-precatorio-trf3/">consulta no TRF3</a> e <a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a>.</p>
 
 <h2>Não quer esperar?</h2>
 <p>A Antecipay compra precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de todo o Brasil. Veja como <a href="/">vender precatório</a> ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
@@ -1209,6 +1211,62 @@ POSTS.insert(0, dict(
 """,
   cta=("Quer previsibilidade, seja qual for o governo?","Credor ou advogado: envie o número do processo e receba uma simulação por escrito, transparente e sem compromisso.","Olá! Tenho um precatório (ou honorários) e quero uma simulação."),
   related=["precatorios-2027-ec-136","vale-a-pena-vender-precatorio","desagio-precatorio"],
+))
+POSTS.insert(0, dict(
+  slug="consultar-rpv-precatorio-trf2",
+  tag="Consulta",
+  title="Como consultar precatório e RPV pelo CPF no TRF2 (RJ e ES)",
+  seo="Consultar precatório pelo CPF no TRF2 (RJ e ES) | Antecipay",
+  desc="Como consultar precatório e RPV pelo CPF no TRF2: quais números o eproc pede além do CPF, onde achá-los e quando o dinheiro sai no RJ e no ES.",
+  lead="Tem uma ação contra a União ou o INSS na Justiça Federal do Rio de Janeiro ou do Espírito Santo? Veja como consultar o seu precatório ou a sua RPV no TRF2.",
+  answer="Para consultar precatório ou RPV no TRF2, acesse a consulta pública de precatórios do eproc, informe o CPF ou CNPJ do beneficiário e preencha só mais um campo: o número de registro do precatório ou RPV, o número do processo de origem ou o número da requisição. Só o CPF não basta. A RPV é paga em até 60 dias depois de registrada no tribunal; o precatório segue a data de corte de 1º de fevereiro.",
+  faq=[
+   ("Dá para consultar precatório no TRF2 só com o CPF?","Não. O CPF ou CNPJ do beneficiário é obrigatório, mas o sistema também pede um destes números: registro do precatório ou RPV, processo de origem ou requisição. Basta preencher um deles."),
+   ("O TRF2 atende quais estados?","O TRF2 atende a Justiça Federal do Rio de Janeiro e do Espírito Santo."),
+   ("Não sei o número do processo. Como faço?","O número do processo de origem aparece na petição inicial, nas intimações e nos documentos da ação. Se não encontrar, peça ao advogado que cuidou do caso ou envie o seu CPF para a nossa equipe, que fazemos a busca."),
+   ("Preciso de advogado para consultar?","Não. A consulta de precatórios e RPVs do TRF2 é pública."),
+  ],
+  body="""
+<h2>Quais estados são atendidos pelo TRF2</h2>
+<p>O Tribunal Regional Federal da 2ª Região cuida das ações contra a União, o INSS e outros órgãos federais no <strong>Rio de Janeiro</strong> e no <strong>Espírito Santo</strong>. Se a sua ação foi contra o Estado ou um município, a consulta é no Tribunal de Justiça (TJRJ ou TJES), não no TRF2.</p>
+
+<h2>Passo a passo da consulta pelo CPF</h2>
+<ol>
+<li>Acesse a consulta pública de precatórios e RPVs do TRF2: <a href="https://eproc.trf2.jus.br/eproc/externo_controlador.php?acao=precatorio_consulta_publica" target="_blank" rel="noopener">eproc.trf2.jus.br</a>.</li>
+<li>Digite o <strong>CPF</strong> (ou CNPJ) do beneficiário. Esse campo é obrigatório.</li>
+<li>Preencha <strong>só um</strong> dos outros campos (veja a tabela abaixo).</li>
+<li>Faça a pesquisa e anote a situação, o valor e se a requisição é precatório ou RPV.</li>
+</ol>
+
+<h2>Só o CPF não basta: qual número usar</h2>
+<p>Essa é a dúvida mais comum. Diferente de outros tribunais, o TRF2 não lista tudo o que existe num CPF: ele pede um segundo dado para achar a requisição.</p>
+<div class="table-wrap"><table>
+<tr><th>Campo</th><th>Formato</th><th>Onde encontrar</th></tr>
+<tr><td><strong>Registro do precatório ou RPV</strong></td><td>10, 15 ou 20 dígitos</td><td>Na intimação ou na certidão de expedição da requisição</td></tr>
+<tr><td><strong>Processo de origem</strong></td><td>Número do processo da ação</td><td>Na petição inicial, nas intimações ou com o advogado</td></tr>
+<tr><td><strong>Requisição</strong></td><td>9 ou 11 dígitos</td><td>No andamento do processo, quando o ofício requisitório é expedido</td></tr>
+</table></div>
+<p>O mais fácil, em geral, é o <strong>número do processo de origem</strong>. Se a pesquisa não trouxer nada, a requisição pode ainda não ter sido expedida: veja o que significa <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a>.</p>
+
+<h2>Quando o dinheiro sai</h2>
+<div class="table-wrap"><table>
+<tr><th>Tipo</th><th>Prazo</th></tr>
+<tr><td><strong>RPV</strong> (até 60 salários mínimos)</td><td>Até 60 dias depois de a requisição ser registrada no tribunal</td></tr>
+<tr><td><strong>Precatório federal</strong></td><td>Apresentado até 1º de fevereiro: pago até o fim do ano seguinte. Depois dessa data, fica para o orçamento do ano posterior.</td></tr>
+</table></div>
+<p>Veja mais em <a href="/blog/quanto-tempo-demora-precatorio/">quanto tempo demora um precatório</a> e, se a ação foi contra o INSS, em <a href="/blog/precatorio-inss/">precatório do INSS</a>.</p>
+
+<h2>Onde sacar</h2>
+<p>Na Justiça Federal, o valor costuma ser depositado numa conta judicial na Caixa ou no Banco do Brasil, em nome do beneficiário. Em geral, o saque é feito na agência do banco pagador, com RG, CPF e comprovante de residência. Se o juiz exigir alvará, o advogado orienta o caminho.</p>
+
+<h2>Outros tribunais</h2>
+<p>Para ações em outras regiões, veja a <a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a>, a <a href="/blog/consultar-rpv-precatorio-trf3/">consulta no TRF3</a> e a <a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a>, ou o guia geral <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório</a>.</p>
+
+<h2>Não quer esperar?</h2>
+<p>A Antecipay compra precatórios federais e do <a href="/vender-precatorio-inss/">INSS</a> de todo o Brasil, inclusive do RJ e do ES, com atendimento 100% digital. Veja como <a href="/">vender precatório</a> ou faça uma estimativa na <a href="/calculadora-precatorio/">calculadora de precatório</a>.</p>
+""",
+  cta=("Tem precatório no TRF2?","Envie o CPF ou o número do processo e receba uma proposta por escrito, sem compromisso.","Olá! Tenho um precatório no TRF2 e quero uma proposta."),
+  related=["consultar-rpv-precatorio-trf3","consultar-rpv-precatorio-trf1","quanto-tempo-demora-precatorio"],
 ))
 BY = {p["slug"]: p for p in POSTS}
 
