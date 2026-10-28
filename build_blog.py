@@ -196,13 +196,13 @@ POSTS = [
   answer="Você consulta no site do tribunal onde correu a ação: no TRF da sua região, se for contra a União ou o INSS, e no Tribunal de Justiça do seu estado, se for contra o Estado ou o Município. Em geral basta o CPF ou o número do processo.",
   faq=[
    ("Como consultar precatório pelo CPF?","Acesse o portal de precatórios do tribunal responsável (TRF ou TJ) e procure a consulta por CPF/CNPJ ou por número do processo."),
-      ("Qual tribunal consultar para precatório do INSS?","Ações contra o INSS correm na Justiça Federal. A consulta é feita no TRF da sua região. No Rio Grande do Norte, é o TRF5; no Rio de Janeiro e no Espírito Santo, é o TRF2."),
+      ("Qual tribunal consultar para precatório do INSS?","Ações contra o INSS correm na Justiça Federal. A consulta é feita no TRF da sua região: no Rio Grande do Norte, é o TRF5; no Rio de Janeiro e no Espírito Santo, é o TRF2. Veja o passo a passo em como consultar o precatório do INSS."),
    ("Onde consulto precatório do Estado ou do Município?","No site do Tribunal de Justiça do seu estado, na área de precatórios."),
   ],
   body="""
 <h2>1. Descubra quem é o devedor</h2>
 <ul>
-<li><strong>União, INSS, universidades e autarquias federais:</strong> a ação correu na Justiça Federal. A consulta é no <strong>Tribunal Regional Federal (TRF)</strong> da sua região.</li>
+<li><strong>União, INSS, universidades e autarquias federais:</strong> a ação correu na Justiça Federal. A consulta é no <strong>Tribunal Regional Federal (TRF)</strong> da sua região. Se for contra o INSS, veja <a href="/blog/precatorio-inss/">como consultar o precatório do INSS</a>.</li>
 <li><strong>Estado ou Município:</strong> a ação correu na Justiça Estadual. A consulta é no <strong>Tribunal de Justiça (TJ)</strong> do seu estado.</li>
 </ul>
 <h2>2. Encontre o TRF da sua região</h2>
@@ -277,12 +277,14 @@ BY = {p["slug"]: p for p in POSTS}
 POSTS.insert(0, dict(
   slug="precatorio-inss",
   tag="INSS",
-  title="Precatório do INSS: como funciona e quanto tempo demora",
-  seo="Precatório do INSS: prazo e como receber | Antecipay",
-  desc="Ganhou ação contra o INSS? Entenda quando o pagamento sai por RPV ou precatório, os prazos, a prioridade para idosos e doentes graves e o imposto de renda.",
-  lead="Aposentadoria, auxílio, BPC ou revisão: quem ganha uma ação contra o INSS recebe os atrasados por RPV ou por precatório. Veja como funciona cada caminho e quanto tempo leva.",
-  answer="Os atrasados de uma ação contra o INSS são pagos pela Justiça Federal. Até 60 salários mínimos, o pagamento sai por RPV, em cerca de 60 dias. Acima disso, vira precatório federal: se for inscrito até 1º de fevereiro, é pago até o fim do ano seguinte. Idosos, pessoas com doença grave e pessoas com deficiência podem receber uma parte antes.",
+  title="Precatório do INSS: como consultar pelo CPF e quanto tempo demora",
+  seo="Precatório do INSS: como consultar e prazo | Antecipay",
+  desc="Como consultar o precatório do INSS pelo CPF no TRF do seu estado, quando o pagamento sai por RPV ou precatório, a prioridade para idosos e o imposto de renda.",
+  lead="Aposentadoria, auxílio, BPC ou revisão: quem ganha uma ação contra o INSS recebe os atrasados por RPV ou por precatório. Veja como consultar o seu pelo CPF, como funciona cada caminho e quanto tempo leva.",
+  answer="Para consultar o precatório do INSS, entre no site do TRF que atende o seu estado, na área de precatórios e RPV, e pesquise pelo CPF ou pelo número do processo; ele não aparece no Meu INSS. Até 60 salários mínimos, o pagamento sai por RPV, em cerca de 60 dias. Acima disso, vira precatório federal: se for inscrito até 1º de fevereiro, é pago até o fim do ano seguinte. Idosos, pessoas com doença grave e pessoas com deficiência podem receber uma parte antes.",
   faq=[
+   ("Como consultar o precatório do INSS pelo CPF?","No site do Tribunal Regional Federal (TRF) do seu estado, na área de precatórios e RPV, pesquisando pelo CPF de quem ganhou a ação ou pelo número do processo. No TRF2 (RJ e ES), o sistema pede o CPF e mais um número do caso."),
+   ("O precatório do INSS aparece no Meu INSS?","Não. Os atrasados de ação judicial são pagos pela Justiça Federal, e a consulta é feita no site do TRF, não no aplicativo do INSS."),
    ("Quanto tempo demora o precatório do INSS?","Se o precatório for inscrito até 1º de fevereiro, o pagamento sai até o fim do ano seguinte. Inscrito depois dessa data, vai para o orçamento do ano posterior."),
    ("Qual o valor máximo da RPV do INSS?","60 salários mínimos. Acima disso, o crédito é pago por precatório, a não ser que o credor renuncie ao valor excedente para receber como RPV."),
    ("Precatório do INSS tem prioridade?","Sim. Por ser de natureza alimentar, tem preferência sobre os demais. Credores com 60 anos ou mais, doença grave ou deficiência podem receber antes uma parte de até 180 salários mínimos."),
@@ -291,6 +293,25 @@ POSTS.insert(0, dict(
   body="""
 <h2>Quem paga os atrasados do INSS</h2>
 <p>O INSS é uma autarquia federal. Por isso, as ações contra ele correm na <strong>Justiça Federal</strong>, e quem paga os atrasados é a União, por meio do Tribunal Regional Federal (TRF) da sua região. No Rio Grande do Norte, é o <strong>TRF5</strong>.</p>
+<h2>Como consultar o precatório do INSS pelo CPF</h2>
+<p>O precatório e a RPV do INSS <strong>não aparecem no Meu INSS</strong>: quem paga os atrasados de uma ação judicial é a Justiça Federal. A consulta é feita no site do TRF que cuida do seu estado, e é pública, sem precisar de advogado.</p>
+<ol>
+<li><strong>Descubra o seu TRF</strong> na tabela abaixo, pelo estado onde a ação correu.</li>
+<li>No site do tribunal, entre na área <strong>"Precatórios e RPV"</strong> ou <strong>"Requisições de pagamento"</strong>.</li>
+<li>Pesquise pelo <strong>CPF</strong> de quem ganhou a ação ou pelo <strong>número do processo</strong>. No TRF2, o CPF sozinho não basta: o sistema pede também o número do processo ou da requisição.</li>
+<li>Confira se a requisição é <strong>RPV</strong> ou <strong>precatório</strong>, o valor, o ano do orçamento e a situação.</li>
+</ol>
+<div class="table-wrap"><table>
+<tr><th>Tribunal</th><th>Estados</th><th>Guia de consulta</th></tr>
+<tr><td>TRF1</td><td>DF, GO, TO, MT, BA, PI, MA, PA, AM, AC, RR, RO, AP</td><td><a href="/blog/consultar-rpv-precatorio-trf1/">consulta no TRF1</a></td></tr>
+<tr><td>TRF2</td><td>RJ, ES</td><td><a href="/blog/consultar-rpv-precatorio-trf2/">consulta no TRF2</a></td></tr>
+<tr><td>TRF3</td><td>SP, MS</td><td><a href="/blog/consultar-rpv-precatorio-trf3/">consulta no TRF3</a></td></tr>
+<tr><td>TRF4</td><td>RS, PR, SC</td><td>site do TRF4, área de precatórios e RPV</td></tr>
+<tr><td>TRF5</td><td>PE, CE, AL, SE, RN, PB</td><td><a href="/blog/consultar-rpv-precatorio-trf5/">consulta no TRF5</a></td></tr>
+<tr><td>TRF6</td><td>MG</td><td>site do TRF6, área de precatórios e RPV</td></tr>
+</table></div>
+<p><strong>Ação no Juizado ou na Justiça Estadual?</strong> Ações do INSS no Juizado Especial Federal também são pagas pelo TRF. Se a ação correu na Justiça Estadual de uma cidade sem vara federal (competência delegada), o pagamento continua sendo federal e a consulta também é no TRF.</p>
+<p><strong>Não encontrou nada?</strong> A requisição pode ainda não ter sido expedida. Veja o que significa <a href="/blog/expedicao-de-oficio-precatorio/">expedição de ofício no precatório</a>, fale com o advogado ou envie o número do processo para a nossa equipe, que fazemos a consulta. Para outros casos, veja <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>.</p>
 <h2>RPV ou precatório?</h2>
 <p>Depende do valor total dos atrasados na data da requisição:</p>
 <div class="table-wrap"><table>
@@ -311,8 +332,6 @@ POSTS.insert(0, dict(
 <p><strong>Atenção:</strong> essa prioridade é pessoal. Se o precatório for vendido, quem compra não aproveita a preferência. Por isso, quem tem direito a ela deve avaliar com calma se vale antecipar todo o crédito ou só a parte que ainda ficaria na fila.</p>
 <h2>Tem imposto de renda?</h2>
 <p>Em geral, sim. Os atrasados previdenciários são tributados pelo regime de <strong>rendimentos recebidos acumuladamente (RRA)</strong>, que divide o valor pelos meses de atraso e costuma resultar em imposto menor. Aposentados com doença grave prevista em lei podem ser isentos, e os juros de mora sobre verbas alimentares não são tributados.</p>
-<h2>Como consultar o seu precatório do INSS</h2>
-<p>Entre no portal do TRF da sua região e pesquise pelo CPF ou pelo número do processo. O passo a passo está em <a href="/blog/como-saber-se-tenho-precatorio/">como saber se tenho precatório a receber</a>. No Nordeste, veja <a href="/blog/consultar-rpv-precatorio-trf5/">como consultar no TRF5</a>; também há guias para o <a href="/blog/consultar-rpv-precatorio-trf1/">TRF1</a>, o <a href="/blog/consultar-rpv-precatorio-trf2/">TRF2</a> e o <a href="/blog/consultar-rpv-precatorio-trf3/">TRF3</a>.</p>
 <h2>Não quer esperar?</h2>
 <p>O precatório do INSS pode ser vendido, como qualquer precatório (entenda <a href="/blog/o-que-e-precatorio-e-rpv/">o que é precatório e RPV</a>). Você recebe um valor à vista agora e quem compra passa a receber da União no futuro. Veja <a href="/vender-precatorio-inss/">como funciona a venda do precatório do INSS na Antecipay</a> e, para os demais casos, como <a href="/">vender precatório</a>.</p>
 """,
